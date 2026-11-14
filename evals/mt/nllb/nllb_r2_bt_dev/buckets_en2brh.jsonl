@@ -1,0 +1,302 @@
+{"id": "bouquet_P373-S1", "chrf": 4.5, "bucket": "wrong_word", "evidence": "'پد آن برجا سلیس' -> 'رند ء ہنا'", "meaning_preserved": false}
+{"id": "bouquet_P373-S5", "chrf": 8.8, "bucket": "wrong_word", "evidence": "'نرنگ ئے برجا تخا' -> 'رم کرسا کرے'", "meaning_preserved": false}
+{"id": "bouquet_P316-S3", "chrf": 11.6, "bucket": "wrong_word", "evidence": "'نرخ' -> 'نہاد'", "meaning_preserved": false}
+{"id": "bouquet_P398-S5", "chrf": 11.9, "bucket": "wrong_word", "evidence": "'جوان وڑ اٹ کننگ تانو' -> 'بھاز استخوائی تخک' (literal idiom)", "meaning_preserved": false}
+{"id": "bouquet_P442-S4", "chrf": 13.6, "bucket": "entity", "evidence": "'finanzasesp' -> 'فنانس سپ'", "meaning_preserved": false}
+{"id": "bouquet_P137-S1", "chrf": 15.0, "bucket": "wrong_word", "evidence": "'گولی نا توار' -> 'سم'", "meaning_preserved": false}
+{"id": "smolsent_542", "chrf": 15.7, "bucket": "synonym_ok", "evidence": "'باز زیات باسن انگا دیر تیٹ دیک' -> 'دیر تا اسہ بھلو کچ اسے ٹی شاغک'", "meaning_preserved": true}
+{"id": "smolsent_24", "chrf": 16.2, "bucket": "synonym_ok", "evidence": "'کشاری آمدنی' -> 'خلقی کٹیا'; 'بزغر' -> 'زمیندار'", "meaning_preserved": true}
+{"id": "bouquet_P325-S4", "chrf": 16.7, "bucket": "wrong_word", "evidence": "'خرما ... موکو' -> 'ککڑ نا مکڑی'", "meaning_preserved": false}
+{"id": "bouquet_P383-S3", "chrf": 16.7, "bucket": "synonym_ok", "evidence": "'وردش کننگ کیرہ' -> 'ورزش کننگ مریک'", "meaning_preserved": true}
+{"id": "bouquet_P229-S1", "chrf": 16.9, "bucket": "synonym_ok", "evidence": "'ہنگامی اطلاع' -> 'دمدستی نوٹس'", "meaning_preserved": true}
+{"id": "bouquet_P083-S2", "chrf": 17.9, "bucket": "wrong_word", "evidence": "'گجر' -> 'گراوٹ'", "meaning_preserved": false}
+{"id": "bouquet_P316-S2", "chrf": 18.0, "bucket": "wrong_word", "evidence": "'مزہ جوان' -> 'مزہ خرن' (savory rendered as salty)", "meaning_preserved": false}
+{"id": "bouquet_P137-S3", "chrf": 18.1, "bucket": "urdu_register", "evidence": "'کوچہ ٹی تارمئی' -> 'گلی ٹی کچ سیاہ'", "meaning_preserved": true}
+{"id": "smolsent_71", "chrf": 18.2, "bucket": "entity", "evidence": "'درملکی زبان تا چاہندار و کتاب آتا پو' -> 'فارن لینگویج نرڈ و بک ورم'", "meaning_preserved": false}
+{"id": "smolsent_217", "chrf": 18.7, "bucket": "urdu_register", "evidence": "'یخین' -> 'بے شک'; 'اسل مون' -> 'بارڈر نا سدھا مونا'", "meaning_preserved": true}
+{"id": "bouquet_P115-S1", "chrf": 18.8, "bucket": "urdu_register", "evidence": "'اواری' -> 'ہم آہنگی'", "meaning_preserved": true}
+{"id": "bouquet_P325-S5", "chrf": 19.4, "bucket": "synonym_ok", "evidence": "'کہی وڑ نا رنگ' -> 'وڑ وڑ انا رنگ آک'", "meaning_preserved": true}
+{"id": "bouquet_P048-S3", "chrf": 19.5, "bucket": "wrong_word", "evidence": "'معلومداری اف' -> 'نن تپنہ'; 'قانون' -> 'کانود'", "meaning_preserved": false}
+{"id": "bouquet_P359-S5", "chrf": 19.6, "bucket": "synonym_ok", "evidence": "'جوان اے' -> 'کنے خوشی ء' (closer to source 'I am glad')", "meaning_preserved": true}
+{"id": "bouquet_P383-S5", "chrf": 20.1, "bucket": "synonym_ok", "evidence": "'کل جوان او' -> 'خیریت ئے'", "meaning_preserved": true}
+{"id": "bouquet_P373-S2", "chrf": 20.2, "bucket": "wrong_word", "evidence": "'موڷ' (dust) -> 'مش'", "meaning_preserved": false}
+{"id": "bouquet_P161-S4", "chrf": 20.2, "bucket": "entity", "evidence": "'تربیت تنگانے' -> 'ہاؤس ٹرینڈ'", "meaning_preserved": true}
+{"id": "bouquet_P037-S2", "chrf": 20.5, "bucket": "entity", "evidence": "'بون ایپیٹیٹ' -> 'بون اپیٹ'", "meaning_preserved": true}
+{"id": "bouquet_P297-S4", "chrf": 20.7, "bucket": "wrong_word", "evidence": "'لڑ' (priority list) -> 'اولیت نا ترازو' (weighing balance); 'کل آن مست' -> 'اسٹ'", "meaning_preserved": false}
+{"id": "bouquet_P083-S4", "chrf": 20.7, "bucket": "entity", "evidence": "'دودو' -> 'دودیو' (reference omits much; hypothesis is complete)", "meaning_preserved": true}
+{"id": "smolsent_204", "chrf": 21.0, "bucket": "urdu_register", "evidence": "'جنجالی' -> 'متنازعہ'", "meaning_preserved": true}
+{"id": "bouquet_P048-S5", "chrf": 21.0, "bucket": "urdu_register", "evidence": "'گڈ وڈ' -> 'پیچیدہ'; 'ٹرائل'", "meaning_preserved": true}
+{"id": "smolsent_39", "chrf": 21.3, "bucket": "wrong_word", "evidence": "'پر چس، مزاحیہ' -> 'مضحکہ خیز، مضحکہ خیز'", "meaning_preserved": false}
+{"id": "bouquet_P215-S2", "chrf": 21.4, "bucket": "entity", "evidence": "'جز وقتی' -> 'پارٹ ٹائم'; 'چنا تا خیالداری' -> 'چائلڈ کیئر'", "meaning_preserved": true}
+{"id": "bouquet_P145-S3", "chrf": 21.5, "bucket": "wrong_word", "evidence": "'گولی ئس خلکور' (shot) -> 'سم کاری کننگا' (poisoned)", "meaning_preserved": false}
+{"id": "bouquet_P229-S4", "chrf": 21.5, "bucket": "synonym_ok", "evidence": "'ماڑی ئے ہرفنگ ... صاف کروکا ٹیم' -> 'کچرہ غاتے مر کننگ ... مر کننگ نا عملہ'", "meaning_preserved": true}
+{"id": "smolsent_93", "chrf": 21.6, "bucket": "synonym_ok", "evidence": "'جوانو کاریم ئس مریک' -> 'سہی ء کاریم اس مفک' (hypothesis correctly keeps the negation; reference drops it)", "meaning_preserved": true}
+{"id": "bouquet_P435-S5", "chrf": 22.0, "bucket": "synonym_ok", "evidence": "'صرف جواننگا گڑاک قیمتی' -> 'اسٹ انگا جوان انگا ہیت نرخ آک'", "meaning_preserved": true}
+{"id": "smolsent_514", "chrf": 22.1, "bucket": "entity", "evidence": "'بنیاتی ھاٹی نا بل' -> 'انفراسٹرکچر بل'; 'ایل ایم او' transliterated", "meaning_preserved": true}
+{"id": "bouquet_P363-S3", "chrf": 22.5, "bucket": "synonym_ok", "evidence": "'ہمو ہراکے راست کنڈا ٹی' -> 'راستیکو پارہ غا'", "meaning_preserved": true}
+{"id": "bouquet_P376-S4", "chrf": 22.5, "bucket": "wrong_word", "evidence": "'پرکریٹ و برش کریٹ' -> 'تفیٹ و کشاٹ' (tied / pulled out)", "meaning_preserved": false}
+{"id": "bouquet_P161-S1", "chrf": 22.6, "bucket": "orthography", "evidence": "'سہداک' -> 'سہدارک'", "meaning_preserved": true}
+{"id": "bouquet_P048-S4", "chrf": 22.6, "bucket": "synonym_ok", "evidence": "'مونا اتیر ... قانون ئے پو مریک' -> 'کانود ء پہہ مروک ء بندغ اس پن کیر'", "meaning_preserved": true}
+{"id": "smolsent_788", "chrf": 22.7, "bucket": "orthography", "evidence": "'ووٹنگ' -> 'وونٹ'", "meaning_preserved": true}
+{"id": "bouquet_P145-S5", "chrf": 22.7, "bucket": "entity", "evidence": "'مشورہ' -> 'ٹپس' (transliterated)", "meaning_preserved": true}
+{"id": "smolsent_110", "chrf": 22.8, "bucket": "wrong_word", "evidence": "'وبائی نا دراخی' (pandemic) -> 'دین' (religion)", "meaning_preserved": false}
+{"id": "bouquet_P090-S4", "chrf": 23.0, "bucket": "synonym_ok", "evidence": "'ایسری ناپورو خننگک' -> 'فائنل ئے اسہ ناپورو احساس ئس ایتک'", "meaning_preserved": true}
+{"id": "bouquet_P463-S1", "chrf": 23.1, "bucket": "grammar", "evidence": "'اینڈلسیا ئے مون تروکا جنگل آتا خاخر' -> 'اندلس ئے خطرہ نا گواچی مروک جنگلاتی خاخر' (roles garbled)", "meaning_preserved": false}
+{"id": "smolsent_664", "chrf": 23.7, "bucket": "synonym_ok", "evidence": "'باتی ئس ... ہنتو' -> 'اسہ بندغ اس ہم ... جرات کتو'", "meaning_preserved": true}
+{"id": "smolsent_340", "chrf": 24.2, "bucket": "entity", "evidence": "'Twitch' -> 'YouTube'", "meaning_preserved": false}
+{"id": "bouquet_P383-S2", "chrf": 24.3, "bucket": "synonym_ok", "evidence": "'دباؤ ٹی شاغسہ' -> 'دھکہ تننگ'", "meaning_preserved": true}
+{"id": "bouquet_P325-S3", "chrf": 24.4, "bucket": "synonym_ok", "evidence": "'چاہنگ خواہ' -> 'خبر تمنگ خواہک'", "meaning_preserved": true}
+{"id": "bouquet_P055-S4", "chrf": 25.0, "bucket": "wrong_word", "evidence": "'بروکا وخت' -> 'آخبت' (likely 'afterlife', not 'future')", "meaning_preserved": false}
+{"id": "smolsent_674", "chrf": 25.1, "bucket": "synonym_ok", "evidence": "'کل جوانو نہ' -> 'انت خیریت ء'", "meaning_preserved": true}
+{"id": "smolsent_699", "chrf": 25.1, "bucket": "wrong_word", "evidence": "'مون تننگ' -> 'توننگ' ('handling' garbled)", "meaning_preserved": false}
+{"id": "bouquet_P103-S3", "chrf": 25.2, "bucket": "synonym_ok", "evidence": "'ماہرین آتا مطابق' -> 'زانتکار آتا پٹ و پول نا رد اٹ' (hyp more complete; 'چویوان' -> 'کو یوان')", "meaning_preserved": true}
+{"id": "smolsent_610", "chrf": 25.3, "bucket": "synonym_ok", "evidence": "'لائبریری' -> 'لٹ خانہ'; 'عکس' -> 'پورٹریٹ'", "meaning_preserved": true}
+{"id": "smolsent_862", "chrf": 25.3, "bucket": "synonym_ok", "evidence": "'آؤٹ گوئنگ میل' -> 'پیشن مروک آ میل' (ref garbled; hyp complete)", "meaning_preserved": true}
+{"id": "bouquet_P458-S1", "chrf": 25.5, "bucket": "synonym_ok", "evidence": "'بے ترتیب او بدلی' -> 'بے مٹ ء بدلی'", "meaning_preserved": true}
+{"id": "smolsent_742", "chrf": 25.7, "bucket": "synonym_ok", "evidence": "'پارباسی' -> 'شفاف'", "meaning_preserved": true}
+{"id": "bouquet_P030-S2", "chrf": 25.9, "bucket": "wrong_word", "evidence": "'گڑاس کاریم' -> 'ارادے چلیفنگ'", "meaning_preserved": false}
+{"id": "bouquet_P177-S4", "chrf": 26.0, "bucket": "wrong_word", "evidence": "'جمپ خلنگ' -> 'چھاپنگ' (duplicated for skipping and hopping)", "meaning_preserved": false}
+{"id": "bouquet_P383-S1", "chrf": 26.1, "bucket": "wrong_word", "evidence": "'انسانی اف' -> 'انسانیت سوز اف' (double negative flips meaning)", "meaning_preserved": false}
+{"id": "bouquet_P310-S3", "chrf": 26.2, "bucket": "wrong_word", "evidence": "'بادرنگ' -> 'الار'", "meaning_preserved": false}
+{"id": "bouquet_P409-S2", "chrf": 26.3, "bucket": "synonym_ok", "evidence": "'بےچینی -> فریشانی', 'و پین -> ودیکی'", "meaning_preserved": true}
+{"id": "smolsent_453", "chrf": 26.5, "bucket": "synonym_ok", "evidence": "'رصد نا دونو اتپاک -> مشاہدہ نا دا وڑ انا اتفاق آک'", "meaning_preserved": true}
+{"id": "smolsent_650", "chrf": 26.8, "bucket": "wrong_word", "evidence": "'رہائش -> ہند آک' (places, not housing); 'ائیدو -> میلہ'", "meaning_preserved": false}
+{"id": "smolsent_374", "chrf": 27.1, "bucket": "synonym_ok", "evidence": "'اسہ وخت آ ... شائستہ -> داڑتون اوار ادب کننگ'", "meaning_preserved": true}
+{"id": "smolsent_277", "chrf": 27.1, "bucket": "synonym_ok", "evidence": "'نشانی -> علامت', 'ہڷ -> تپ', 'گٹ اٹ خوارش -> گٹ ئنا دڑد'", "meaning_preserved": true}
+{"id": "bouquet_P310-S2", "chrf": 27.1, "bucket": "synonym_ok", "evidence": "'اولاد الو تا -> اولاد نصیب متنے'", "meaning_preserved": true}
+{"id": "smolsent_451", "chrf": 27.6, "bucket": "synonym_ok", "evidence": "'مخلوق -> بندغ آتے', 'جیڑہ -> ویل آک'", "meaning_preserved": true}
+{"id": "bouquet_P196-S5", "chrf": 27.6, "bucket": "entity", "evidence": "'لوسیا -> لوشیا'", "meaning_preserved": true}
+{"id": "smolsent_153", "chrf": 27.7, "bucket": "wrong_word", "evidence": "'وڑ تیٹ -> مقدمہ غاتیٹی' (legal cases); 'چاہنداری -> دریافت'", "meaning_preserved": false}
+{"id": "bouquet_P376-S2", "chrf": 27.7, "bucket": "orthography", "evidence": "'کم کننگ -> مر کننگ', 'آرام تننگ -> دم درینگ انگ'", "meaning_preserved": true}
+{"id": "bouquet_P310-S5", "chrf": 27.8, "bucket": "wrong_word", "evidence": "'بادرنگ -> الار'", "meaning_preserved": false}
+{"id": "smolsent_134", "chrf": 27.9, "bucket": "synonym_ok", "evidence": "'احتیات ٹی -> خوڑتی تون', 'زیبائی -> جمالیاتی'", "meaning_preserved": true}
+{"id": "bouquet_P297-S1", "chrf": 28.4, "bucket": "synonym_ok", "evidence": "'سلہ سوج درکار -> سلاہ نا ضرورت'", "meaning_preserved": true}
+{"id": "bouquet_P090-S5", "chrf": 28.4, "bucket": "wrong_word", "evidence": "niche -> 'طاق' (literal wall niche), garbles 'niche characteristics and the market'", "meaning_preserved": false}
+{"id": "smolsent_752", "chrf": 28.5, "bucket": "synonym_ok", "evidence": "'قابل بدلی -> ٹرانسفر کننگ مریرہ', 'طبع شدہ -> چھاپ مروک'", "meaning_preserved": true}
+{"id": "bouquet_P227-S2", "chrf": 28.5, "bucket": "synonym_ok", "evidence": "'خوراک تفابو -> ارغ تفبو' (stray leading 'ئے')", "meaning_preserved": true}
+{"id": "bouquet_P261-S4", "chrf": 28.5, "bucket": "urdu_register", "evidence": "'زند نا ڈول -> طرز زندگی'", "meaning_preserved": true}
+{"id": "bouquet_P297-S3", "chrf": 28.6, "bucket": "grammar", "evidence": "'وڑ آتے نشان اتنگ خواوہ -> دا پاننگ خواوہ کہ ... وڑ' (sentence left unfinished)", "meaning_preserved": false}
+{"id": "smolsent_238", "chrf": 28.7, "bucket": "synonym_ok", "evidence": "'پائیدار -> سوگو', 'بریبر تخک -> برقرار تخنگ کیک'", "meaning_preserved": true}
+{"id": "bouquet_P196-S2", "chrf": 28.8, "bucket": "omission", "evidence": "missing: 'تپروسس' (without knowing) -> 'انت آن بیدس'", "meaning_preserved": false}
+{"id": "bouquet_P463-S3", "chrf": 28.9, "bucket": "synonym_ok", "evidence": "'کمپنی تا ٹیکس -> کارپوریٹ خراج', 'موخر -> پدبٹنگ'", "meaning_preserved": true}
+{"id": "bouquet_P083-S5", "chrf": 28.9, "bucket": "entity", "evidence": "'دودو -> دوئیڈو'", "meaning_preserved": true}
+{"id": "bouquet_P373-S4", "chrf": 29.1, "bucket": "synonym_ok", "evidence": "'پد اٹ تموکا -> شونکار آک', 'فریب -> گمان'", "meaning_preserved": true}
+{"id": "smolsent_350", "chrf": 29.4, "bucket": "synonym_ok", "evidence": "'مسخرہ -> ملنڈ', 'خڑکی نا کارندہ -> برادری نا باسک'", "meaning_preserved": true}
+{"id": "bouquet_P055-S1", "chrf": 29.4, "bucket": "synonym_ok", "evidence": "'ووت شاغار -> وونٹ ء بٹنگ کن پیشن مسر'", "meaning_preserved": true}
+{"id": "smolsent_755", "chrf": 29.6, "bucket": "entity", "evidence": "'ثانوی -> سیکنڈری'", "meaning_preserved": true}
+{"id": "smolsent_696", "chrf": 29.8, "bucket": "synonym_ok", "evidence": "'معاف کپک -> بشخپک', 'سوبری -> سوگوی'", "meaning_preserved": true}
+{"id": "bouquet_P037-S3", "chrf": 29.9, "bucket": "synonym_ok", "evidence": "'مزہ ئے الینہ -> کوشش کبو'", "meaning_preserved": true}
+{"id": "bouquet_P325-S2", "chrf": 30.1, "bucket": "synonym_ok", "evidence": "'دا نا رنگ بھاز -> رنگ باز'", "meaning_preserved": true}
+{"id": "bouquet_P161-S3", "chrf": 30.1, "bucket": "wrong_word", "evidence": "'کچ آتیتون (treats) -> کچک نا علاج (dog's medical treatment)'", "meaning_preserved": false}
+{"id": "bouquet_P037-S5", "chrf": 30.1, "bucket": "synonym_ok", "evidence": "'ای داسہ نیکن رائی کیوہ' -> 'ای دادے داسہ نمے آ راہی کیوہ'", "meaning_preserved": true}
+{"id": "smolsent_338", "chrf": 30.2, "bucket": "omission", "evidence": "missing: 'fight' (زمغی جنگ -> تلوار only)", "meaning_preserved": false}
+{"id": "bouquet_P215-S6", "chrf": 30.3, "bucket": "entity", "evidence": "'حوصلہ تروکا خط' -> 'موٹیویشن لیٹر'", "meaning_preserved": true}
+{"id": "bouquet_P083-S1", "chrf": 30.4, "bucket": "wrong_word", "evidence": "'مرو' (rabbit) -> 'خراس'", "meaning_preserved": false}
+{"id": "smolsent_7", "chrf": 30.6, "bucket": "synonym_ok", "evidence": "'چال' -> 'چم بازی'", "meaning_preserved": true}
+{"id": "bouquet_P409-S3", "chrf": 30.7, "bucket": "urdu_register", "evidence": "'کڑمب ساہ' -> 'گہرائی ٹی ساہ'; 'خیال' -> 'توجہ'", "meaning_preserved": true}
+{"id": "smolsent_49", "chrf": 30.8, "bucket": "urdu_register", "evidence": "'گواچنی' -> 'حقیقت'; 'پٹ ولوٹ' -> 'ٹریک'", "meaning_preserved": true}
+{"id": "bouquet_P090-S3", "chrf": 30.8, "bucket": "synonym_ok", "evidence": "'فریشان کروکسے' -> 'حیرانی نا ہیت ئسے'", "meaning_preserved": true}
+{"id": "bouquet_P215-S5", "chrf": 30.9, "bucket": "entity", "evidence": "'ان زوت کہ مننگ کیک' -> 'ASAP'", "meaning_preserved": false}
+{"id": "smolsent_858", "chrf": 31.1, "bucket": "urdu_register", "evidence": "'تفوک ئے' -> 'انحصار کیک'", "meaning_preserved": true}
+{"id": "smolsent_801", "chrf": 31.1, "bucket": "synonym_ok", "evidence": "'آخوبتی نا' -> 'بروک آ وخت اٹی'", "meaning_preserved": true}
+{"id": "bouquet_P330-S3", "chrf": 31.1, "bucket": "entity", "evidence": "'نیام نا سطح نا' -> 'انٹرمیڈیٹ'", "meaning_preserved": true}
+{"id": "bouquet_P261-S5", "chrf": 31.1, "bucket": "urdu_register", "evidence": "'گڑا' -> 'تو'; 'برجا کبو' -> 'شروع کر'; 'جانجوڑی' -> 'فٹنس'", "meaning_preserved": true}
+{"id": "bouquet_P463-S4", "chrf": 31.3, "bucket": "synonym_ok", "evidence": "'چھوٹ' -> 'آجوئی'", "meaning_preserved": true}
+{"id": "bouquet_P037-S4", "chrf": 31.3, "bucket": "synonym_ok", "evidence": "'ضرور' -> 'یخین اٹ'", "meaning_preserved": true}
+{"id": "smolsent_84", "chrf": 31.5, "bucket": "synonym_ok", "evidence": "'جاچ ئس کر -> چیک کبو'", "meaning_preserved": true}
+{"id": "bouquet_P261-S3", "chrf": 31.6, "bucket": "synonym_ok", "evidence": "'صحنت مند انگا کننگاک -> صحت مند خوراک'", "meaning_preserved": true}
+{"id": "bouquet_P215-S1", "chrf": 31.8, "bucket": "wrong_word", "evidence": "'بامعنی -> بھرم تروک'", "meaning_preserved": true}
+{"id": "smolsent_100", "chrf": 31.9, "bucket": "synonym_ok", "evidence": "'رندے -> درجہ غاتے'", "meaning_preserved": true}
+{"id": "bouquet_P363-S6", "chrf": 31.9, "bucket": "entity", "evidence": "'پیوٹر -> پٹرو', 'ایونوف -> ایرونوس'", "meaning_preserved": false}
+{"id": "bouquet_P458-S2", "chrf": 32.0, "bucket": "synonym_ok", "evidence": "'اننگ او -> دننگ ء'", "meaning_preserved": true}
+{"id": "smolsent_404", "chrf": 32.1, "bucket": "urdu_register", "evidence": "'پتن و باز ترند -> بے حد وسیع و بے حد تیز'", "meaning_preserved": true}
+{"id": "bouquet_P330-S1", "chrf": 32.1, "bucket": "wrong_word", "evidence": "'پروجیکٹس -> ڈٹ آتے'", "meaning_preserved": false}
+{"id": "bouquet_P172-S5", "chrf": 32.1, "bucket": "synonym_ok", "evidence": "'دوشہ -> مار', 'اصلی کوننگ -> حقی آ ارغ'", "meaning_preserved": true}
+{"id": "bouquet_P227-S1", "chrf": 32.2, "bucket": "synonym_ok", "evidence": "'صحت مند تخنگ -> دراخ جوڑ کننگ'", "meaning_preserved": true}
+{"id": "bouquet_P310-S6", "chrf": 32.2, "bucket": "synonym_ok", "evidence": "'کاٹار -> پرغار' (hyp also keeps 'الار' cucumber)", "meaning_preserved": true}
+{"id": "bouquet_P359-S2", "chrf": 32.7, "bucket": "synonym_ok", "evidence": "'ای چاوہ ولے سما اف -> کنے سما ء، دا واضح اف'", "meaning_preserved": true}
+{"id": "smolsent_660", "chrf": 32.9, "bucket": "entity", "evidence": "'ہاکو -> یاکو'", "meaning_preserved": false}
+{"id": "smolsent_585", "chrf": 33.0, "bucket": "entity", "evidence": "'بننگ نا آلات -> ہیڈنگ ایڈ'", "meaning_preserved": false}
+{"id": "bouquet_P435-S4", "chrf": 33.0, "bucket": "wrong_word", "evidence": "'کروکیٹس -> ککڑی'", "meaning_preserved": false}
+{"id": "bouquet_P310-S1", "chrf": 33.0, "bucket": "synonym_ok", "evidence": "'اسہ زمانہ سیٹی' -> 'وخت اس کہ'", "meaning_preserved": true}
+{"id": "bouquet_P177-S3", "chrf": 33.0, "bucket": "urdu_register", "evidence": "'وردش' -> 'ورزش'", "meaning_preserved": true}
+{"id": "bouquet_P229-S3", "chrf": 33.1, "bucket": "omission", "evidence": "missing: 'نوش' (drinking) — 'دیر ئے نوش کننگ' -> 'دیر انا کننگ'", "meaning_preserved": false}
+{"id": "smolsent_633", "chrf": 33.3, "bucket": "entity", "evidence": "'بیچلر سویپ' -> 'بیچلر سوات'", "meaning_preserved": false}
+{"id": "bouquet_P442-S2", "chrf": 33.3, "bucket": "entity", "evidence": "'yosoymaria' -> 'یوسومریا'", "meaning_preserved": true}
+{"id": "smolsent_472", "chrf": 33.8, "bucket": "grammar", "evidence": "'داٹی بورہ ہم زیات' -> 'دا بورہ غان ہم زیات'", "meaning_preserved": false}
+{"id": "bouquet_P343-S1", "chrf": 33.8, "bucket": "omission", "evidence": "missing: 'یا' (18 itself) — '18 سال یا اوڑان زیات' -> '18 سال آن زیات'", "meaning_preserved": false}
+{"id": "smolsent_425", "chrf": 33.9, "bucket": "synonym_ok", "evidence": "'کڑنبو گڑتی' -> 'است ہسونی'", "meaning_preserved": true}
+{"id": "bouquet_P145-S2", "chrf": 33.9, "bucket": "urdu_register", "evidence": "'مہون' -> 'بلیک'; 'بھلا ریلوے اسٹیشن' -> 'مین ٹرین اسٹیشن'", "meaning_preserved": true}
+{"id": "bouquet_P363-S1", "chrf": 34.1, "bucket": "entity", "evidence": "'آنا پاولونا' -> 'انا ہاوولوفنا'", "meaning_preserved": false}
+{"id": "smolsent_757", "chrf": 34.4, "bucket": "wrong_word", "evidence": "'خواست کروک آک' -> 'خواجہ غاتے'", "meaning_preserved": false}
+{"id": "bouquet_P383-S4", "chrf": 34.5, "bucket": "synonym_ok", "evidence": "'15 سال نا اے' -> 'مہالو آن 15 سال آن'", "meaning_preserved": true}
+{"id": "smolsent_651", "chrf": 34.6, "bucket": "synonym_ok", "evidence": "'تاب تروک آ جوائنٹ' -> 'بینڈ جوائنٹ'", "meaning_preserved": true}
+{"id": "bouquet_P398-S1", "chrf": 34.6, "bucket": "urdu_register", "evidence": "'ہرادے ... پارہ' -> 'نام نہاد'", "meaning_preserved": true}
+{"id": "smolsent_318", "chrf": 34.7, "bucket": "synonym_ok", "evidence": "'فریشانی مریک' -> 'سرگڑدانی ٹی مریرہ'", "meaning_preserved": true}
+{"id": "bouquet_P442-S1", "chrf": 34.7, "bucket": "entity", "evidence": "'albertogarcia' -> 'البرٹوکاریسیا'", "meaning_preserved": true}
+{"id": "bouquet_P215-S4", "chrf": 34.7, "bucket": "synonym_ok", "evidence": "'وخت' -> 'گھنٹہ غاک'", "meaning_preserved": true}
+{"id": "smolsent_647", "chrf": 34.8, "bucket": "synonym_ok", "evidence": "'دا سوچ ... گنج اسے' -> 'خیال بس کہ ... راہی کرے'", "meaning_preserved": true}
+{"id": "bouquet_P359-S1", "chrf": 34.8, "bucket": "synonym_ok", "evidence": "'مشورہ کتو' -> 'سلاہ خواہپک'", "meaning_preserved": true}
+{"id": "bouquet_P090-S2", "chrf": 34.9, "bucket": "synonym_ok", "evidence": "'روایتی' -> 'کلیشے'", "meaning_preserved": true}
+{"id": "bouquet_P196-S1", "chrf": 35.0, "bucket": "synonym_ok", "evidence": "'خیال ئے پینتین درے' -> 'چکار کیک'", "meaning_preserved": true}
+{"id": "bouquet_P409-S4", "chrf": 35.1, "bucket": "synonym_ok", "evidence": "'خلوئی ئے' -> 'وقف کروئی ئے'", "meaning_preserved": true}
+{"id": "smolsent_183", "chrf": 35.2, "bucket": "synonym_ok", "evidence": "'جوڑابو' -> 'شون ایت'; 'چشخ' -> 'چھاپ'", "meaning_preserved": true}
+{"id": "bouquet_P316-S1", "chrf": 35.3, "bucket": "wrong_word", "evidence": "'اسکوئڈ' -> 'کلوار'", "meaning_preserved": false}
+{"id": "smolsent_267", "chrf": 35.7, "bucket": "urdu_register", "evidence": "'کن خور' -> 'مائع خوراک'", "meaning_preserved": true}
+{"id": "bouquet_P037-S1", "chrf": 35.8, "bucket": "urdu_register", "evidence": "'مزئی' -> 'مزہ والا'", "meaning_preserved": true}
+{"id": "bouquet_P012-S2", "chrf": 36.1, "bucket": "synonym_ok", "evidence": "'صرف' -> 'بیرہ'", "meaning_preserved": true}
+{"id": "smolsent_447", "chrf": 36.2, "bucket": "synonym_ok", "evidence": "'آرام اٹ مریس' -> 'آسرات محسوس مریک'", "meaning_preserved": true}
+{"id": "smolsent_835", "chrf": 36.3, "bucket": "entity", "evidence": "'ازگر' -> 'پیتھون'", "meaning_preserved": true}
+{"id": "smolsent_848", "chrf": 36.6, "bucket": "omission", "evidence": "'well-founded' -> 'جوان وڑاٹ ئسر' (missing: founded/justified)", "meaning_preserved": false}
+{"id": "smolsent_242", "chrf": 36.6, "bucket": "entity", "evidence": "'نت نا آرتھوٹکس -> فٹ آرتھوٹکس'", "meaning_preserved": true}
+{"id": "smolsent_609", "chrf": 36.7, "bucket": "omission", "evidence": "missing: 'اینٹی' (anti-biophilic -> بائیو فائلک)", "meaning_preserved": false}
+{"id": "bouquet_P276-S3", "chrf": 36.8, "bucket": "synonym_ok", "evidence": "'تینٹ دیر -> مچ کروئی مریک'", "meaning_preserved": true}
+{"id": "bouquet_P435-S2", "chrf": 37.0, "bucket": "wrong_word", "evidence": "'درمیانہ -> میڈیم نایاب'; 'بھاز گچین مس -> جوان مس'", "meaning_preserved": false}
+{"id": "smolsent_720", "chrf": 37.1, "bucket": "synonym_ok", "evidence": "'گرج مریک -> خواستگار اے'", "meaning_preserved": true}
+{"id": "smolsent_665", "chrf": 37.3, "bucket": "wrong_word", "evidence": "'مخالف گواہ -> دشمنی نا شاہدی'", "meaning_preserved": false}
+{"id": "bouquet_P137-S4", "chrf": 37.3, "bucket": "synonym_ok", "evidence": "'نرنگ -> رم کننگ'", "meaning_preserved": true}
+{"id": "bouquet_P055-S2", "chrf": 37.3, "bucket": "synonym_ok", "evidence": "'برجا کرین -> بنا ٹی ان'", "meaning_preserved": true}
+{"id": "smolsent_677", "chrf": 37.4, "bucket": "wrong_word", "evidence": "'کار حادثہ -> کار شکست'", "meaning_preserved": false}
+{"id": "bouquet_P083-S3", "chrf": 37.4, "bucket": "synonym_ok", "evidence": "'چالاکو -> ڈھکوک و چالاک ء'", "meaning_preserved": true}
+{"id": "smolsent_656", "chrf": 37.6, "bucket": "synonym_ok", "evidence": "'متروک مریک -> متکن مرو'", "meaning_preserved": true}
+{"id": "bouquet_P172-S1", "chrf": 37.6, "bucket": "orthography", "evidence": "'بے سرسہب -> بے سہب'", "meaning_preserved": true}
+{"id": "bouquet_P172-S4", "chrf": 37.8, "bucket": "synonym_ok", "evidence": "'ولدا النگ -> دوارہ دوئی کننگ'", "meaning_preserved": true}
+{"id": "bouquet_P310-S4", "chrf": 37.9, "bucket": "wrong_word", "evidence": "'بادرنگ دسیر -> الار خلکر'", "meaning_preserved": false}
+{"id": "bouquet_P172-S3", "chrf": 38.0, "bucket": "grammar", "evidence": "'شاغاٹ -> شاغ'", "meaning_preserved": false}
+{"id": "bouquet_P145-S4", "chrf": 38.1, "bucket": "synonym_ok", "evidence": "'ملزم و گواہ' -> 'دوبہ دار و شاہدی'", "meaning_preserved": true}
+{"id": "smolsent_580", "chrf": 38.3, "bucket": "omission", "evidence": "missing: 'born-in-a-stable' (سوبرو) -> only 'ودی مروکا'", "meaning_preserved": false}
+{"id": "bouquet_P373-S3", "chrf": 38.4, "bucket": "synonym_ok", "evidence": "'مہون او گلی' -> 'تہار ء گلی'", "meaning_preserved": true}
+{"id": "smolsent_207", "chrf": 38.5, "bucket": "synonym_ok", "evidence": "'ننا پام اسل زیات' -> 'ننا سمجھ آن بھاز ایڑتر'", "meaning_preserved": true}
+{"id": "smolsent_621", "chrf": 38.6, "bucket": "wrong_word", "evidence": "'گری گری' -> 'پنوک و مروک'", "meaning_preserved": false}
+{"id": "smolsent_685", "chrf": 38.6, "bucket": "synonym_ok", "evidence": "'شیئر کریر' -> 'تون اوار ئس'", "meaning_preserved": true}
+{"id": "bouquet_P227-S3", "chrf": 38.6, "bucket": "urdu_register", "evidence": "'چکاتا جاگہ' -> 'چڑیا گھر'", "meaning_preserved": true}
+{"id": "smolsent_222", "chrf": 38.7, "bucket": "synonym_ok", "evidence": "'وخت ئس ای جاچ ئے بنا کریٹ' -> 'ہراتم نن دورہ نا بناء کرین'", "meaning_preserved": true}
+{"id": "bouquet_P446-S1", "chrf": 38.9, "bucket": "wrong_word", "evidence": "'سیلز آتیکن' -> 'بہا کننگ کن'", "meaning_preserved": false}
+{"id": "bouquet_P172-S2", "chrf": 38.9, "bucket": "wrong_word", "evidence": "'چلیفوئی' (switch on) -> 'بند کروئی' (switch off)", "meaning_preserved": false}
+{"id": "smolsent_680", "chrf": 39.0, "bucket": "synonym_ok", "evidence": "'نسیسہ' -> 'چٹفنگ نا رجحان تخرے'", "meaning_preserved": true}
+{"id": "bouquet_P215-S3", "chrf": 39.1, "bucket": "wrong_word", "evidence": "'مونی اتننگ' (realize) -> 'پوہ مننگ' (understand)", "meaning_preserved": false}
+{"id": "smolsent_189", "chrf": 39.2, "bucket": "synonym_ok", "evidence": "'آخوبتی آ آمر' -> 'بروک آ آمر ... سرسہب مس'", "meaning_preserved": true}
+{"id": "smolsent_703", "chrf": 39.2, "bucket": "synonym_ok", "evidence": "'اولیکوے ... ارٹمی شعرپاروک؛ گلوکارہ' -> 'اول ... ارٹمیکو گلوکار'", "meaning_preserved": true}
+{"id": "smolsent_45", "chrf": 39.2, "bucket": "synonym_ok", "evidence": "'مونی دا کہ، روف، سلہ' -> 'داڑن بیدس، سرفبو، دنزبو'", "meaning_preserved": true}
+{"id": "smolsent_815", "chrf": 39.3, "bucket": "grammar", "evidence": "'مائیکروسافٹ ئے بونس پوائنٹس' -> 'مائیکروسافٹ نا پوائنٹس آتے نشان ایتک' (structure garbled; 'bonus' detached)", "meaning_preserved": false}
+{"id": "bouquet_P161-S2", "chrf": 39.4, "bucket": "synonym_ok", "evidence": "'پپی' -> 'کتی'; 'مہر کروکو' -> 'مہروان'", "meaning_preserved": true}
+{"id": "smolsent_763", "chrf": 39.5, "bucket": "urdu_register", "evidence": "'جوانو نتیجہ ئس ایتک' -> 'پیدوار مریک'", "meaning_preserved": true}
+{"id": "bouquet_P446-S2", "chrf": 39.6, "bucket": "entity", "evidence": "'ایل کورٹ انگلس' -> 'ایل اسکوپیٹ انگلیس'", "meaning_preserved": false}
+{"id": "bouquet_P398-S4", "chrf": 39.7, "bucket": "synonym_ok", "evidence": "'لباس' -> 'گد'; 'کل عام' -> 'غٹ لس'", "meaning_preserved": true}
+{"id": "smolsent_485", "chrf": 39.9, "bucket": "wrong_word", "evidence": "'بلینچڈ اسکویڈ' -> 'چٹوکا کلوار'", "meaning_preserved": false}
+{"id": "bouquet_P196-S3", "chrf": 39.9, "bucket": "synonym_ok", "evidence": "'غور و خلیس اٹ ہورک' -> 'خلیس آنبار حیران مرسا خننگ کیک'", "meaning_preserved": true}
+{"id": "smolsent_622", "chrf": 40.3, "bucket": "wrong_word", "evidence": "'کوٹغ' -> 'بادام'", "meaning_preserved": false}
+{"id": "bouquet_P055-S3", "chrf": 40.4, "bucket": "synonym_ok", "evidence": "'مدام آن و مدام ... ارے' -> 'مدام ... مسونے و مرو'", "meaning_preserved": true}
+{"id": "bouquet_P048-S1", "chrf": 40.4, "bucket": "urdu_register", "evidence": "'ٹکر خلنگ مفاد آتا' -> 'مفاد آتا تضاد نا اصطلاح'", "meaning_preserved": true}
+{"id": "smolsent_82", "chrf": 40.5, "bucket": "wrong_word", "evidence": "'موکل تننگ' -> 'محلت'; missing: 'opposite'", "meaning_preserved": false}
+{"id": "smolsent_777", "chrf": 40.5, "bucket": "synonym_ok", "evidence": "'تجرباتی دوائیک' -> 'آزمائشی دارو آک'; 'تہمل ٹی ایسور' -> 'آرام کریر'", "meaning_preserved": true}
+{"id": "bouquet_P115-S2", "chrf": 40.5, "bucket": "omission", "evidence": "'ننے دعا ایتیرے' -> 'و برکت' (verb missing, truncated)", "meaning_preserved": true}
+{"id": "bouquet_P139-S3", "chrf": 40.8, "bucket": "synonym_ok", "evidence": "'چاہسٹ ... واپس کننگ اٹی اے' -> 'کنے سما تما ... پدی تس'", "meaning_preserved": true}
+{"id": "smolsent_710", "chrf": 41.1, "bucket": "synonym_ok", "evidence": "'رکاوٹ' -> 'ہڑاند'; 'تقسیم' -> 'بشخنگ'; 'ٹیک کمپنی' -> 'ٹیک دیو'", "meaning_preserved": true}
+{"id": "smolsent_268", "chrf": 41.2, "bucket": "urdu_register", "evidence": "'پلگارا توبے نا رقص' -> 'مقدس چاند ناچ'", "meaning_preserved": true}
+{"id": "bouquet_P330-S2", "chrf": 41.2, "bucket": "synonym_ok", "evidence": "'کاریم ئے وخت آ پورو کننگ نا لائخی ارے' -> 'کاریم نا پورو مننگ نا ضمانت تننگ نا لائخی' (the system includes 'guarantee'; the reference leaves it out)", "meaning_preserved": true}
+{"id": "bouquet_P458-S3", "chrf": 41.2, "bucket": "synonym_ok", "evidence": "'مجبور او' -> 'بیوس ء'; 'اسہ وڑ کننگ' -> 'ہم جنس جوڑ کننگ'", "meaning_preserved": true}
+{"id": "smolsent_841", "chrf": 41.3, "bucket": "synonym_ok", "evidence": "'چنکا و بھلا فیصلہ غاک' -> 'کل آن چنکا ... بھلا فیصلہ غاتسکان' (the system keeps 'smallest/greatest'; the reference does not)", "meaning_preserved": true}
+{"id": "bouquet_P376-S3", "chrf": 41.3, "bucket": "urdu_register", "evidence": "'گڑا تے' -> 'مصنوعات'; 'لڑ' -> 'فہرست'; 'جوان' -> 'بہتر'", "meaning_preserved": true}
+{"id": "smolsent_771", "chrf": 41.6, "bucket": "synonym_ok", "evidence": "'غیر مرکوز ومرکوز' -> 'بے فوکس و فوکس کروک'", "meaning_preserved": true}
+{"id": "smolsent_412", "chrf": 41.7, "bucket": "entity", "evidence": "'نو فٹ' -> 'نت فٹ'", "meaning_preserved": false}
+{"id": "smolsent_618", "chrf": 41.7, "bucket": "synonym_ok", "evidence": "'بری مننگ، و معافی (یا خلاسی)' -> 'یلہ کننگ و بشخنگ (یا چٹفنگ)'", "meaning_preserved": true}
+{"id": "smolsent_589", "chrf": 42.0, "bucket": "synonym_ok", "evidence": "'اقدام ... شدید کاختی ... توروئی' -> 'گام گیج ... نازرک تنکی ... توننگ'", "meaning_preserved": true}
+{"id": "bouquet_P276-S2", "chrf": 42.0, "bucket": "orthography", "evidence": "'سلابو' -> 'سل بو'", "meaning_preserved": true}
+{"id": "bouquet_P127-S4", "chrf": 42.0, "bucket": "wrong_word", "evidence": "'تفصیل ئے ہوریو' -> 'سرجم آتے رسینگ تنے'", "meaning_preserved": false}
+{"id": "smolsent_413", "chrf": 42.3, "bucket": "grammar", "evidence": "'آشوبی جنگ ئے کریر' -> 'انقلاب تون جنگ کریر'", "meaning_preserved": false}
+{"id": "smolsent_369", "chrf": 43.1, "bucket": "synonym_ok", "evidence": "'درآمد ... ذمہ وارے' -> 'امپورٹ ... زموار مریرہ'", "meaning_preserved": true}
+{"id": "bouquet_P103-S1", "chrf": 43.1, "bucket": "wrong_word", "evidence": "'وباؤ تے' -> 'دین ئنا خدا / دین'", "meaning_preserved": false}
+{"id": "bouquet_P098-S3", "chrf": 43.2, "bucket": "synonym_ok", "evidence": "'بھلو مسخت' -> 'مرغن وختی مسخت'; 'اواری' -> 'اسیجا'", "meaning_preserved": true}
+{"id": "bouquet_P098-S2", "chrf": 43.3, "bucket": "synonym_ok", "evidence": "'کم پیسہ ٹی تیز رفتار' -> 'اڑزان و ترند'", "meaning_preserved": true}
+{"id": "bouquet_P422-S4", "chrf": 43.4, "bucket": "synonym_ok", "evidence": "'آؤ، کنتون دادے' -> 'ببو، جی، داڑے کنتون ارے'", "meaning_preserved": true}
+{"id": "bouquet_P048-S2", "chrf": 43.4, "bucket": "urdu_register", "evidence": "'برخلاف مریر گڑا' -> 'تضاد کیک تو'", "meaning_preserved": true}
+{"id": "bouquet_P127-S5", "chrf": 43.4, "bucket": "synonym_ok", "evidence": "'وختی روانہ مسونے' -> 'مہالو آن نما کنڈا بننگ ئے'", "meaning_preserved": true}
+{"id": "smolsent_772", "chrf": 43.6, "bucket": "synonym_ok", "evidence": "'گواچنی پیداواری ایسری' -> 'حقی پیداواری حل'", "meaning_preserved": true}
+{"id": "smolsent_695", "chrf": 43.9, "bucket": "entity", "evidence": "'نیمہ ملین' -> 'نیم لکھ'", "meaning_preserved": false}
+{"id": "bouquet_P012-S3", "chrf": 44.1, "bucket": "urdu_register", "evidence": "'زیات غصہ کپہ' -> 'زیادہ رد عمل بند کبو'", "meaning_preserved": true}
+{"id": "bouquet_P139-S1", "chrf": 44.1, "bucket": "wrong_word", "evidence": "'بےچینی' -> 'گمان'", "meaning_preserved": false}
+{"id": "bouquet_P103-S4", "chrf": 44.2, "bucket": "synonym_ok", "evidence": "'جتا خلق آتیٹی' -> 'جتا علاقہ آتیٹ'", "meaning_preserved": true}
+{"id": "smolsent_711", "chrf": 44.4, "bucket": "synonym_ok", "evidence": "'رہامس' -> 'یلہ کننگا'", "meaning_preserved": true}
+{"id": "smolsent_549", "chrf": 44.7, "bucket": "urdu_register", "evidence": "'پوسکنا' -> 'جدید'", "meaning_preserved": true}
+{"id": "bouquet_P435-S3", "chrf": 44.7, "bucket": "synonym_ok", "evidence": "'اوفتیٹی بھاز سی ئس' -> 'اوفک بھاز چرپی ئسر'", "meaning_preserved": true}
+{"id": "smolsent_642", "chrf": 44.8, "bucket": "urdu_register", "evidence": "'باگل' -> 'گانا'", "meaning_preserved": true}
+{"id": "smolsent_778", "chrf": 44.8, "bucket": "wrong_word", "evidence": "'کمک کیک' -> 'مخ تفی ء کیک'", "meaning_preserved": false}
+{"id": "smolsent_790", "chrf": 44.9, "bucket": "urdu_register", "evidence": "'توئی' -> 'ماہانہ'", "meaning_preserved": true}
+{"id": "bouquet_P409-S1", "chrf": 44.9, "bucket": "synonym_ok", "evidence": "'کنٹرول کننگ' -> 'سنبھالنگ'", "meaning_preserved": true}
+{"id": "bouquet_P137-S2", "chrf": 45.0, "bucket": "urdu_register", "evidence": "'بش' -> 'بیدار'", "meaning_preserved": true}
+{"id": "smolsent_126", "chrf": 45.1, "bucket": "synonym_ok", "evidence": "'باز کم بندغ آک وخت ئس' -> 'بندغ آک بھاز کم'", "meaning_preserved": true}
+{"id": "smolsent_136", "chrf": 45.2, "bucket": "wrong_word", "evidence": "with a slotted spoon -> 'چمچہ ئس شاغسہ' (putting a spoon in)", "meaning_preserved": false}
+{"id": "smolsent_652", "chrf": 45.4, "bucket": "synonym_ok", "evidence": "'سوآ سلوک مریرہ' -> 'سو آن گزران کریرہ'", "meaning_preserved": true}
+{"id": "bouquet_P177-S2", "chrf": 45.7, "bucket": "synonym_ok", "evidence": "'چکنگ نا خلاف' -> 'کشنگ آن بچنگ نا'", "meaning_preserved": true}
+{"id": "bouquet_P398-S3", "chrf": 46.0, "bucket": "wrong_word", "evidence": "'سودا الکونن' -> 'دکانداری کینہ' (running a shop)", "meaning_preserved": false}
+{"id": "bouquet_P196-S4", "chrf": 46.3, "bucket": "omission", "evidence": "missing: 'آخر' (possibly)", "meaning_preserved": true}
+{"id": "bouquet_P030-S3", "chrf": 46.5, "bucket": "synonym_ok", "evidence": "'پیشیم' -> 'نیمروچ'; 'سلیوہ' -> 'مریوہ'", "meaning_preserved": true}
+{"id": "smolsent_765", "chrf": 46.7, "bucket": "synonym_ok", "evidence": "'برعکس' -> 'چپ'; 'تقریبا' -> 'کم و ود'", "meaning_preserved": true}
+{"id": "bouquet_P145-S1", "chrf": 46.8, "bucket": "synonym_ok", "evidence": "'دزار' -> 'لٹ و پل کننگا' (hyp also keeps Trier and afternoon)", "meaning_preserved": true}
+{"id": "smolsent_367", "chrf": 47.0, "bucket": "wrong_word", "evidence": "'بنیات' -> 'چوک' (crossroads, literal)", "meaning_preserved": false}
+{"id": "smolsent_686", "chrf": 47.0, "bucket": "synonym_ok", "evidence": "'زرس ارے کرے' -> 'پد بٹے'", "meaning_preserved": true}
+{"id": "bouquet_P359-S4", "chrf": 47.0, "bucket": "omission", "evidence": "missing: 'تپک' (negation); 'کس تپک' -> 'کسس' (someone)", "meaning_preserved": false}
+{"id": "smolsent_471", "chrf": 47.2, "bucket": "wrong_word", "evidence": "'پلاٹ' -> 'سازش' (conspiracy); 'کرائی پئوجی' -> 'کرایہ دار' (tenants)", "meaning_preserved": false}
+{"id": "smolsent_535", "chrf": 47.9, "bucket": "urdu_register", "evidence": "'مرو -> خرگوش'; also 'کنڈرگارٹن -> چنا باغ', 'خوایہ -> بیدہ'", "meaning_preserved": true}
+{"id": "bouquet_P258-S2", "chrf": 48.1, "bucket": "synonym_ok", "evidence": "'صرف جوانو ساعت -> بیرہ جوان انگا ساہت آک', 'حقیقت -> گواچن'", "meaning_preserved": true}
+{"id": "bouquet_P103-S2", "chrf": 48.1, "bucket": "entity", "evidence": "'چویوان -> کو یوان'", "meaning_preserved": true}
+{"id": "bouquet_P446-S3", "chrf": 48.3, "bucket": "synonym_ok", "evidence": "'دکان ... ارے -> اسٹورز ... دو بریک'", "meaning_preserved": true}
+{"id": "smolsent_728", "chrf": 48.7, "bucket": "synonym_ok", "evidence": "'کارندہ -> عہدیدار', 'ایجنسیک -> ادارہ', 'گل آک -> تنظیم آک'", "meaning_preserved": true}
+{"id": "bouquet_P363-S5", "chrf": 48.7, "bucket": "synonym_ok", "evidence": "'کوٹ -> بلیزر'", "meaning_preserved": true}
+{"id": "smolsent_823", "chrf": 49.0, "bucket": "synonym_ok", "evidence": "'تیوی -> غٹ', 'شوندتروکو -> لیس مریرہ'", "meaning_preserved": true}
+{"id": "smolsent_802", "chrf": 49.8, "bucket": "synonym_ok", "evidence": "'خدشہ تا اظہار -> گڑتی نا درشانی'", "meaning_preserved": true}
+{"id": "smolsent_538", "chrf": 49.8, "bucket": "synonym_ok", "evidence": "'سم ئس خلنگ -> شوٹ کننگ', 'کھڑکی -> درنجہ'", "meaning_preserved": true}
+{"id": "smolsent_767", "chrf": 50.3, "bucket": "synonym_ok", "evidence": "'داتسکان کہ ... رجوع کننگ -> ہم ... کنڈ آ ہننگ'", "meaning_preserved": true}
+{"id": "bouquet_P139-S2", "chrf": 50.5, "bucket": "wrong_word", "evidence": "'کنا دو آ -> کنا زی آ' (on my hand -> on me)", "meaning_preserved": false}
+{"id": "smolsent_614", "chrf": 51.1, "bucket": "wrong_word", "evidence": "'جہاندم نا وڑ دوست -> دوزخ آن ہنین' (literal 'hell')", "meaning_preserved": false}
+{"id": "bouquet_P376-S1", "chrf": 51.1, "bucket": "synonym_ok", "evidence": "'اصلی ... گدرینگانے -> گواچنی ء ... مسنے'", "meaning_preserved": true}
+{"id": "smolsent_726", "chrf": 51.5, "bucket": "entity", "evidence": "'ہوبی لابی -> شوقین لابی'", "meaning_preserved": false}
+{"id": "smolsent_627", "chrf": 51.5, "bucket": "synonym_ok", "evidence": "'کنجا آ -> جاگہ غا'", "meaning_preserved": true}
+{"id": "smolsent_109", "chrf": 51.6, "bucket": "synonym_ok", "evidence": "'مرنا پچخ ... شیڑتیفنگک' -> 'انا نا کوپہ ... لتاڑنگک'", "meaning_preserved": true}
+{"id": "bouquet_P258-S3", "chrf": 51.6, "bucket": "synonym_ok", "evidence": "'صرف ... نشان ایتینہ' -> 'بیرہ ... مون پاش کینہ'", "meaning_preserved": true}
+{"id": "bouquet_P398-S2", "chrf": 51.8, "bucket": "synonym_ok", "evidence": "'ڈس ئے خلنگ' -> 'سرپند مننگ' (hyp also keeps 'today' = اینو)", "meaning_preserved": true}
+{"id": "smolsent_230", "chrf": 52.4, "bucket": "synonym_ok", "evidence": "'ایندھن یکجہ' -> 'تیل مچ'", "meaning_preserved": true}
+{"id": "bouquet_P422-S2", "chrf": 52.5, "bucket": "synonym_ok", "evidence": "'ملیتو ... ڈیلیور مسونے' -> 'رسینگتویسس ... سر مسونے'", "meaning_preserved": true}
+{"id": "bouquet_P297-S2", "chrf": 52.7, "bucket": "synonym_ok", "evidence": "'وار وارس' -> 'وخت وخت'", "meaning_preserved": true}
+{"id": "bouquet_P343-S2", "chrf": 52.9, "bucket": "orthography", "evidence": "'کارڈ' -> 'کار'", "meaning_preserved": true}
+{"id": "bouquet_P297-S5", "chrf": 53.2, "bucket": "synonym_ok", "evidence": "'ہوشیار مبو' -> 'خیالداری کبو'", "meaning_preserved": true}
+{"id": "bouquet_P422-S1", "chrf": 53.2, "bucket": "entity", "evidence": "'مارٹا' -> 'مرسٹا' (also 'بخیر' -> 'شاباش')", "meaning_preserved": false}
+{"id": "bouquet_P229-S2", "chrf": 53.6, "bucket": "synonym_ok", "evidence": "'خراب' -> 'زہیری'; 'بچنگ نا ڈولاک' -> 'رکھوک خیالداری'", "meaning_preserved": true}
+{"id": "smolsent_586", "chrf": 53.8, "bucket": "urdu_register", "evidence": "'ارے کننگ' -> 'تاخیر'", "meaning_preserved": true}
+{"id": "smolsent_522", "chrf": 54.1, "bucket": "wrong_word", "evidence": "'پتنہ' -> 'خیسن'", "meaning_preserved": false}
+{"id": "bouquet_P463-S2", "chrf": 54.5, "bucket": "synonym_ok", "evidence": "'خدونا ... ودیفنگ' -> 'تدوک آ ... ودکی'", "meaning_preserved": true}
+{"id": "bouquet_P343-S3", "chrf": 55.7, "bucket": "urdu_register", "evidence": "'ناجوڑ ... ملوک' -> 'مریض ... فعال'", "meaning_preserved": true}
+{"id": "smolsent_833", "chrf": 56.3, "bucket": "synonym_ok", "evidence": "'بارواٹ انت خیال ئے' -> 'انت ... بارواٹ'", "meaning_preserved": true}
+{"id": "bouquet_P325-S1", "chrf": 56.4, "bucket": "urdu_register", "evidence": "'ہیڷ' -> 'مکڑی'", "meaning_preserved": true}
+{"id": "smolsent_847", "chrf": 56.5, "bucket": "synonym_ok", "evidence": "'تنقید' -> 'نغد کاری'", "meaning_preserved": true}
+{"id": "bouquet_P276-S1", "chrf": 56.5, "bucket": "synonym_ok", "evidence": "'اسکول ٹی ہڑدے وردی' -> 'اسکول آ ہڑدے پورو وردی'", "meaning_preserved": true}
+{"id": "bouquet_P115-S4", "chrf": 56.9, "bucket": "entity", "evidence": "'ہائی یوئے' -> 'ہائیوے'", "meaning_preserved": false}
+{"id": "smolsent_414", "chrf": 57.7, "bucket": "wrong_word", "evidence": "'سیٹی' -> 'توفک'", "meaning_preserved": false}
+{"id": "bouquet_P127-S2", "chrf": 57.7, "bucket": "synonym_ok", "evidence": "'خواست ٹی خوشی اٹ کمک کیوہ' -> 'درخواست تون نما کمک ء کننگ ٹی خوش مریوہ'", "meaning_preserved": true}
+{"id": "smolsent_825", "chrf": 57.8, "bucket": "synonym_ok", "evidence": "'پیادہ ہن' -> 'پند خلنگ'", "meaning_preserved": true}
+{"id": "bouquet_P261-S2", "chrf": 58.1, "bucket": "synonym_ok", "evidence": "'ملیرہ' -> 'دو بریرہ'", "meaning_preserved": true}
+{"id": "smolsent_793", "chrf": 58.7, "bucket": "urdu_register", "evidence": "'زندہ سلیسور' -> 'بچار'", "meaning_preserved": true}
+{"id": "smolsent_827", "chrf": 58.9, "bucket": "synonym_ok", "evidence": "'نمائندہ اسے نا وڑ خدمت کرے' -> 'نمائندہ نا حیثیت ئٹ کاریم کرے'", "meaning_preserved": true}
+{"id": "smolsent_479", "chrf": 59.4, "bucket": "urdu_register", "evidence": "'بھلو پنی' -> 'عظیم'", "meaning_preserved": true}
+{"id": "bouquet_P435-S1", "chrf": 59.4, "bucket": "synonym_ok", "evidence": "'گچین الو' -> 'جوان اف'", "meaning_preserved": true}
+{"id": "bouquet_P261-S1", "chrf": 60.3, "bucket": "synonym_ok", "evidence": "'لائک' -> 'پسند'", "meaning_preserved": true}
+{"id": "bouquet_P422-S3", "chrf": 61.6, "bucket": "entity", "evidence": "'تصدیقی' -> 'کنفیمیشن'", "meaning_preserved": true}
+{"id": "smolsent_254", "chrf": 61.9, "bucket": "wrong_word", "evidence": "'مسلسل' -> 'متزلزل'", "meaning_preserved": false}
+{"id": "bouquet_P127-S1", "chrf": 63.5, "bucket": "synonym_ok", "evidence": "'پارسل' -> 'پیکج'", "meaning_preserved": true}
+{"id": "smolsent_557", "chrf": 65.5, "bucket": "orthography", "evidence": "'اس' -> 'ئس'; 'تما' -> 'ئس'", "meaning_preserved": false}
+{"id": "bouquet_P090-S1", "chrf": 66.0, "bucket": "grammar", "evidence": "'استاک' -> 'استار' (plural -> singular)", "meaning_preserved": true}
+{"id": "bouquet_P359-S3", "chrf": 66.5, "bucket": "synonym_ok", "evidence": "'لائخ' -> 'ہشار'", "meaning_preserved": true}
+{"id": "bouquet_P177-S1", "chrf": 67.2, "bucket": "synonym_ok", "evidence": "'جوان وڑ اٹ وارم اپ' -> 'سیشن آن مست جوان وارم اپ'", "meaning_preserved": true}
+{"id": "bouquet_P363-S2", "chrf": 68.7, "bucket": "synonym_ok", "evidence": "'ہرا' -> 'ہرا اسٹ'", "meaning_preserved": true}
+{"id": "bouquet_P363-S4", "chrf": 68.7, "bucket": "synonym_ok", "evidence": "'ہرا' -> 'ہرا اسٹ'", "meaning_preserved": true}
+{"id": "smolsent_718", "chrf": 69.7, "bucket": "synonym_ok", "evidence": "'آخ اوارمریر' -> 'تالان مریرہ'", "meaning_preserved": true}
+{"id": "bouquet_P012-S1", "chrf": 70.3, "bucket": "synonym_ok", "evidence": "'کنے لگتو' -> 'کنا خیال الو'", "meaning_preserved": true}
+{"id": "smolsent_843", "chrf": 71.3, "bucket": "synonym_ok", "evidence": "'نا فہرست' -> 'لسٹنگ'", "meaning_preserved": true}
+{"id": "bouquet_P127-S3", "chrf": 71.4, "bucket": "synonym_ok", "evidence": "'نمبر دا دے 12345678' -> 'نمبر 12345678ء'", "meaning_preserved": true}
+{"id": "smolsent_811", "chrf": 72.4, "bucket": "urdu_register", "evidence": "'فرشتہ غاک' -> 'ملائکہ غاک'", "meaning_preserved": true}
+{"id": "bouquet_P258-S1", "chrf": 78.9, "bucket": "urdu_register", "evidence": "'بدلیفنگ اے' -> 'بدل کننگ کیک'", "meaning_preserved": true}
+{"id": "bouquet_P098-S1", "chrf": 84.1, "bucket": "orthography", "evidence": "'باروٹ' -> 'بارو اٹ'", "meaning_preserved": true}
+{"id": "bouquet_P030-S1", "chrf": 85.9, "bucket": "synonym_ok", "evidence": "'خوارے' -> 'خواسہ'", "meaning_preserved": true}
+{"id": "bouquet_P115-S3", "chrf": 93.2, "bucket": "orthography", "evidence": "'2009' -> '2009ء' (the hypothesis adds the year marker ء; the date is the same)", "meaning_preserved": true}
+{"id": "bouquet_P442-S3", "chrf": 100.0, "bucket": "synonym_ok", "evidence": "The hypothesis matches the reference exactly: 'جوان سوج' -> 'جوان سوج'", "meaning_preserved": true}

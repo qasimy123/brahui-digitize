@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brahui word pronunciation check</title>
+<style>
+  :root { --bg:#f6f4ef; --card:#fffdf8; --ink:#1f2a2e; --muted:#5d6b70; --line:#ddd6c8; --accent:#0f6b5c; --accent-ink:#fff; --warn:#8a5a00; --bad:#a23b2a; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#15191b; --card:#1d2326; --ink:#e9ecea; --muted:#9aa8ab; --line:#313a3e; --accent:#4fc3a8; --accent-ink:#0c1a17; --warn:#e0b060; --bad:#f08a78; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:24px 16px 120px; }
+  h1 { font-size:1.5rem; margin:0 0 6px; } .lede { color:var(--muted); margin:0 0 16px; }
+  .how { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin-bottom:16px; }
+  .how ul { margin:6px 0 0; padding-left:20px; } code { background:var(--bg); border:1px solid var(--line); border-radius:5px; padding:0 5px; }
+  .who { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px; }
+  input[type=text] { font:inherit; color:var(--ink); background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:7px 10px; }
+  .row { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; margin:12px 0; }
+  .row.ok { border-color:var(--accent); } .row.fixed { border-color:var(--warn); } .row.unsure, .row.badaudio { border-color:var(--bad); }
+  .top { display:flex; gap:12px; align-items:baseline; flex-wrap:wrap; }
+  .i { color:var(--muted); font-size:.8rem; min-width:28px; }
+  .spell { font-size:1.5rem; font-weight:650; width:220px; max-width:100%; }
+  .en { color:var(--muted); flex:1; min-width:160px; }
+  .ar { direction:rtl; color:var(--muted); font-size:1.15rem; font-family:"Geeza Pro","Noto Naskh Arabic",serif; }
+  .conf { font-size:.82rem; color:var(--muted); margin-top:6px; } .conf b { border-radius:999px; padding:1px 9px; margin-right:6px; border:1px solid currentColor; font-weight:600; }
+  .conf.low b { color:var(--bad); } .conf.medium b { color:var(--warn); } .conf.high b { color:var(--accent); }
+  h2.tier { font-size:1rem; margin:26px 0 0; color:var(--muted); font-weight:600; }
+  .ex { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:10px; padding-top:10px; border-top:1px dashed var(--line); }
+  .ex .txt { flex:1; min-width:180px; color:var(--muted); } .ex .txt b { color:var(--ink); }
+  .play { background:transparent; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:5px 12px; font:inherit; cursor:pointer; }
+  .play.on { background:var(--accent); color:var(--accent-ink); }
+  .btns { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+  .btns label { border:1px solid var(--line); border-radius:999px; padding:5px 13px; cursor:pointer; user-select:none; font-size:.92rem; }
+  .btns input { position:absolute; opacity:0; } .btns label:has(input:checked) { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .btns label:has(input:focus-visible) { outline:2px solid var(--accent); outline-offset:2px; }
+  .none { color:var(--muted); font-size:.9rem; margin-top:8px; }
+  .bar { position:fixed; left:0; right:0; bottom:0; background:var(--card); border-top:1px solid var(--line); padding:10px 16px; }
+  .bar div { max-width:720px; margin:0 auto; display:flex; gap:10px; align-items:center; flex-wrap:wrap; } .bar span { flex:1; min-width:140px; color:var(--muted); }
+  button.dl { font:inherit; border-radius:8px; padding:9px 14px; border:1px solid var(--accent); background:var(--accent); color:var(--accent-ink); cursor:pointer; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Brahui word pronunciation check</h1>
+  <p class="lede">No Arabic script needed. For each common word you hear real speakers say it, and see the spelling the computer voice will read. Fix the spelling when it doesn't match what you hear.</p>
+  <div class="how">
+    <strong>How to review</strong>
+    <ul>
+      <li>Press <em>Word</em> to hear the word alone, or <em>Phrase</em> to hear it inside a few words. The phrase is written out with the word in bold.</li>
+      <li>If the big spelling matches the sound, press <em>Matches</em>. If not, type it the way it sounds; it is then marked <em>Fixed</em>.</li>
+      <li>Spelling: <code>a i u</code> are short, <code>ā ī ū</code> are long (you can type <code>aa ii uu</code>), plus <code>e</code> and <code>o</code>. <code>kh gh sh ch</code> are single sounds; <code>ṭ ḍ ṛ</code> can be typed <code>T D R</code>.</li>
+      <li>The clips are cut by a machine, so some start late or catch a neighbouring word. Most words have two recordings: if one is wrong, ignore it and judge from the other. Press <em>No clip is right</em> only when none of them is the word shown. If you can't tell, press <em>Unsure</em>.</li>
+      <li>Words are ordered from least to most certain, and each shows how sure the computer is of its spelling. The first group matters most; the last group is mostly a quick confirmation.</li>
+      <li>You don't have to finish: answers save as you go. Press <em>Download results</em> when you stop and tell Claude.</li>
+    </ul>
+    <div class="who"><label for="who">Reviewer</label><input type="text" id="who" placeholder="your name"></div>
+  </div>
+  <div id="list"></div>
+</main>
+<div class="bar"><div><span id="prog"></span><button class="dl" id="dl">Download results</button></div></div>
+<script>
+const ITEMS = /*ITEMS*/[];
+const SK = "brahui_vowel_review_v2";
+let state = {}; try { state = JSON.parse(localStorage.getItem(SK) || "{}"); } catch (e) {}
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const safe = s => esc(s).replace(/&lt;(\/?)b&gt;/g, "<$1b>");
+const fix = s => s.replace(/aa/g, "ā").replace(/ii/g, "ī").replace(/uu/g, "ū").replace(/T/g, "ṭ").replace(/D/g, "ḍ").replace(/R/g, "ṛ").trim();
+const list = document.getElementById("list"); const player = new Audio(); let onBtn = null;
+player.addEventListener("ended", () => { if (onBtn) onBtn.classList.remove("on"); });
+const CONF = { low: "Low confidence", medium: "Medium confidence", high: "High confidence" };
+const TIER = { low: "Least certain: please check these first", medium: "Fairly certain", high: "Most certain: from the dictionary" };
+let tier = "";
+ITEMS.forEach((it, i) => {
+  if (it.conf !== tier) { tier = it.conf; const h = document.createElement("h2"); h.className = "tier"; h.textContent = TIER[tier] + " (" + ITEMS.filter(x => x.conf === tier).length + " words)"; list.appendChild(h); }
+  const s = state[it.w] = state[it.w] || { roman: it.r, status: "" };
+  const el = document.createElement("section"); el.className = "row " + s.status; el.dataset.i = i;
+  el.innerHTML = `<div class="top"><span class="i">${i + 1}</span>
+      <input class="spell" type="text" value="${esc(s.roman)}" aria-label="Spelling of word ${i + 1}" autocapitalize="off" autocomplete="off" spellcheck="false">
+      <span class="en">${it.en ? esc(it.en) : "(no meaning on file)"}</span><span class="ar" lang="brh">${esc(it.w)}</span></div>
+    <div class="conf ${it.conf}"><b>${CONF[it.conf]}</b>${esc(it.why)}${it.alt && it.alt.length ? " Also seen: " + it.alt.map(esc).join(", ") + "." : ""}</div>
+    ${it.ac ? '<div class="conf">' + esc(it.ac) + "</div>" : ""}
+    ${it.ex.length ? it.ex.map((x, j) => `<div class="ex"><button class="play" data-k="word" data-j="${j}">Word</button><button class="play" data-k="phrase" data-j="${j}">Phrase</button><span class="txt">${safe(x.txt)}</span></div>`).join("") : '<div class="none">No recording found for this word.</div>'}
+    <div class="btns">${[["ok", "Matches"], ["fixed", "Fixed"], ["unsure", "Unsure"], ["badaudio", "No clip is right"]].map(([v, t]) => `<label><input type="radio" name="s${i}" value="${v}" ${s.status === v ? "checked" : ""}> ${t}</label>`).join("")}</div>`;
+  list.appendChild(el);
+});
+const save = () => { try { localStorage.setItem(SK, JSON.stringify(state)); } catch (e) {} progress(); };
+list.addEventListener("click", e => {
+  const b = e.target.closest(".play"); if (!b) return;
+  const it = ITEMS[b.closest(".row").dataset.i]; if (onBtn) onBtn.classList.remove("on");
+  player.src = "data:audio/mpeg;base64," + it.ex[b.dataset.j][b.dataset.k]; player.play(); onBtn = b; b.classList.add("on");
+});
+list.addEventListener("input", e => {
+  const row = e.target.closest(".row"), it = ITEMS[row.dataset.i], s = state[it.w];
+  if (e.target.type === "radio") s.status = e.target.value;
+  else { s.roman = e.target.value; if (fix(s.roman) !== it.r) { s.status = "fixed"; row.querySelector('input[value="fixed"]').checked = true; } }
+  row.className = "row " + s.status; save();
+});
+const who = document.getElementById("who"); who.value = state._who || ""; who.addEventListener("input", () => { state._who = who.value; save(); });
+function progress() { const d = ITEMS.filter(it => state[it.w].status).length; document.getElementById("prog").textContent = d + " of " + ITEMS.length + " checked (saved in this browser)"; }
+document.getElementById("dl").onclick = () => {
+  const out = { reviewer: state._who || "", words: ITEMS.filter(it => state[it.w].status).map(it => ({ word: it.w, proposed: it.r, roman: fix(state[it.w].roman), status: state[it.w].status, count: it.c, how: it.how, conf: it.conf })) };
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 1)], { type: "application/json" }));
+  a.download = "brahui_vowel_review" + (state._who ? "_" + state._who.replace(/\W+/g, "_") : "") + ".json"; a.click();
+};
+progress();
+</script>
+</body>
+</html>

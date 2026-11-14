@@ -1,0 +1,26 @@
+{
+  "description": "v0 system prompt, same shots, Claude Fable 5.1 (model lever), test split only",
+  "target": "system_prompt",
+  "prompt_file": "evals/mt/prompts/system_v0.md",
+  "prompt_file_brh2en": null,
+  "model": "claude-fable-5-1",
+  "effort": null,
+  "shots_each": 3,
+  "shots_fixed": 12,
+  "scores": {
+    "en2brh/test": {
+      "n": 200,
+      "chrfpp": 35.46,
+      "bleu": 9.08,
+      "mean_sent_chrfpp": 35.58
+    },
+    "brh2en/test": {
+      "n": 854,
+      "chrfpp": 56.28,
+      "bleu": 36.93,
+      "mean_sent_chrfpp": 57.86
+    }
+  },
+  "rows": 1054,
+  "error_rows": 0
+}

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brahui Talk</title>
+<script src="coi-serviceworker.min.js"></script>
+<script src="config.js"></script>
+<style>
+  :root { --bg:#fafafa; --fg:#111; --muted:#666; --card:#fff; --border:#ddd; --accent:#0b57d0; --rec:#d32f2f; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111; --fg:#eee; --muted:#999; --card:#1b1b1b; --border:#333; --accent:#8ab4f8; --rec:#ef5350; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:24px 16px 48px; }
+  h1 { font-size:1.4rem; margin:0 0 4px; } .sub { color:var(--muted); margin:0 0 20px; font-size:.95rem; }
+  .bar { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:16px; }
+  button, select { font:inherit; padding:8px 14px; border-radius:8px; border:1px solid var(--border); background:var(--card); color:var(--fg); cursor:pointer; }
+  button:disabled { opacity:.5; cursor:default; }
+  #mic { font-size:1.25rem; padding:18px 28px; border-radius:999px; background:var(--accent); color:#fff; border:0; }
+  #mic.rec { background:var(--rec); animation:pulse 1.2s infinite; } @keyframes pulse { 50% { opacity:.65; } }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 18px; margin:12px 0; }
+  .label { color:var(--muted); font-size:.8rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; }
+  .big { font-size:1.6rem; line-height:1.5; } .rtl { direction:rtl; text-align:right; font-size:1.9rem; }
+  .rom { color:var(--muted); font-size:1.05rem; margin-top:4px; } #status { color:var(--muted); font-size:.9rem; min-height:1.4em; }
+  progress { width:100%; height:6px; } .small { font-size:.85rem; color:var(--muted); }
+</style></head><body><main>
+<h1>Brahui ⇄ English, spoken</h1>
+<p class="sub">Say something in English and get Brahui (script + romanized); say something in Brahui and get English. Everything runs in your browser; nothing is uploaded.</p>
+<div class="bar">
+  <button id="load">Load models (≈2.6 GB once, then cached)</button>
+  <select id="lang"><option value="auto">Language: auto-detect</option><option value="brh">I'm speaking Brahui</option><option value="en">I'm speaking English</option></select>
+</div>
+<progress id="prog" max="1" value="0" hidden></progress>
+<div id="status">models not loaded</div>
+<div class="bar" style="margin-top:16px">
+  <button id="mic" disabled>🎤 Hold to talk</button>
+  <input type="file" id="file" accept="audio/*" disabled>
+  <button id="sampleBrh" disabled>Brahui sample</button><button id="sampleEn" disabled>English sample</button>
+</div>
+<div class="card" id="heardCard" hidden><div class="label" id="heardLabel">You said</div><div id="heard" class="big"></div><div id="heardRom" class="rom"></div></div>
+<div class="card" id="outCard" hidden><div class="label" id="outLabel">Translation</div><div id="out" class="big"></div><div id="outRom" class="rom"></div><button id="again" hidden>🔊 Play again</button></div>
+<div class="small" id="timing"></div>
+<p class="small">Models: Brahui ASR = omniASR-CTC-300M fine-tune + character-LM beam search; English ASR = Moonshine base; Brahui→English = distilled NLLB (24/6); English→Brahui = NLLB-1.3B r5 (vocab-trimmed, int8). Brahui voice = distilled VITS. Hold the mic button (or press and hold the space bar) while speaking; translation starts at your first pause, so release when you are done. The microphone stays open while this tab is visible so a press starts instantly.</p>
+<script type="module">
+import { pipeline, env, AutoProcessor, AutoModelForCTC, AutoModel, Tensor, StoppingCriteria } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.5.2';
+import { loadCharLM, ctcPrefixBeam } from './ctc_lm.js';
+import { romanize } from './romanize.js';
+const CFG = window.BRAHUI_MODELS || {}; const q = new URLSearchParams(location.search); const $ = id => document.getElementById(id);
+env.allowRemoteModels = !!CFG.remote; env.allowLocalModels = !CFG.remote; env.localModelPath = new URL('./models/', location.href).href;
+env.useBrowserCache = !location.hostname.match(/^(localhost|127\.0\.0\.1)$/);
+const M = { asrBrh: q.get('asr') || CFG.asr || 'ctc300m_student', asrEn: q.get('asren') || CFG.asr_en || 'moonshine-base',
+            mtB2E: q.get('mt') || CFG.mt || 'student_c', mtE2B: q.get('mt_e2b') || CFG.mt_e2b || 'nllb_r5_trim', tts: q.get('tts') || CFG.tts || 'tts_student', lm: CFG.lm || `${env.localModelPath}brh_char6.blm` };
+const base = m => CFG.remote ? `https://huggingface.co/${m}/resolve/main/` : `${env.localModelPath}${m}/`;
+async function extFlags(model, dtype, files) {  // tell transformers.js which .onnx files carry a .onnx_data sidecar
+  const suf = { fp32: '', q8: '_quantized', q4: '_q4', fp16: '_fp16' }[dtype] ?? ''; const out = {};
+  await Promise.all(files.map(async f => { const r = await fetch(`${base(model)}onnx/${f}${suf}.onnx_data`, { method: 'HEAD' }).catch(() => null); out[f] = !!(r && r.ok); }));
+  return out;
+}
+const progress = p => { if (p.status === 'progress') { $('prog').hidden = false; $('prog').value = (p.progress || 0) / 100; } };
+const hasGPU = !!navigator.gpu; let models = null;
+$('load').onclick = async () => {
+  $('load').disabled = true; const t0 = performance.now();
+  let cur = ''; const step = async (name, fn) => { cur = name; $('status').textContent = `loading ${name}…`; const r = await fn(); return r; };
+  try {
+    const m = {};
+    const dev = hasGPU ? 'webgpu' : 'wasm', dt = hasGPU ? 'fp16' : 'q8';
+    const vocab = await fetch(base(M.asrBrh) + 'vocab.json').then(r => r.json());
+    m.id2ch = new Map(Object.entries(vocab).filter(([t]) => t.length === 1).map(([t, i]) => [i, t]));
+    [m.brhProc, m.brhModel, m.lm] = await step('Brahui speech model', async () => Promise.all([AutoProcessor.from_pretrained(M.asrBrh),
+      AutoModelForCTC.from_pretrained(M.asrBrh, { device: dev, dtype: dt, use_external_data_format: await extFlags(M.asrBrh, dt, ['model']), progress_callback: progress }), loadCharLM(M.lm)]));
+    // Whisper on WebGPU: fp32 encoder + q4 decoder is the configuration that loads (fp16 decoder throws an ORT allocation error).
+    const moon = /moonshine/.test(M.asrEn), enDev = q.get('endev') || (moon ? 'wasm' : dev), enDt = q.get('endtype') || (enDev === 'webgpu' ? { encoder_model: 'fp32', decoder_model_merged: 'q4' } : 'q8');
+    m.en = await step('English speech model', () => pipeline('automatic-speech-recognition', M.asrEn, { device: enDev, dtype: enDt, progress_callback: progress }));
+    const mtOpts = async name => ({ device: 'wasm', dtype: 'q8', use_external_data_format: await extFlags(name, 'q8', ['encoder_model', 'decoder_model_merged']), progress_callback: progress });
+    m.b2e = await step('Brahui→English translator', async () => pipeline('translation', M.mtB2E, await mtOpts(M.mtB2E)));
+    m.e2b = await step('English→Brahui translator', async () => pipeline('translation', M.mtE2B, await mtOpts(M.mtE2B)));
+    if (q.get('tts') !== '0') await step('Brahui voice', async () => {   // small VITS voice + the vowel table it reads from; the page works without it
+      try { [m.ttsVocab, m.vowelLex, m.tts] = await Promise.all([fetch(base(M.tts) + 'vocab.json').then(r => r.json()), fetch(`${env.localModelPath}vowel_lex.json`).then(r => r.json()),
+        AutoModel.from_pretrained(M.tts, { device: q.get('ttsdev') || 'wasm', dtype: q.get('ttsdtype') || 'fp32', progress_callback: progress })]); } catch (e) { console.warn('voice not loaded', e); m.tts = null; } });
+    models = m; $('prog').hidden = true;
+    await step('warm-up', async () => {   // first run of each model compiles shaders / allocates; pay that here, not on the first sentence
+      const z = new Float32Array(16000).map(() => (Math.random() - 0.5) * 0.02), w = newJob(z, z.length), save = $('lang').value;
+      for (const l of ['brh', 'en']) { $('lang').value = l; await recognize(z, w); }
+      $('lang').value = save; await m.b2e('سلام', { src_lang: 'urd_Arab', tgt_lang: 'eng_Latn', max_new_tokens: 8 }); await m.e2b('Hello.', { src_lang: 'eng_Latn', tgt_lang: 'urd_Arab', max_new_tokens: 8 });
+      if (m.tts) await synth('salam'); m.asrMs = 0; });
+    $('status').textContent = `ready in ${((performance.now() - t0) / 1000).toFixed(0)} s (speech on ${dev}, translation on ${crossOriginIsolated ? navigator.hardwareConcurrency + '-thread' : 'single-thread'} WASM)`;
+    for (const id of ['mic', 'file', 'sampleBrh', 'sampleEn']) $(id).disabled = false;
+  } catch (e) { $('status').textContent = `load failed at ${cur}: ${e?.message || e}`; console.error('load failed', cur, e); $('load').disabled = false; }
+};
+function trimSilence(x, topDb = 50, frame = 400, hop = 160, padS = 0.1) {
+  if (x.length < 2 * frame) return x; const rms = []; let peak = 0;
+  for (let s = 0; s + frame <= x.length; s += hop) { let e = 0; for (let i = s; i < s + frame; i++) e += x[i] * x[i]; const v = Math.sqrt(e / frame); rms.push(v); if (v > peak) peak = v; }
+  if (!peak) return x; const thr = peak * Math.pow(10, -topDb / 20); let a = 0, b = rms.length - 1;
+  while (a < b && rms[a] < thr) a++; while (b > a && rms[b] < thr) b--;
+  const pad = Math.round(padS * 16000); return x.subarray(Math.max(0, a * hop - pad), Math.min(x.length, b * hop + frame + pad));
+}
+// Brahui script -> the vowelled Latin spelling the voice was trained on: table lookup per word (demo/web/models/vowel_lex.json,
+// scripts/export_vowel_lexicon_js.py), consonant skeleton (romanize.js) for a word the table does not have.
+const PUNCT = { '۔': '.', '،': ',', '؟': '?', '؛': ',', '!': '!', '.': '.', ',': ',', '?': '?' };
+function vowelize(text) {
+  return text.normalize('NFC').replace(/[\u064B-\u0652\u0670\u0640]/g, '').split(/\s+/).filter(Boolean).map(tok => {
+    const m = tok.match(/^([^\p{L}]*)(.*?)([^\p{L}]*)$/u); const w = m[2]; if (!w) return [...tok].map(c => PUNCT[c] || '').join('');
+    const tail = [...m[3]].map(c => PUNCT[c] || '').join(''); return (models.vowelLex[w] ?? romanize(w)) + tail; }).join(' ').replace(/\s+([.,?!])/g, '$1');
+}
+let audioCtx = null, lastWaves = [], playT = 0;
+function enqueue(wave) {   // gapless queue: each piece starts when the previous one ends
+  audioCtx = audioCtx || new AudioContext(); const b = audioCtx.createBuffer(1, wave.length, 16000); b.copyToChannel(wave, 0);
+  const s = audioCtx.createBufferSource(); s.buffer = b; s.connect(audioCtx.destination); const at = Math.max(audioCtx.currentTime, playT); s.start(at); playT = at + b.duration;
+}
+async function synth(latin) {   // VITS expects the pad id (0) between letters
+  const ids = [0]; for (const c of latin.toLowerCase()) if (c in models.ttsVocab) ids.push(models.ttsVocab[c], 0);
+  if (ids.length < 3) return null; const n = ids.length;
+  const out = await models.tts({ input_ids: new Tensor('int64', BigInt64Array.from(ids.map(BigInt)), [1, n]), attention_mask: new Tensor('int64', new BigInt64Array(n).fill(1n), [1, n]) });
+  return Float32Array.from(out.waveform.data);
+}
+// Voice in pieces so sound starts early: a short opening piece is synthesized and played first and the rest is synthesized
+// while it plays. Synthesis takes about half of real time, so each piece may be up to ~1.8x the one before it without a gap.
+// A piece ends at a word boundary, early at punctuation. ?chunk=0 = one piece.
+function clauses(lat) {
+  if (q.get('chunk') === '0' || lat.length <= 30) return [lat]; const out = []; let cur = '', target = 14;
+  for (const w of lat.split(' ')) {
+    cur += (cur ? ' ' : '') + w;
+    if (cur.length >= target || (/[,.?!]$/.test(w) && cur.length >= target * 0.6)) { out.push(cur); cur = ''; target *= 1.8; }
+  }
+  if (cur) { if (out.length && cur.length < 10) out[out.length - 1] += ' ' + cur; else out.push(cur); }
+  return out;
+}
+async function brahuiASR(audio) {  // returns { text, lmPerChar } ; lmPerChar of the greedy string is the language-id signal
+  const parts = []; let lmSum = 0, lmN = 0;
+  for (let s0 = 0; s0 < audio.length; s0 += 20 * 16000) {
+    const out = await models.brhModel(await models.brhProc(audio.subarray(s0, s0 + 20 * 16000)));
+    const [, T, V] = out.logits.dims, d = out.logits.data;
+    let g = '', prev = -1; for (let t = 0; t < T; t++) { let bi = 0, bv = -Infinity; for (let v = 0; v < V; v++) if (d[t * V + v] > bv) { bv = d[t * V + v]; bi = v; } if (bi !== prev && bi !== 0 && models.id2ch.has(bi)) g += models.id2ch.get(bi); prev = bi; }
+    let ctx = models.lm.bos.repeat(models.lm.N - 1); for (const c of g) { lmSum += models.lm.logp(ctx, c); lmN++; ctx = (ctx + c).slice(-(models.lm.N - 1)); }
+    const t = ctcPrefixBeam(d, T, V, models.id2ch, 0, models.lm, { alpha: 0.5, beta: 0.5 }); out.logits.dispose?.(); if (t) parts.push(t);
+  }
+  return { text: parts.join(' ').trim(), lmPerChar: lmN ? lmSum / lmN : -9 };
+}
+// Brahui CTC greedy output scores ~-1.3…-2.1 nats/char under the Brahui char-LM on Brahui speech and -2.7…-4.5 on English
+// speech (its transliteration of English is improbable Brahui), so one threshold separates them without a second model pass.
+const LANG_THRESH = +(q.get('lmthresh') || -2.6);
+async function englishASR(audio) {
+  const o = await models.en(audio, /moonshine/.test(M.asrEn) ? { max_new_tokens: Math.max(8, Math.ceil(audio.length / 16000 * 6.5)) } : { chunk_length_s: 30 });
+  return o.text.trim();
+}
+// ---- one job = one pass speech -> text -> translation -> voice over a fixed stretch of audio. A job started while the mic is
+// still held is speculative: it can be cancelled between decoder steps (stopping criteria) when the speaker carries on.
+const dbg = (...a) => { if (q.get('debug')) console.log('TALK', (performance.now() / 1000).toFixed(2), ...a); };
+const sec = ms => (ms / 1000).toFixed(2) + ' s', sleep = ms => new Promise(r => setTimeout(r, ms));
+// Inference blocks the main thread, so a speculative job checks the (shared-memory) microphone buffer itself: between stages
+// and on every decoder step. If the speaker has carried on past the pause it started from, it gives up at once.
+const carriedOn = job => speechEnd(cap.data.subarray(0, capN())) > job.end + GAP;
+const stale = job => { if (!job.cancelled && job.spec && !job.playing && carriedOn(job)) { job.cancelled = true; dbg('spec gave up: speaker carried on'); } return job.cancelled; };
+class JobStop extends StoppingCriteria { constructor(job) { super(); this.job = job; } _call(ids) { return new Array(ids.length).fill(stale(this.job)); } }
+const newJob = (audio, end, spec = false) => { const j = { audio, end, spec, cancelled: false, tm: {}, waves: [], playing: false, done: false }; j.stop = new JobStop(j); return j; };
+const cancel = job => { job.cancelled = true; };
+function render(job) {
+  if (job.cancelled) return; for (const id of ['heardCard', 'outCard']) $(id).hidden = false; const b = job.lang === 'brh';
+  $('heardLabel').textContent = `You said (${b ? 'Brahui' : 'English'})`; $('heard').textContent = job.src ?? '…'; $('heard').className = b ? 'big rtl' : 'big'; $('heardRom').textContent = b && job.src ? romanize(job.src) : '';
+  $('outLabel').textContent = b ? 'English' : 'Brahui'; $('out').textContent = job.out ?? '…'; $('out').className = b ? 'big' : 'big rtl';
+  $('outRom').textContent = b || !job.out ? '' : (job.lat ?? romanize(job.out)); $('again').hidden = !(job.done && job.waves.length);
+}
+async function recognize(audio, job) {
+  let lang = $('lang').value, t = performance.now();
+  if (lang !== 'en') { job.brh = await brahuiASR(audio); job.tm.brhASR = performance.now() - t; if (lang === 'auto') lang = (job.brh.lmPerChar >= LANG_THRESH && job.brh.text.length >= 3) ? 'brh' : 'en'; }
+  if (lang === 'en') { t = performance.now(); job.src = await englishASR(audio); job.tm.enASR = performance.now() - t; } else job.src = job.brh.text;
+  job.lang = lang; models.asrMs = performance.now() - t;
+}
+async function runJob(job) {
+  const a = trimSilence(job.audio); job.secs = a.length / 16000;
+  await recognize(a, job); if (stale(job)) return job; render(job); await sleep(0); if (stale(job)) return job;
+  const b = job.lang === 'brh'; let t = performance.now();
+  const r = job.src ? await (b ? models.b2e : models.e2b)(job.src, { src_lang: b ? 'urd_Arab' : 'eng_Latn', tgt_lang: b ? 'eng_Latn' : 'urd_Arab', num_beams: 4, max_new_tokens: 200, stopping_criteria: job.stop }) : [{ translation_text: '' }];
+  if (job.cancelled) return job; job.tm.mt = performance.now() - t; job.out = r[0].translation_text; job.tText = performance.now(); dbg('text ready', job.src);
+  if (!b && models.tts && job.out) {
+    job.lat = vowelize(job.out); render(job); await sleep(0); t = performance.now();
+    for (const piece of clauses(job.lat)) {
+      if (stale(job)) return job; const w = await synth(piece); if (!w) continue;
+      if (!job.tVoice) { job.tVoice = performance.now(); job.tm.voice = job.tVoice - t; } job.waves.push(w); dbg('voice piece ready'); if (job.playing) enqueue(w); await sleep(0);
+    }
+  }
+  job.done = true; render(job); finish(job); return job;
+}
+// present = this job is the answer: show it, play whatever voice is ready and let the rest play as it arrives.
+function present(job, tRel, label) { job.playing = true; job.tRel = tRel; job.label = label; playT = 0; for (const w of job.waves) enqueue(w); lastWaves = job.waves; render(job); finish(job); }
+function finish(job) {
+  if (!job.done || !job.playing || job.cancelled) return; const lat = t => sec(Math.max(0, t - job.tRel));
+  const det = $('lang').value === 'auto' ? ` · detected ${job.lang === 'brh' ? 'Brahui' : 'English'} (LM score ${job.brh ? job.brh.lmPerChar.toFixed(2) : 'n/a'})` : '';
+  $('timing').textContent = `${job.secs.toFixed(1)} s of speech · ` + Object.entries(job.tm).map(([k, v]) => `${k} ${sec(v)}`).join(' · ') +
+    ` · ${job.label}: text ${lat(job.tText)}` + (job.tVoice ? `, voice ${lat(job.tVoice)}` : '') + (job.early ? ' (translated during the pause before release)' : '') + det;
+}
+async function handle(audio) { const job = newJob(audio, audio.length); present(job, performance.now(), 'wait'); await runJob(job); }
+async function handleBlob(blob) {
+  $('status').textContent = 'listening…'; const ctx = new AudioContext({ sampleRate: 16000 }); const buf = await ctx.decodeAudioData(await blob.arrayBuffer()); ctx.close();
+  try { if (q.get('sim')) await simulate(buf.getChannelData(0)); else await handle(buf.getChannelData(0)); $('status').textContent = 'ready'; } catch (e) { $('status').textContent = 'error: ' + e.message; console.error(e); }
+}
+$('again').onclick = () => { playT = 0; for (const w of lastWaves) enqueue(w); };
+$('file').onchange = e => e.target.files[0] && handleBlob(e.target.files[0]);
+$('sampleBrh').onclick = async () => handleBlob(await (await fetch('samples/cv_short.mp3')).blob());
+$('sampleEn').onclick = async () => handleBlob(await (await fetch('samples/en_sample.wav')).blob());
+
+// ---- microphone: one stream and one 16 kHz context stay open while the page is visible; a worklet posts raw PCM, so a press
+// starts instantly (with a 0.25 s pre-roll, so the first syllable is not clipped) and nothing has to be decoded on release.
+const MAXN = 60 * 16000, PRE = 4000, SAB = self.crossOriginIsolated && typeof SharedArrayBuffer !== 'undefined';
+// With cross-origin isolation the worklet writes straight into shared memory (hdr = [samples written, recording?]), so the
+// main thread can read fresh audio even in the middle of an inference call; otherwise it posts blocks to feed().
+const cap = { data: new Float32Array(SAB ? new SharedArrayBuffer((MAXN + PRE) * 4) : MAXN + PRE), hdr: new Int32Array(SAB ? new SharedArrayBuffer(8) : 2), pre: new Float32Array(PRE), mic: null };
+const capN = () => Atomics.load(cap.hdr, 0);
+function feed(x) {
+  if (cap.hdr[1]) { const n = capN(), k = Math.min(x.length, cap.data.length - n); cap.data.set(x.subarray(0, k), n); Atomics.store(cap.hdr, 0, n + k); }
+  else if (x.length < PRE) { cap.pre.copyWithin(0, x.length); cap.pre.set(x, PRE - x.length); }
+}
+function capStart(sim) {
+  if (sim) cap.pre.fill(0);
+  if (SAB) Atomics.store(cap.hdr, 0, 0); else { cap.data.set(cap.pre, 0); Atomics.store(cap.hdr, 0, PRE); }   // shared path: the worklet copies its own pre-roll
+  Atomics.store(cap.hdr, 1, 1);
+}
+async function pcmNode(ctx) {
+  const src = `registerProcessor('pcm', class extends AudioWorkletProcessor {
+    constructor(o) { super(); const p = o.processorOptions; this.pre = new Float32Array(p.pre); this.z = new Float32Array(128); this.was = 0; if (p.data) { this.d = new Float32Array(p.data); this.h = new Int32Array(p.hdr); } }
+    process(i) { const x = (i[0] && i[0][0]) || this.z; if (!this.d) { this.port.postMessage(x.slice()); return true; }
+      const on = Atomics.load(this.h, 1);
+      if (on) { let n = Atomics.load(this.h, 0); if (!this.was) { this.d.set(this.pre, 0); n = this.pre.length; } const k = Math.min(x.length, this.d.length - n); this.d.set(x.subarray(0, k), n); Atomics.store(this.h, 0, n + k); }
+      else { this.pre.copyWithin(0, x.length); this.pre.set(x, this.pre.length - x.length); }
+      this.was = on; return true; } });`;
+  await ctx.audioWorklet.addModule(URL.createObjectURL(new Blob([src], { type: 'text/javascript' })));
+  const node = new AudioWorkletNode(ctx, 'pcm', { processorOptions: SAB ? { pre: PRE, data: cap.data.buffer, hdr: cap.hdr.buffer } : { pre: PRE } });
+  node.port.onmessage = e => feed(e.data); node.connect(ctx.destination); return node;   // the node outputs silence; the connection keeps it pulled
+}
+async function ensureMic() {
+  if (cap.mic) { await cap.mic.ctx.resume(); return; }
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: true, noiseSuppression: true } });
+  const ctx = new AudioContext({ sampleRate: 16000 }); ctx.createMediaStreamSource(stream).connect(await pcmNode(ctx));
+  cap.mic = { stream, ctx };
+}
+document.addEventListener('visibilitychange', () => { if (document.hidden && cap.mic && !ses) { cap.mic.stream.getTracks().forEach(t => t.stop()); cap.mic.ctx.close(); cap.mic = null; cap.pre.fill(0); } });
+// Sample index where the last speech frame ends (0 = no speech yet): 20 ms frames, 20 dB under the loudest frame.
+function speechEnd(x) {
+  const F = 320, n = Math.floor(x.length / F); if (!n) return 0; const rms = new Float32Array(n); let peak = 0;
+  for (let i = 0; i < n; i++) { let e = 0; for (let j = i * F; j < (i + 1) * F; j++) e += x[j] * x[j]; rms[i] = Math.sqrt(e / F); if (rms[i] > peak) peak = rms[i]; }
+  const thr = Math.max(peak * 0.1, 0.004); let b = n - 1; while (b >= 0 && rms[b] < thr) b--; return (b + 1) * F;
+}
+// ---- hold-to-talk session. While the button is held: live transcript while speaking; at the first pause (PAUSE s of
+// silence) the whole chain runs speculatively on the speech so far. On release, if nothing was said after that pause, the
+// speculative result is the answer (often already finished); otherwise it is cancelled and the chain runs on the full audio.
+const PAUSE = +(q.get('pause') || 0.3) * 16000, GAP = 0.25 * 16000, PADS = 0.2 * 16000;
+let ses = null;
+const live = s => s.spec && !s.spec.cancelled;
+async function watch(s) {
+  while (!s.released) {
+    await sleep(40); if (s.released) break;
+    const a = cap.data.subarray(0, capN()), end = speechEnd(a), quiet = a.length - end;
+    if (live(s) && end > s.spec.end + GAP) { dbg('spec cancelled'); cancel(s.spec); }   // the speaker carried on
+    if (s.busy) continue;
+    const run = p => { s.busy = p.catch(e => console.error(e)).finally(() => { s.busy = null; }); };
+    if (end > 0.3 * 16000 && quiet >= PAUSE && !live(s)) { s.spec = newJob(a.slice(0, Math.min(a.length, end + PADS)), end, true); dbg('spec start, speech end at', end / 16000, 'have', a.length / 16000); run(runJob(s.spec)); }
+    else if (end > 0.5 * 16000 && quiet < 0.15 * 16000 && end > s.lastPartial + 0.4 * 16000 && !live(s) && (models.asrMs ?? 0) < 400) {
+      const p = newJob(a.slice(), end); s.lastPartial = end; run(recognize(trimSilence(p.audio), p).then(() => { if (!s.released && !live(s)) render(p); }));
+    }
+    if (capN() >= MAXN) stopRec();
+  }
+}
+async function startRec(sim) {
+  if (ses || !models) return; const s = ses = { released: false, ready: false, spec: null, busy: null, lastPartial: 0 };
+  if (sim !== true) { try { await ensureMic(); } catch (e) { ses = null; $('status').textContent = 'microphone: ' + e.message; return; } if (s.aborted) return; }
+  capStart(sim === true); s.ready = true;
+  $('mic').classList.add('rec'); $('mic').textContent = '● Listening… release to translate'; $('status').textContent = 'listening…'; watch(s);
+}
+async function stopRec() {
+  const s = ses; if (!s || s.released) return; if (!s.ready) { s.aborted = true; ses = null; return; }
+  s.released = true; const tRel = performance.now(); dbg('release, have', capN() / 16000); Atomics.store(cap.hdr, 1, 0); $('mic').classList.remove('rec'); $('mic').textContent = '🎤 Hold to talk';
+  try {
+    const a = cap.data.slice(0, capN()), end = speechEnd(a);
+    if (!end) { if (s.spec) cancel(s.spec); await s.busy; $('status').textContent = 'no speech heard'; return; }
+    let job = live(s) && end <= s.spec.end + GAP ? s.spec : null, p = s.busy;
+    if (job) job.early = true; else { if (s.spec) cancel(s.spec); await s.busy; job = newJob(a, end); p = runJob(job); }
+    $('status').textContent = job.done ? 'ready' : 'translating…'; present(job, tRel, 'after release'); await p; $('status').textContent = 'ready';
+  } catch (e) { $('status').textContent = 'error: ' + e.message; console.error(e); } finally { ses = null; }
+}
+// ?sim=1: the sample buttons and file input go through the hold-to-talk path in real time (release ?rel= seconds after the clip ends).
+async function simulate(audio) {
+  const rel = +(q.get('rel') || 0.4) * 1000; dbg('sim start, clip', audio.length / 16000);
+  if (SAB) {   // same worklet + shared-memory path as the microphone, fed from the clip
+    const ctx = new AudioContext({ sampleRate: 16000 }), node = await pcmNode(ctx), b = ctx.createBuffer(1, audio.length, 16000); b.copyToChannel(audio, 0);
+    const src = ctx.createBufferSource(); src.buffer = b; src.connect(node); await startRec(true); src.start();
+    await sleep(audio.length / 16 + rel); await stopRec(); ctx.close(); return;
+  }
+  await startRec(true); const t0 = performance.now(); let fed = 0;
+  while (fed < audio.length) { await sleep(30); const upto = Math.min(audio.length, Math.round((performance.now() - t0) / 1000 * 16000)); if (upto > fed) { feed(audio.subarray(fed, upto)); fed = upto; } }
+  const t1 = performance.now(); while (performance.now() - t1 < rel) { await sleep(30); feed(new Float32Array(Math.round(0.03 * 16000))); }
+  await stopRec();
+}
+$('mic').onpointerdown = e => { e.preventDefault(); startRec(); }; $('mic').onpointerup = stopRec; $('mic').onpointerleave = stopRec;
+document.addEventListener('keydown', e => { if (e.code === 'Space' && !e.repeat && !$('mic').disabled && e.target.tagName !== 'INPUT') { e.preventDefault(); startRec(); } });
+document.addEventListener('keyup', e => { if (e.code === 'Space') stopRec(); });
+if (q.get('debug')) window.talk = { simulate, handle, clauses };
+if (q.get('autoload')) $('load').click();
+</script></main></body></html>

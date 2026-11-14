@@ -1,0 +1,7 @@
+{
+ "wavs": "evals/tts/f5_multi2_roman_mac/base_old/wavs",
+ "n": 20,
+ "cer_mean": 0.096,
+ "cer_median": 0.0885,
+ "dur_ratio_vs_real": 0.658
+}

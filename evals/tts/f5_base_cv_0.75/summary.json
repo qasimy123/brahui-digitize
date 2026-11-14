@@ -1,0 +1,7 @@
+{
+ "wavs": "evals/tts/f5_base_cv_0.75/wavs",
+ "n": 100,
+ "cer_mean": 0.0907,
+ "cer_median": 0.0791,
+ "dur_ratio_vs_real": 0.944
+}

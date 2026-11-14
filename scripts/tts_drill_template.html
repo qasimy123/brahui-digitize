@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brahui voice drill</title>
+<style>
+  :root { --bg:#f6f4ef; --card:#fffdf8; --ink:#1f2a2e; --muted:#5d6b70; --line:#ddd6c8; --accent:#0f6b5c; --accent-ink:#fff; --warn:#8a5a00; --bad:#a23b2a; --bad-bg:#f8e4df; --ok-bg:#e3f1ec; --guess:#b8860b; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#15191b; --card:#1d2326; --ink:#e9ecea; --muted:#9aa8ab; --line:#313a3e; --accent:#4fc3a8; --accent-ink:#0c1a17; --warn:#e0b060; --bad:#f08a78; --bad-bg:#3a211d; --ok-bg:#1f3832; --guess:#e0b060; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:20px 16px 130px; }
+  h1 { font-size:1.4rem; margin:0 0 4px; } .lede { color:var(--muted); margin:0 0 14px; }
+  details.how { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 16px; margin-bottom:14px; }
+  details.how summary { cursor:pointer; font-weight:600; } details.how ol { margin:8px 0 0; padding-left:20px; } details.how li { margin:3px 0; }
+  .who { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:10px; }
+  input[type=text], textarea { font:inherit; color:var(--ink); background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:8px 10px; max-width:100%; }
+  textarea { width:100%; min-height:54px; resize:vertical; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; }
+  .num { font-size:.8rem; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; display:flex; justify-content:space-between; gap:8px; }
+  .en { font-size:1.15rem; margin:6px 0 10px; }
+  .play { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  button { font:inherit; border-radius:8px; padding:9px 14px; border:1px solid var(--accent); background:var(--accent); color:var(--accent-ink); cursor:pointer; }
+  button.ghost { background:transparent; color:var(--accent); } button:disabled { opacity:.4; cursor:default; }
+  .hint { color:var(--muted); font-size:.9rem; margin:0 0 8px; }
+  .words { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:6px; }
+  .w { border:1px solid var(--line); border-radius:10px; padding:6px 10px; background:var(--bg); color:var(--ink); text-align:center; min-width:44px; }
+  .w b { display:block; font-size:1.1rem; font-weight:600; } .w small { display:block; color:var(--muted); font-size:.8rem; direction:rtl; font-family:"Geeza Pro","Noto Naskh Arabic",serif; }
+  .w.guess b { text-decoration:underline dotted var(--guess); text-underline-offset:4px; }
+  .w.sel { outline:2px solid var(--accent); outline-offset:1px; } .w.wrong { background:var(--bad-bg); border-color:var(--bad); } .w.right { background:var(--ok-bg); border-color:var(--accent); }
+  .w.playing { box-shadow:0 0 0 3px var(--accent); }
+  .panel { border:1px solid var(--line); border-radius:10px; padding:12px; margin:8px 0 4px; background:var(--bg); }
+  .panel h3 { margin:0 0 8px; font-size:1rem; } .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:6px 0; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chips label { border:1px solid var(--line); border-radius:999px; padding:5px 12px; cursor:pointer; user-select:none; font-size:.92rem; background:var(--card); }
+  .chips input { position:absolute; opacity:0; } .chips label:has(input:checked) { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .chips label:has(input:focus-visible) { outline:2px solid var(--accent); outline-offset:2px; }
+  .keys button { padding:4px 10px; background:var(--card); color:var(--ink); border-color:var(--line); }
+  .q { margin:14px 0 6px; font-weight:600; }
+  .legend { color:var(--muted); font-size:.85rem; margin-top:4px; }
+  .bar { position:fixed; left:0; right:0; bottom:0; background:var(--card); border-top:1px solid var(--line); padding:10px 16px; }
+  .bar > div { max-width:760px; margin:0 auto; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .bar span { flex:1; min-width:120px; color:var(--muted); font-size:.9rem; }
+  .dots { display:flex; flex-wrap:wrap; gap:4px; margin:12px 0 0; }
+  .dots button { width:30px; height:30px; padding:0; border-radius:50%; font-size:.75rem; background:transparent; color:var(--muted); border-color:var(--line); }
+  .dots button.done { background:var(--ok-bg); color:var(--ink); border-color:var(--accent); } .dots button.issue { background:var(--bad-bg); color:var(--ink); border-color:var(--bad); } .dots button.cur { outline:2px solid var(--accent); outline-offset:1px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Brahui voice: word-by-word check</h1>
+  <p class="lede">__LEDE__</p>
+  <details class="how" open>
+    <summary>How to review</summary>
+    <ol>
+      <li>Press <em>Play sentence</em>. The English line says what it should mean.</li>
+      <li>Tap any word to hear just that word. If it is said wrong, press <em>Said wrong</em> and type how it should sound, in English letters, the way you would text it. Long vowels: type them double (<em>aa</em>, <em>ee</em>, <em>oo</em>) or use the letter buttons.</li>
+      <li>Tick what was wrong with it. Words with a dotted underline are ones the computer guessed, so they are the most likely to be off.</li>
+      <li>If the whole sentence has a problem (robotic, odd pauses, pitch), tick it under <em>The sentence as a whole</em>.</li>
+      <li>Press <em>Next</em>. At the end press <em>Copy results</em> or <em>Download results</em> and give them to Claude. Everything is saved in this browser as you go.</li>
+    </ol>
+    <div class="who"><label for="who">Reviewer</label><input type="text" id="who" placeholder="your name"></div>
+  </details>
+  <div class="card" id="card"></div>
+  <div class="dots" id="dots"></div>
+</main>
+<div class="bar"><div><button class="ghost" id="prev">Back</button><button id="next">Next</button><span id="prog"></span><button class="ghost" id="copy">Copy results</button><button class="ghost" id="dl">Download results</button></div></div>
+<script>
+const ITEMS = /*ITEMS*/[];
+const ROUND = "__ROUND__";
+const SK = "brahui_tts_drill_" + ROUND;
+let state = {}; try { state = JSON.parse(localStorage.getItem(SK) || "{}"); } catch (e) {}
+const save = () => { try { localStorage.setItem(SK, JSON.stringify(state)); } catch (e) {} dots(); };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const WTAGS = [["vowel", "wrong vowel"], ["cons", "wrong consonant"], ["stress", "stress in the wrong place"], ["unclear", "swallowed or unclear"], ["extra", "extra or missing sound"], ["word", "not the right word here"]];
+const STAGS = [["robot", "robotic or glitchy"], ["pauses", "odd pauses"], ["pitch", "pitch goes up or down oddly"], ["fast", "too fast"], ["slow", "too slow"], ["accent", "accent sounds off"], ["lost", "cannot understand it"]];
+let cur = Math.min(state._cur || 0, ITEMS.length - 1), sel = null;
+const st = n => (state[n] = state[n] || { words: {}, tags: [], note: "", seen: false });
+// ---- audio: decoded once per sentence so a single word can be played exactly
+let ctx = null, node = null, timer = null; const bufs = {};
+async function buf(it) {
+  ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+  if (!bufs[it.n]) { const bin = atob(it.audio), a = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) a[i] = bin.charCodeAt(i); bufs[it.n] = await ctx.decodeAudioData(a.buffer); }
+  return bufs[it.n];
+}
+function stop() { if (node) { try { node.stop(); } catch (e) {} node = null; } clearTimeout(timer); document.querySelectorAll(".w.playing").forEach(x => x.classList.remove("playing")); }
+async function play(it, t0, t1, rate, el) {
+  stop(); const b = await buf(it); if (ctx.state === "suspended") await ctx.resume();
+  node = ctx.createBufferSource(); node.buffer = b; node.playbackRate.value = rate || 1; node.connect(ctx.destination);
+  const a = t0 == null ? 0 : Math.max(0, t0), d = t1 == null ? undefined : Math.max(0.05, t1 - a);
+  node.start(0, a, d); if (el) { el.classList.add("playing"); const me = node; node.onended = () => { if (node === me) el.classList.remove("playing"); }; }
+}
+function render() {
+  const it = ITEMS[cur], s = st(it.n); s.seen = true; state._cur = cur; stop();
+  const card = document.getElementById("card");
+  card.innerHTML = `<div class="num"><span>Sentence ${cur + 1} of ${ITEMS.length}</span><span>${esc(it.n)}${it.why ? " · " + esc(it.why) : ""}</span></div>
+    <div class="en">${esc(it.en)}</div>
+    <div class="play"><button id="pl">Play sentence</button><button class="ghost" id="pls">Play slowly</button></div>
+    <p class="hint">Tap a word to hear it alone and to mark it.</p>
+    <div class="words">${it.words.map((w, i) => `<button class="w ${w.src === "model" || w.src === "guess" ? "guess" : ""}" data-i="${i}"><b>${esc(w.r)}</b><small>${esc(w.w)}</small></button>`).join("")}</div>
+    <div class="legend">Dotted underline: a spelling the computer guessed.</div>
+    <div id="panel"></div>
+    <div class="q">The sentence as a whole</div>
+    <div class="chips" id="stags">${[["fine", "sounds fine"]].concat(STAGS).map(([f, t]) => `<label><input type="checkbox" data-f="${f}" ${s.tags.includes(f) ? "checked" : ""}> ${t}</label>`).join("")}</div>
+    <div class="q">Notes</div><textarea id="note" placeholder="anything else: which part sounded off, how it should be said">${esc(s.note)}</textarea>`;
+  card.querySelector("#pl").onclick = () => play(it, null, null, 1);
+  card.querySelector("#pls").onclick = () => play(it, null, null, 0.75);
+  card.querySelectorAll(".w").forEach(b => b.onclick = () => { const i = +b.dataset.i, w = it.words[i]; sel = i; play(it, w.t0 == null ? null : w.t0 - 0.06, w.t1 == null ? null : w.t1 + 0.1, 1, b); marks(); panel(); });
+  card.querySelector("#stags").oninput = e => { const f = e.target.dataset.f; s.tags = s.tags.filter(x => x !== f); if (e.target.checked) s.tags.push(f); save(); };
+  card.querySelector("#note").oninput = e => { s.note = e.target.value; save(); };
+  sel = null; marks(); panel(); dots();
+  document.getElementById("prev").disabled = cur === 0; document.getElementById("next").textContent = cur === ITEMS.length - 1 ? "Finish" : "Next";
+}
+function marks() {
+  const it = ITEMS[cur], s = st(it.n);
+  document.querySelectorAll("#card .w").forEach(b => { const m = s.words[b.dataset.i]; b.classList.toggle("wrong", !!m && m.st === "wrong"); b.classList.toggle("right", !!m && m.st === "right"); b.classList.toggle("sel", +b.dataset.i === sel); });
+}
+function panel() {
+  const p = document.getElementById("panel"); if (sel == null) { p.innerHTML = ""; return; }
+  const it = ITEMS[cur], s = st(it.n), w = it.words[sel], m = s.words[sel] || {}; const i = sel;
+  p.innerHTML = `<div class="panel"><h3>“${esc(w.r)}”</h3>
+    <div class="row"><button class="ghost" id="again">Hear it again</button><button class="ghost" id="slow">Slowly</button><button class="ghost" id="ctxp">With its neighbours</button></div>
+    <div class="chips" id="wst"><label><input type="radio" name="wst" value="right" ${m.st === "right" ? "checked" : ""}> Said right</label><label><input type="radio" name="wst" value="wrong" ${m.st === "wrong" ? "checked" : ""}> Said wrong</label></div>
+    <div id="wfix" ${m.st === "wrong" ? "" : "hidden"}>
+      <div class="q">How should it sound?</div>
+      <div class="row"><input type="text" id="fix" value="${esc(m.fix || "")}" placeholder="${esc(w.r)}" autocapitalize="off" autocomplete="off" spellcheck="false">
+        <span class="keys">${["ā", "ī", "ū", "ṭ", "ḍ", "ṛ"].map(k => `<button type="button" data-k="${k}">${k}</button>`).join(" ")}</span></div>
+      <div class="q">What was wrong?</div>
+      <div class="chips" id="wtags">${WTAGS.map(([f, t]) => `<label><input type="checkbox" data-f="${f}" ${(m.tags || []).includes(f) ? "checked" : ""}> ${t}</label>`).join("")}</div>
+    </div></div>`;
+  const get = () => (s.words[i] = s.words[i] || { st: null, fix: "", tags: [] });
+  const seg = (rate, pad) => play(it, w.t0 == null ? null : w.t0 - 0.06 - pad, w.t1 == null ? null : w.t1 + 0.1 + pad, rate, document.querySelector(`#card .w[data-i="${i}"]`));
+  p.querySelector("#again").onclick = () => seg(1, 0); p.querySelector("#slow").onclick = () => seg(0.7, 0);
+  p.querySelector("#ctxp").onclick = () => { const a = it.words[Math.max(0, i - 1)], b = it.words[Math.min(it.words.length - 1, i + 1)]; play(it, a.t0 == null ? null : a.t0 - 0.06, b.t1 == null ? null : b.t1 + 0.1, 1); };
+  p.querySelector("#wst").oninput = e => { get().st = e.target.value; p.querySelector("#wfix").hidden = e.target.value !== "wrong"; marks(); save(); if (e.target.value === "wrong") p.querySelector("#fix").focus(); };
+  p.querySelector("#fix").oninput = e => { get().fix = e.target.value; save(); };
+  p.querySelectorAll(".keys button").forEach(b => b.onclick = () => { const f = p.querySelector("#fix"); const a = f.selectionStart ?? f.value.length, z = f.selectionEnd ?? a; f.value = f.value.slice(0, a) + b.dataset.k + f.value.slice(z); f.focus(); f.setSelectionRange(a + 1, a + 1); get().fix = f.value; save(); });
+  p.querySelector("#wtags").oninput = e => { const g = get(), f = e.target.dataset.f; g.tags = (g.tags || []).filter(x => x !== f); if (e.target.checked) g.tags.push(f); save(); };
+}
+const issue = s => Object.values(s.words).some(m => m.st === "wrong") || s.tags.some(t => t !== "fine") || !!s.note.trim();
+function dots() {
+  const d = document.getElementById("dots"); let seen = 0, iss = 0;
+  d.innerHTML = ITEMS.map((it, k) => { const s = st(it.n); seen += s.seen; const i = issue(s); iss += i; return `<button data-k="${k}" class="${i ? "issue" : s.seen ? "done" : ""} ${k === cur ? "cur" : ""}" aria-label="Sentence ${k + 1}">${k + 1}</button>`; }).join("");
+  d.querySelectorAll("button").forEach(b => b.onclick = () => { cur = +b.dataset.k; render(); window.scrollTo(0, 0); });
+  document.getElementById("prog").textContent = seen + " of " + ITEMS.length + " seen, " + iss + " with a problem marked";
+}
+document.getElementById("prev").onclick = () => { if (cur > 0) { cur--; render(); window.scrollTo(0, 0); } };
+document.getElementById("next").onclick = () => { if (cur < ITEMS.length - 1) { cur++; render(); window.scrollTo(0, 0); } else { save(); document.getElementById("prog").textContent = "Done. Press Copy results or Download results."; } };
+const who = document.getElementById("who"); who.value = state._who || ""; who.addEventListener("input", () => { state._who = who.value; save(); });
+function results() {
+  return JSON.stringify({ kind: "brahui_tts_drill", round: ROUND, reviewer: state._who || "", sentences: ITEMS.map(it => {
+    const s = st(it.n), words = [];
+    it.words.forEach((w, i) => { const m = s.words[i]; if (m && m.st) words.push({ i, word: w.w, said: w.r, source: w.src, status: m.st, fix: m.st === "wrong" ? (m.fix || "").trim() : "", tags: m.st === "wrong" ? m.tags || [] : [] }); });
+    return { n: it.n, seen: !!s.seen, tags: s.tags, note: s.note, words }; }) }, null, 1);
+}
+document.getElementById("dl").onclick = () => {
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([results()], { type: "application/json" }));
+  a.download = "brahui_tts_drill_" + ROUND + (state._who ? "_" + state._who.replace(/\W+/g, "_") : "") + ".json"; a.click();
+};
+document.getElementById("copy").onclick = async e => { try { await navigator.clipboard.writeText(results()); e.target.textContent = "Copied"; } catch (x) { e.target.textContent = "Copy failed, use Download"; } };
+render();
+</script>
+</body>
+</html>

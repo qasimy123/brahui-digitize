@@ -1,0 +1,7 @@
+{
+ "wavs": "evals/tts/diag_arabic_raw_u10000/wavs",
+ "n": 20,
+ "cer_mean": 0.326,
+ "cer_median": 0.3362,
+ "dur_ratio_vs_real": 0.706
+}

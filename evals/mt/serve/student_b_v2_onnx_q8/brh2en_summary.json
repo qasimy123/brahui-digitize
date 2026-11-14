@@ -1,0 +1,11 @@
+{
+  "chrfpp": 47.4,
+  "bleu": 24.42,
+  "n": 302,
+  "sec": 70.2,
+  "sec_per_sent": 0.23,
+  "export": "export/student_b_v2",
+  "variant": "quantized",
+  "beams": 4,
+  "threads": 0
+}

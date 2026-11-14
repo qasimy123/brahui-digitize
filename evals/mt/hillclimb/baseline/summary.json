@@ -1,0 +1,37 @@
+{
+  "description": "v0 system prompt, 12 fixed + 3 retrieved shots per sentence, batch 20, sonnet",
+  "target": "system_prompt",
+  "prompt_file": "evals/mt/prompts/system_v0.md",
+  "model": "sonnet",
+  "effort": null,
+  "shots_each": 3,
+  "shots_fixed": 12,
+  "scores": {
+    "en2brh/train": {
+      "n": 663,
+      "chrfpp": 32.59,
+      "bleu": 9.04,
+      "mean_sent_chrfpp": 32.7
+    },
+    "en2brh/test": {
+      "n": 200,
+      "chrfpp": 30.77,
+      "bleu": 6.99,
+      "mean_sent_chrfpp": 30.88
+    },
+    "brh2en/train": {
+      "n": 504,
+      "chrfpp": 48.63,
+      "bleu": 28.08,
+      "mean_sent_chrfpp": 49.96
+    },
+    "brh2en/test": {
+      "n": 854,
+      "chrfpp": 50.37,
+      "bleu": 30.25,
+      "mean_sent_chrfpp": 50.91
+    }
+  },
+  "rows": 2221,
+  "error_rows": 0
+}

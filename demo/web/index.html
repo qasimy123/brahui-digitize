@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brahui Local Translator</title>
+<!-- Registers a service worker that adds COOP/COEP headers on hosts that cannot set them (GitHub Pages, HF static), so WASM runs multi-threaded. -->
+<script src="coi-serviceworker.min.js"></script>
+<script src="config.js"></script><!-- optional, written by scripts/deploy_web.py: window.BRAHUI_MODELS = {remote:true, mt:'user/repo', asr:'user/repo'} -->
+<style>
+  :root { --bg:#fafaf8; --fg:#1a1a1a; --muted:#666; --card:#fff; --accent:#1f6f8b; --border:#ddd; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121212; --fg:#eee; --muted:#aaa; --card:#1e1e1e; --accent:#5fb3d0; --border:#333; } }
+  :root[data-theme="dark"] { --bg:#121212; --fg:#eee; --muted:#aaa; --card:#1e1e1e; --accent:#5fb3d0; --border:#333; }
+  body { margin:0; padding:16px; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, sans-serif; max-width:760px; margin-inline:auto; }
+  h1 { font-size:1.4rem; margin:0 0 4px; } .sub { color:var(--muted); font-size:.9rem; margin-bottom:16px; }
+  textarea { width:100%; box-sizing:border-box; min-height:110px; padding:10px; font:inherit; border:1px solid var(--border); border-radius:8px; background:var(--card); color:var(--fg); }
+  textarea[dir=rtl] { font-size:1.15rem; }
+  .row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:10px 0; }
+  button { padding:8px 16px; border:0; border-radius:8px; background:var(--accent); color:#fff; font:inherit; cursor:pointer; } button:disabled { opacity:.5; cursor:default; }
+  select { padding:6px; font:inherit; border-radius:6px; background:var(--card); color:var(--fg); border:1px solid var(--border); }
+  #out { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px; min-height:60px; white-space:pre-wrap; }
+  #status { color:var(--muted); font-size:.85rem; } progress { width:100%; }
+  .asr { margin-top:24px; padding-top:16px; border-top:1px solid var(--border); }
+</style>
+</head>
+<body>
+<h1>Brahui ⇄ English, fully in your browser</h1>
+<div class="sub">Models download once (then cached) and run locally with WebGPU or WASM. Nothing leaves this device.</div>
+
+<div class="row">
+  <select id="dir"><option value="brh2en">Brahui → English</option><option value="en2brh">English → Brahui</option></select>
+  <select id="device"><option value="wasm">WASM (CPU)</option><option value="webgpu">WebGPU (experimental: int8 output is garbled on some GPUs)</option></select>
+  <select id="dtype"><option value="q8">int8</option><option value="fp16">fp16</option><option value="q4">q4</option><option value="fp32">fp32</option></select>
+  <button id="load">Load MT model</button>
+</div>
+<textarea id="src" dir="rtl" placeholder="برہوئی ٹی اسہ جملہ لکھ..."></textarea>
+<div class="row"><button id="go" disabled>Translate</button><span id="status">model not loaded</span></div>
+<progress id="prog" value="0" max="100" hidden></progress>
+<div id="out"></div>
+
+<div class="asr">
+  <div class="row"><select id="asrModel"><option value="ctc300m_student">ASR: 300M student + LM (650 MB, CER 8.0)</option><option value="ctc1b_s3">ASR: 1B teacher (2 GB, needs WebGPU, ~2x slower)</option></select><button id="loadAsr">Load ASR model</button><button id="rec" disabled>● Record</button><input type="file" id="file" accept="audio/*" disabled><button id="sample" disabled>Try sample clip</button><span id="asrStatus">model not loaded</span></div>
+  <div id="asrOut"></div>
+</div>
+
+<script type="module">
+import { pipeline, env, AutoProcessor, AutoModelForCTC } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.5.2';
+import { loadCharLM, ctcPrefixBeam } from './ctc_lm.js';
+// Serve the export dirs next to this page:  demo/web/models/<name>/{config.json,tokenizer.json,onnx/*.onnx}
+const CFG = window.BRAHUI_MODELS || {};  // deployed: models come from the HF Hub; local dev: from ./models/<name>/
+env.allowRemoteModels = !!CFG.remote; env.allowLocalModels = !CFG.remote; env.localModelPath = new URL('./models/', location.href).href;
+env.useBrowserCache = !location.hostname.match(/^(localhost|127\.0\.0\.1)$/);
+const q = new URLSearchParams(location.search); const MT_MODEL = q.get('mt') || CFG.mt || 'student_c';
+const $ = id => document.getElementById(id);
+// ASR default: the 300M student decoded with the char-LM beam search (cv_test CER 8.0 vs 9.9 greedy; 1B teacher greedy 8.6),
+// ~0.07 s per second of audio on WebGPU fp16. The 1B is kept as the slower high-accuracy option.
+const ASR_DEFAULT = q.get('asr') || CFG.asr || 'ctc300m_student';
+if (CFG.asr && !q.get('asr')) $('asrModel').innerHTML = `<option value="${CFG.asr}">ASR: ${CFG.asr}</option>`;
+if (![...$('asrModel').options].some(o => o.value === ASR_DEFAULT)) $('asrModel').add(new Option('ASR: ' + ASR_DEFAULT, ASR_DEFAULT));
+$('asrModel').value = ASR_DEFAULT;
+const SUFFIX = { fp32: '', q8: '_quantized', q4: '_q4', fp16: '_fp16' };
+async function extFlags(model, dtype, files) {  // transformers.js must be told which .onnx files carry a .onnx_data sidecar
+  const out = {};
+  for (const f of files) {
+    const base = CFG.remote ? `https://huggingface.co/${model}/resolve/main/` : `${env.localModelPath}${model}/`;
+    const url = `${base}onnx/${f}${SUFFIX[dtype] ?? ''}.onnx_data`;
+    try { out[f] = (await fetch(url, { method: 'HEAD' })).ok; } catch { out[f] = false; }
+  }
+  return out;
+}
+let mt = null, asr = null, asrLM = null;  // asrLM = { proc, model, lm, id2ch, blank } when LM decoding is on (default; ?lm=0 for the plain pipeline)
+const progressTo = (statusEl, progEl) => p => {
+  if (p.status === 'progress') { progEl.hidden = false; progEl.value = p.progress ?? 0; statusEl.textContent = `${p.file}: ${(p.loaded/1e6).toFixed(0)} / ${(p.total/1e6).toFixed(0)} MB`; }
+  else if (p.status === 'done') statusEl.textContent = `loaded ${p.file}`;
+};
+$('load').onclick = async () => {
+  $('load').disabled = true; const t0 = performance.now();
+  try {
+    const ext = await extFlags(MT_MODEL, $('dtype').value, ['encoder_model', 'decoder_model_merged']);
+    mt = await pipeline('translation', MT_MODEL, { device: $('device').value, dtype: $('dtype').value, use_external_data_format: ext, progress_callback: progressTo($('status'), $('prog')) });
+    $('status').textContent = `MT ready in ${((performance.now()-t0)/1000).toFixed(1)}s (${$('device').value}, ${$('dtype').value}, ${crossOriginIsolated ? navigator.hardwareConcurrency + ' threads' : 'single-threaded: no cross-origin isolation'})`; $('go').disabled = false; $('prog').hidden = true;
+  } catch (e) { $('status').textContent = 'load failed: ' + e.message; console.error(e); $('load').disabled = false; }
+};
+$('dir').onchange = () => { const b = $('dir').value === 'brh2en'; $('src').dir = b ? 'rtl' : 'ltr'; };
+$('go').onclick = async () => {
+  const b = $('dir').value === 'brh2en'; const text = $('src').value.trim(); if (!text) return;
+  $('go').disabled = true; const t0 = performance.now();
+  try {
+    const out = await mt(text, { src_lang: b ? 'urd_Arab' : 'eng_Latn', tgt_lang: b ? 'eng_Latn' : 'urd_Arab', num_beams: Number(q.get('beams') || 4), max_new_tokens: 256 });
+    $('out').textContent = out[0].translation_text; $('out').dir = b ? 'ltr' : 'rtl';
+    $('status').textContent = `translated in ${((performance.now()-t0)/1000).toFixed(2)}s`;
+  } catch (e) { $('out').textContent = 'error: ' + e.message; console.error(e); }
+  $('go').disabled = false;
+};
+$('loadAsr').onclick = async () => {
+  $('loadAsr').disabled = true; $('asrModel').disabled = true; const ASR_MODEL = $('asrModel').value;
+  try {
+    // CTC is one batched pass, so WebGPU fp16 is ~5x faster than 8-thread WASM int8 here (8.9 s clip: 0.52 s vs 2.7 s),
+    // and unlike the MT decoder its fp16 output matches int8. Auto-pick unless ?asrdev= / ?asrdtype= override.
+    const dev = q.get('asrdev') || (navigator.gpu ? 'webgpu' : $('device').value), dt = q.get('asrdtype') || (dev === 'webgpu' ? 'fp16' : $('dtype').value);
+    const ext = await extFlags(ASR_MODEL, dt, ['model']); const opts = { device: dev, dtype: dt, use_external_data_format: ext, progress_callback: progressTo($('asrStatus'), $('prog')) };
+    if (q.get('lm') === '0') { asr = await pipeline('automatic-speech-recognition', ASR_MODEL, opts); asrLM = null; }
+    else {
+      // CTC prefix beam search + character 6-gram LM (demo/web/ctc_lm.js): 300M student cv_dev CER 4.6 -> 3.6 for ~50 ms of JS per clip.
+      const base = CFG.remote ? `https://huggingface.co/${ASR_MODEL}/resolve/main/` : `${env.localModelPath}${ASR_MODEL}/`;
+      const [proc, model, lm, vocab] = await Promise.all([AutoProcessor.from_pretrained(ASR_MODEL), AutoModelForCTC.from_pretrained(ASR_MODEL, opts),
+        loadCharLM(CFG.lm || `${env.localModelPath}brh_char6.blm`), fetch(base + 'vocab.json').then(r => r.json())]);
+      const id2ch = new Map(Object.entries(vocab).filter(([t]) => t.length === 1).map(([t, i]) => [i, t]));
+      asrLM = { proc, model, lm, id2ch, blank: 0 }; asr = null;
+    }
+    $('asrStatus').textContent = `ASR ready (${ASR_MODEL}${asrLM ? ' + char-LM beam' : ''}, ${dev}, ${dt}, ${crossOriginIsolated ? navigator.hardwareConcurrency + ' threads' : 'single-threaded'})`; $('rec').disabled = false; $('file').disabled = false; $('sample').disabled = false; $('prog').hidden = true;
+  } catch (e) { $('asrStatus').textContent = 'load failed: ' + e.message; console.error(e); $('loadAsr').disabled = false; $('asrModel').disabled = false; }
+};
+// Drop leading/trailing silence (frames quieter than peak-50 dB, 25 ms frames / 10 ms hop, 0.1 s pad kept):
+// CTC latency is linear in audio length and Common Voice clips carry ~0.7 s of silence on average
+// (200-clip cv_test subset: median 6.9 s -> 6.2 s). Same rule as scripts/asr_eval.py --trim 50: s3 CER 8.29 vs 8.20 untrimmed
+// (35 dB saves more, 6.0 s median, but costs +0.3 CER). ?trim=0 disables.
+function trimSilence(x, topDb = 50, frame = 400, hop = 160, padS = 0.1) {
+  if (q.get('trim') === '0' || x.length < 2 * frame) return x;
+  const rms = []; let peak = 0;
+  for (let s = 0; s + frame <= x.length; s += hop) { let e = 0; for (let i = s; i < s + frame; i++) e += x[i] * x[i]; const v = Math.sqrt(e / frame); rms.push(v); if (v > peak) peak = v; }
+  if (!peak) return x;
+  const thr = peak * Math.pow(10, -topDb / 20); let a = 0, b = rms.length - 1;
+  while (a < b && rms[a] < thr) a++; while (b > a && rms[b] < thr) b--;
+  const pad = Math.round(padS * 16000), i0 = Math.max(0, a * hop - pad), i1 = Math.min(x.length, b * hop + frame + pad);
+  return x.subarray(i0, i1);
+}
+async function transcribeBlob(blob) {
+  const ctx = new AudioContext({ sampleRate: 16000 }); const buf = await ctx.decodeAudioData(await blob.arrayBuffer());
+  const audio = trimSilence(buf.getChannelData(0)); const t0 = performance.now();
+  let text;
+  if (asrLM) {  // 20 s chunks like scripts/asr_eval.py (the CTC models degrade past ~20 s); each chunk decoded with the LM
+    const parts = [];
+    for (let s0 = 0; s0 < audio.length; s0 += 20 * 16000) {
+      const inp = await asrLM.proc(audio.subarray(s0, s0 + 20 * 16000)); const out = await asrLM.model(inp);
+      const [, T, V] = out.logits.dims; const t = ctcPrefixBeam(out.logits.data, T, V, asrLM.id2ch, asrLM.blank, asrLM.lm, { alpha: +(q.get('alpha') || 0.5), beta: +(q.get('beta') || 0.5) });
+      out.logits.dispose?.(); if (t) parts.push(t);
+    }
+    text = parts.join(' ');
+  } else { text = (await asr(audio, { chunk_length_s: 20, stride_length_s: 2 })).text; }
+  const r = { text };
+  $('asrOut').textContent = r.text; $('asrOut').dir = 'rtl'; $('src').value = r.text;
+  $('asrStatus').textContent = `transcribed ${(buf.duration).toFixed(1)}s of audio (${(audio.length/16000).toFixed(1)}s after silence trim) in ${((performance.now()-t0)/1000).toFixed(2)}s`;
+}
+$('file').onchange = e => e.target.files[0] && transcribeBlob(e.target.files[0]);
+$('sample').onclick = async () => transcribeBlob(await (await fetch('samples/' + (q.get('clip') || 'cv_sample.mp3'))).blob());
+let rec, chunks = [];
+$('rec').onclick = async () => {
+  if (rec && rec.state === 'recording') { rec.stop(); $('rec').textContent = '● Record'; return; }
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: true }); chunks = [];
+  rec = new MediaRecorder(stream); rec.ondataavailable = e => chunks.push(e.data);
+  rec.onstop = () => { stream.getTracks().forEach(t => t.stop()); transcribeBlob(new Blob(chunks)); };
+  rec.start(); $('rec').textContent = '■ Stop';
+};
+</script>
+</body>
+</html>

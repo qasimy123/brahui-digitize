@@ -1,0 +1,7 @@
+{
+ "wavs": "evals/tts/f5_multi_roman/curve/u55000/wavs",
+ "n": 20,
+ "cer_mean": 0.0931,
+ "cer_median": 0.0843,
+ "dur_ratio_vs_real": 0.658
+}

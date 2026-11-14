@@ -1,0 +1,7 @@
+{
+ "wavs": "evals/tts/listen_v3/old/wavs",
+ "n": 24,
+ "cer_mean": 0.113,
+ "cer_median": 0.0998,
+ "dur_ratio_vs_real": NaN
+}

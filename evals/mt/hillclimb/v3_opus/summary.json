@@ -1,0 +1,38 @@
+{
+  "description": "v3: en2brh=v2 glossary prompt, brh2en=v0 plain prompt, Opus 5.5",
+  "target": "system_prompt",
+  "prompt_file": "evals/mt/prompts/system_v2.md",
+  "prompt_file_brh2en": "evals/mt/prompts/system_v0.md",
+  "model": "opus",
+  "effort": null,
+  "shots_each": 3,
+  "shots_fixed": 12,
+  "scores": {
+    "en2brh/train": {
+      "n": 663,
+      "chrfpp": 34.44,
+      "bleu": 10.17,
+      "mean_sent_chrfpp": 34.42
+    },
+    "en2brh/test": {
+      "n": 200,
+      "chrfpp": 35.3,
+      "bleu": 9.91,
+      "mean_sent_chrfpp": 35.29
+    },
+    "brh2en/train": {
+      "n": 504,
+      "chrfpp": 54.7,
+      "bleu": 34.76,
+      "mean_sent_chrfpp": 56.85
+    },
+    "brh2en/test": {
+      "n": 854,
+      "chrfpp": 56.67,
+      "bleu": 37.27,
+      "mean_sent_chrfpp": 57.93
+    }
+  },
+  "rows": 2221,
+  "error_rows": 0
+}

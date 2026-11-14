@@ -1,0 +1,7 @@
+{
+ "wavs": "evals/tts/student/onnx_q8_all/wavs",
+ "n": 40,
+ "cer_mean": 0.1119,
+ "cer_median": 0.1001,
+ "dur_ratio_vs_real": 0.921
+}

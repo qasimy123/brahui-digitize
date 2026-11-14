@@ -1,0 +1,37 @@
+{
+  "description": "v0 system prompt, same shots, Claude Opus 5.5 (model lever)",
+  "target": "system_prompt",
+  "prompt_file": "evals/mt/prompts/system_v0.md",
+  "model": "opus",
+  "effort": null,
+  "shots_each": 3,
+  "shots_fixed": 12,
+  "scores": {
+    "en2brh/train": {
+      "n": 663,
+      "chrfpp": 34.06,
+      "bleu": 9.7,
+      "mean_sent_chrfpp": 34.11
+    },
+    "en2brh/test": {
+      "n": 200,
+      "chrfpp": 34.92,
+      "bleu": 10.13,
+      "mean_sent_chrfpp": 34.64
+    },
+    "brh2en/train": {
+      "n": 504,
+      "chrfpp": 54.81,
+      "bleu": 35.12,
+      "mean_sent_chrfpp": 56.14
+    },
+    "brh2en/test": {
+      "n": 854,
+      "chrfpp": 57.21,
+      "bleu": 37.78,
+      "mean_sent_chrfpp": 58.52
+    }
+  },
+  "rows": 2221,
+  "error_rows": 0
+}

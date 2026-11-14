@@ -1,0 +1,7 @@
+{
+ "wavs": "evals/tts/diag_cvref/wavs",
+ "n": 20,
+ "cer_mean": 0.7777,
+ "cer_median": 0.7727,
+ "dur_ratio_vs_real": 0.706
+}

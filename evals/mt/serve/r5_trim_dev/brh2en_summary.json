@@ -1,0 +1,10 @@
+{
+  "chrfpp": 51.11,
+  "bleu": 28.28,
+  "n": 302,
+  "sec": 208.6,
+  "model": "runs/nllb_r5_trim/final",
+  "dir": "brh2en",
+  "beams": 4,
+  "device": "mps"
+}

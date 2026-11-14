@@ -1,0 +1,7 @@
+{
+ "wavs": "evals/tts/diag_roman_sp0.8/wavs",
+ "n": 20,
+ "cer_mean": 0.5015,
+ "cer_median": 0.5,
+ "dur_ratio_vs_real": 0.823
+}

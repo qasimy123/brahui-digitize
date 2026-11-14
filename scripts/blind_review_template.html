@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brahui voice blind review</title>
+<style>
+  :root { --bg:#f6f4ef; --card:#fffdf8; --ink:#1f2a2e; --muted:#5d6b70; --line:#ddd6c8; --accent:#0f6b5c; --accent-ink:#fff; --warn:#8a5a00; --pick:#e3f1ec; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#15191b; --card:#1d2326; --ink:#e9ecea; --muted:#9aa8ab; --line:#313a3e; --accent:#4fc3a8; --accent-ink:#0c1a17; --warn:#e0b060; --pick:#1f3832; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:24px 16px 120px; }
+  h1 { font-size:1.5rem; margin:0 0 6px; }
+  .lede { color:var(--muted); margin:0 0 18px; }
+  .how { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin-bottom:18px; }
+  .how ol { margin:6px 0 0; padding-left:20px; } .how li { margin:2px 0; }
+  .who { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px; }
+  input[type=text], textarea { font:inherit; color:var(--ink); background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:8px 10px; }
+  input[type=text] { width:220px; max-width:100%; } textarea { width:100%; min-height:58px; resize:vertical; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; margin:14px 0; }
+  .card.done { border-color:var(--accent); }
+  .num { font-size:.8rem; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; display:flex; justify-content:space-between; }
+  .brh { direction:rtl; text-align:right; font-size:1.55rem; line-height:1.9; margin:6px 0 2px; font-family:"Noto Nastaliq Urdu","Geeza Pro","Noto Naskh Arabic",serif; }
+  .rom { font-style:italic; color:var(--muted); } .en { margin:4px 0 12px; } .unsure { color:var(--warn); font-size:.85rem; }
+  .clips { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  @media (max-width:560px) { .clips { grid-template-columns:1fr; } }
+  .clip { border:1px solid var(--line); border-radius:10px; padding:10px; }
+  .clip b { display:block; margin-bottom:6px; } audio { width:100%; height:36px; }
+  .flags { display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:8px; font-size:.9rem; color:var(--muted); }
+  .q { margin:12px 0 6px; font-weight:600; }
+  .opts { display:flex; flex-wrap:wrap; gap:8px; }
+  .opts label { border:1px solid var(--line); border-radius:999px; padding:6px 14px; cursor:pointer; user-select:none; }
+  .opts input { position:absolute; opacity:0; } .opts label:has(input:checked) { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .opts label:has(input:focus-visible) { outline:2px solid var(--accent); outline-offset:2px; }
+  .bar { position:fixed; left:0; right:0; bottom:0; background:var(--card); border-top:1px solid var(--line); padding:10px 16px; }
+  .bar div { max-width:760px; margin:0 auto; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .bar span { flex:1; min-width:140px; color:var(--muted); }
+  button { font:inherit; border-radius:8px; padding:9px 14px; border:1px solid var(--accent); background:var(--accent); color:var(--accent-ink); cursor:pointer; }
+  button.ghost { background:transparent; color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Brahui voice: blind comparison</h1>
+  <p class="lede">24 sentences, each spoken by two versions of the voice model. You are not told which is which.</p>
+  <div class="how">
+    <strong>How to review</strong>
+    <ol>
+      <li>Play A and B for a sentence (headphones help).</li>
+      <li>Pick which one sounds like better, more natural Brahui. Tick any problems you hear.</li>
+      <li>Add a note if a word is wrong or the accent sounds off. Notes in any language are fine.</li>
+      <li>When finished, press <em>Download results</em> and tell Claude; the file lands in your Downloads folder.</li>
+    </ol>
+    <p class="unsure" style="margin:8px 0 0">The English lines are machine translations of sentence fragments and may be wrong; lines starting with "?" are the least certain. Correct them in the notes if you like.</p>
+    <div class="who"><label for="who">Reviewer</label><input type="text" id="who" placeholder="your name"></div>
+  </div>
+  <div id="list"></div>
+</main>
+<div class="bar"><div><span id="prog"></span><button class="ghost" id="copy">Copy results</button><button id="dl">Download results</button></div></div>
+<script>
+const ITEMS = /*ITEMS*/[];
+const KEY = "__KEY__";
+const SK = "brahui_blind_review_v1";
+let state = {}; try { state = JSON.parse(localStorage.getItem(SK) || "{}"); } catch (e) {}
+const save = () => { try { localStorage.setItem(SK, JSON.stringify(state)); } catch (e) {} progress(); };
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const FLAGS = [["wrong", "wrong or garbled word"], ["robot", "robotic or glitchy"], ["accent", "accent sounds off"]];
+const list = document.getElementById("list");
+ITEMS.forEach(it => {
+  const s = state[it.n] = state[it.n] || {}; const unsure = it.en.startsWith("?");
+  const el = document.createElement("section"); el.className = "card"; el.id = "c" + it.n;
+  const clip = k => `<div class="clip"><b>Version ${k}</b><audio controls preload="none" src="data:audio/mpeg;base64,${it[k]}"></audio>
+    <div class="flags">${FLAGS.map(([f, t]) => `<label><input type="checkbox" data-n="${it.n}" data-f="${k}_${f}" ${s[k + "_" + f] ? "checked" : ""}> ${t}</label>`).join("")}</div></div>`;
+  el.innerHTML = `<div class="num"><span>Sentence ${it.n}</span><span class="st"></span></div>
+    <div class="brh" lang="brh">${esc(it.brh)}</div><div class="rom">${esc(it.rom)}</div>
+    <div class="en">${esc(unsure ? it.en.slice(2) : it.en)} ${unsure ? '<span class="unsure">(translation unsure)</span>' : ""}</div>
+    <div class="clips">${clip("A")}${clip("B")}</div>
+    <div class="q">Which sounds like better, more natural Brahui?</div>
+    <div class="opts">${[["A", "A is better"], ["B", "B is better"], ["same", "No real difference"], ["bad", "Both are bad"]].map(([v, t]) =>
+      `<label><input type="radio" name="p${it.n}" value="${v}" data-n="${it.n}" ${s.pick === v ? "checked" : ""}> ${t}</label>`).join("")}</div>
+    <div class="q">Notes</div><textarea data-n="${it.n}" placeholder="e.g. A says the second word wrong; B sounds like a news reader">${esc(s.note || "")}</textarea>`;
+  list.appendChild(el);
+});
+list.addEventListener("input", e => {
+  const t = e.target, n = t.dataset.n; if (!n) return;
+  if (t.type === "radio") state[n].pick = t.value; else if (t.type === "checkbox") state[n][t.dataset.f] = t.checked; else state[n].note = t.value;
+  save();
+});
+list.addEventListener("play", e => { document.querySelectorAll("audio").forEach(a => { if (a !== e.target) a.pause(); }); }, true);
+const who = document.getElementById("who"); who.value = state._who || ""; who.addEventListener("input", () => { state._who = who.value; save(); });
+function progress() {
+  let d = 0; ITEMS.forEach(it => { const ok = !!state[it.n].pick; d += ok; const c = document.getElementById("c" + it.n); c.classList.toggle("done", ok); c.querySelector(".st").textContent = ok ? "answered" : ""; });
+  document.getElementById("prog").textContent = d + " of " + ITEMS.length + " answered (saved in this browser)";
+}
+function results() {
+  const key = JSON.parse(atob(KEY));
+  return JSON.stringify({ reviewer: state._who || "", key, answers: ITEMS.map(it => {
+    const s = state[it.n], o = { n: it.n, pick: s.pick || null, note: s.note || "" };
+    o.preferred_model = s.pick === "A" || s.pick === "B" ? key[it.n][s.pick] : s.pick || null;
+    ["A", "B"].forEach(k => FLAGS.forEach(([f]) => { if (s[k + "_" + f]) (o["flags_" + key[it.n][k]] = o["flags_" + key[it.n][k]] || []).push(f); }));
+    return o; }) }, null, 1);
+}
+document.getElementById("dl").onclick = () => {
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([results()], { type: "application/json" }));
+  a.download = "brahui_blind_review" + (state._who ? "_" + state._who.replace(/\W+/g, "_") : "") + ".json"; a.click();
+};
+document.getElementById("copy").onclick = async e => { try { await navigator.clipboard.writeText(results()); e.target.textContent = "Copied"; } catch (x) { e.target.textContent = "Copy failed, use Download"; } };
+progress();
+</script>
+</body>
+</html>

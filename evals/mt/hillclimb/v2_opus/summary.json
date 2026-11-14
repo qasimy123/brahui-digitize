@@ -1,0 +1,37 @@
+{
+  "description": "v2: v1 minus brh->en section, Opus 5.5",
+  "target": "system_prompt",
+  "prompt_file": "evals/mt/prompts/system_v2.md",
+  "model": "opus",
+  "effort": null,
+  "shots_each": 3,
+  "shots_fixed": 12,
+  "scores": {
+    "en2brh/train": {
+      "n": 663,
+      "chrfpp": 34.69,
+      "bleu": 10.23,
+      "mean_sent_chrfpp": 34.57
+    },
+    "en2brh/test": {
+      "n": 200,
+      "chrfpp": 35.36,
+      "bleu": 10.34,
+      "mean_sent_chrfpp": 35.33
+    },
+    "brh2en/train": {
+      "n": 504,
+      "chrfpp": 54.06,
+      "bleu": 34.04,
+      "mean_sent_chrfpp": 55.72
+    },
+    "brh2en/test": {
+      "n": 854,
+      "chrfpp": 56.21,
+      "bleu": 36.69,
+      "mean_sent_chrfpp": 57.54
+    }
+  },
+  "rows": 2221,
+  "error_rows": 0
+}

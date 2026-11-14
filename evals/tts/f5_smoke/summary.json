@@ -1,0 +1,7 @@
+{
+ "wavs": "evals/tts/f5_smoke/wavs",
+ "n": 3,
+ "cer_mean": 0.8378,
+ "cer_median": 0.85,
+ "dur_ratio_vs_real": 0.869
+}

@@ -1,0 +1,566 @@
+{
+ "en2brh": [
+  {
+   "id": "smolsent_211",
+   "chrfpp": 9.79,
+   "src": "Who is faster, the turtle or the butterfly?",
+   "ref": "ہراسٹ تیزے سرکوک یا پِرک؟",
+   "hyp": "کدو ترند ئے، کچھوا یا تتلی؟"
+  },
+  {
+   "id": "smolsent_613",
+   "chrfpp": 9.82,
+   "src": "Madam, your glasses are fogged up!",
+   "ref": "میڈم نا شیشہ غاک گڑزی و!",
+   "hyp": "بی بی، نا عینک ٹی دھند مسونے!"
+  },
+  {
+   "id": "smolsent_308",
+   "chrfpp": 10.34,
+   "src": "Portrait (vertical) or landscape (horizontal) orientation is acceptable.",
+   "ref": "پورٹریٹ (عمودی) یا ڈغار نا چغین کاری؛ تزئین نا (افقی) واقفیت قابل قبول ئے۔",
+   "hyp": "عمودی یا افقی سمت دوئی منظورے۔"
+  },
+  {
+   "id": "smolsent_359",
+   "chrfpp": 10.48,
+   "src": "Check measurements like shoulders, bust, waist, and hips.",
+   "ref": "کوپہ ، مُخ ، چاربندی تے ھُربو کچ کبو",
+   "hyp": "شغنہ، سینہ، کمر و کولہوتا ناپ آتے چیک کرو۔"
+  },
+  {
+   "id": "smolsent_586",
+   "chrfpp": 11.28,
+   "src": "There are some really neat delay effects, and the overall vibe is nice.",
+   "ref": "گڑاس واقعی صاف اُرے کننگ نا اثراک اریر، و مجموعی وڑاٹ وائب جوانے۔",
+   "hyp": "کجا بازا زبردست ڈیلے ایفیکٹس ارے، و کل ماحول جوان ئے۔"
+  },
+  {
+   "id": "smolsent_73",
+   "chrfpp": 12.89,
+   "src": "According to the initial findings, Bilici died of a heart attack.",
+   "ref": "بنائی  پٹ و پول نا رد اَٹ بیلیسی اُست ئنا اٹیک آن کذیت کرینے۔",
+   "hyp": "ابتدائی تحقیق نا مطابق بلیچی دل نا دورہ آن مرے۔"
+  },
+  {
+   "id": "smolsent_794",
+   "chrfpp": 12.9,
+   "src": "Member physicians and researchers develop widely recognized clinical practice guidelines.",
+   "ref": "ممبر ڈاکٹرو پول کارک شابیتو تلہ سے آ تسلیم کروک  کلینیکل پریکٹس آک رابلدی  شون تیرہ ۔",
+   "hyp": "رکن ڈاکٹر و محقق بازا مشہور آ طبی عمل نا رہنما اصول تے جوڑ کیرہ۔"
+  },
+  {
+   "id": "smolsent_204",
+   "chrfpp": 13.01,
+   "src": "Sometimes blunt, maybe controversial, hopefully never too grumpy or gloomy.",
+   "ref": "وخت وختس بید رھبند، مننگ کیک جنجالی، اُمیت ارے کہ وختس  ھم سخت نا اومیت ءُ غمگین مفہ بو۔",
+   "hyp": "کدی کدی سخت، شاید متنازعہ، امیت ئے کہ کدی ہم زیات چڑخ یا اُداس مفک۔"
+  },
+  {
+   "id": "smolsent_59",
+   "chrfpp": 13.08,
+   "src": "Either way, use the full amount to ensure its sour flavors come through.",
+   "ref": "ہڑتوما رنگ آتا، سرجم ٹی جاچ ئے ھلسہ دانا زَفت انگا تام ئے اُست جمی ئس مرے۔",
+   "hyp": "ہر وڑ اٹ، پورا مقدار ئے استعمال کبو تاکہ اونا ترش ذائقہ پیشن بررے۔"
+  },
+  {
+   "id": "smolsent_411",
+   "chrfpp": 13.23,
+   "src": "You are outgoing and social and you thrive on communication and connection with others on an intellectual level.",
+   "ref": "نی درآمد ءُ چاگردی اُس ءُ تو فکری پڑا ایلوتون رابطہ و رابطہ ٹی شونداری کیسہ۔",
+   "hyp": "نی ملنگ و چاگڑدی ئے و نی دوسراتون عقلی سطح آ گپ و تران و ہمگرنچی آ جوڑ مریس۔"
+  },
+  {
+   "id": "smolsent_753",
+   "chrfpp": 13.3,
+   "src": "The jobs generated would soon disappear in the grand scheme of things.",
+   "ref": "ودی مروک آ  ملازمت آک گڑاتا عظیم منصوبہ بندی ٹی وزئس  ایسر مریرہ۔",
+   "hyp": "پیدا مسوکا نوکری آک اسل منظر ٹی تکڑ ختم مریر۔"
+  },
+  {
+   "id": "smolsent_52",
+   "chrfpp": 13.36,
+   "src": "Some might prefer early morning while others prefer late night.",
+   "ref": "گڑاس سُھب وختی ئے دوست تخرہ و گڑاس نن نیمہ ئے دوست تخرہ ۔",
+   "hyp": "گڑاس اسہ سوگبار نیمرو آن مخ ہرا ایلوفک رات نا دیر آ خواھنگ کیرہ۔"
+  },
+  {
+   "id": "smolsent_783",
+   "chrfpp": 13.56,
+   "src": "Boat trailer wholesale manufacturer, parts and service provider.",
+   "ref": "بوٹ ٹریلر ہول سیل مینوفیکچرر، پارٹس وسروس تروک آک۔",
+   "hyp": "کشتی ٹرالی نا تھوک جوڑ کروکو، پرزہ جات و سروس فراہم کروکو۔"
+  },
+  {
+   "id": "smolsent_237",
+   "chrfpp": 14.07,
+   "src": "You will literally learn how to eat breakfast, lunch, and dinner.",
+   "ref": "نی لوزی دروشم اٹ  ھیل کیسہ کہ نہاری ، نیمروچ نا اِرغ ، و نن نا اِرغ ئے ہمر کُنیرہ ۔",
+   "hyp": "نی لفظ بہ لفظ سکی کہ ناشتہ، دوپہر نا کھانا و شام نا کھانا دیخسر خننگ ئے۔"
+  },
+  {
+   "id": "smolsent_301",
+   "chrfpp": 14.1,
+   "src": "Although, \"celebrity crush\" seems like too narrow and shallow a term.",
+   "ref": "گرچہ، \"پنی و بندغ اسے  کچل\" باز تنک و سبک و اصطلاح اسے نا وڑ خننگک۔",
+   "hyp": "ہرچنت، ’’مشہور شخصیت نا عشق‘‘ ہندنو اسہ لفظ ئس مریک ہرا باز تنگ و سطحی ئے۔"
+  },
+  {
+   "id": "smolsent_776",
+   "chrfpp": 14.35,
+   "src": "Leaving some graduates in more challenging situations than others.",
+   "ref": "گڑاس گریجویٹ آتے ایلو تہ  مقابلہ ٹی  زیات مشکل حالیت ٹی ہِلنگ ۔",
+   "hyp": "کچھ فارغ التحصیل آتے ہنتو آتیٹ گیشتر سخت حالات ٹی تننگ ٹی۔"
+  },
+  {
+   "id": "smolsent_541",
+   "chrfpp": 14.51,
+   "src": "It won’t do to have the fox steal a goose and a duck and celebrate the feast.",
+   "ref": "دُن مفک کہ شوک، ہنس و بطخ دُزی کیر و ائید کیر۔",
+   "hyp": "دا جوان افک کہ کھرنا اسہ ہاز و اسہ بتخ ئے چوری کرے و دعوت ئے جشن کرے۔"
+  },
+  {
+   "id": "smolsent_440",
+   "chrfpp": 14.55,
+   "src": "It is fairer to listen to the string that broke than to never strain a bow.",
+   "ref": "دا ودیک گچین اے کہ ہمو تارے بننگ اے ہرا کشکا،ایڑان کہ اسُل کمان چھکنگتنے",
+   "hyp": "کمان ئے ہچ ہم نہ کشنگ آن گڑا پروشوکا تار نا ہیت ئے آسخنگ زیادہ انصاف ئے۔"
+  },
+  {
+   "id": "smolsent_141",
+   "chrfpp": 14.65,
+   "src": "May God bless you with happiness, contentment, prosperity, peace, and abundance on your birthday and always.",
+   "ref": "اللہ نمے نما ودی دے آ مدامی خوش و آبات کے ، خوشی و آسودگیک مدامی نمے آ تالان مریر۔",
+   "hyp": "خدا نے نا سالگرہ آ و ہمیشہ خوشی، قناعت، خوشحالی، امن و برکت تون نوازے۔"
+  },
+  {
+   "id": "smolsent_469",
+   "chrfpp": 14.87,
+   "src": "The difference is their tolerance to the pain and how they manifest the ache.",
+   "ref": "فرق دادے کہ اونا دڑدے سگنگ و او ھمر دڑدے درشان کیک ۔",
+   "hyp": "فرق اوفتا درد نا برداشت و دردئے ظاہر کننگ نا وڑ ئے۔"
+  },
+  {
+   "id": "smolsent_809",
+   "chrfpp": 14.94,
+   "src": "Book artist, printmaker, rabid reader, freelance writer, and editor.",
+   "ref": "کتاب آرٹسٹ، پرنٹ میکر، ریڈر، فری لانس نبشتہ کار وشونکار۔",
+   "hyp": "کتاب نا فنکار، چھاپ کروک، تیز خوانندہ، آزاد لیکھک و مدیر۔"
+  },
+  {
+   "id": "smolsent_587",
+   "chrfpp": 14.98,
+   "src": "The guys in messy holey shirts and girls in shredded clothing did not anticipate to take this daunting passage.",
+   "ref": "کچٹ انگا ہولی کوس بینگوک ماک و آگڑی آ پُچاتون مسنک مشکل انگا کسرتے آ ہننگ نا اومیت کپسہ ۔",
+   "hyp": "ہرنگوک سوراخ دار کمیس و ہرنگوکا کپڑہ آتیٹی کنڈوک چاکا و جنینک دا ھُلّو گزر نا امید ہچو کتنو۔"
+  },
+  {
+   "id": "smolsent_137",
+   "chrfpp": 15.11,
+   "src": "Accessories lend visual appeal through pattern and texture.",
+   "ref": "لوازمات پیٹرن و ساخت نا وسیلہ تون  بصری خواست تیرہ۔",
+   "hyp": "سنگار نا گڑاک نمونہ و بناوٹ نا ذریعہ آن دیدنی کشش ایتیرہ۔"
+  },
+  {
+   "id": "smolsent_66",
+   "chrfpp": 15.57,
+   "src": "If it is the incorrect amount, have the vendor revise the invoice.",
+   "ref": "اگہ دا رَد و زرّ و  گڑا دکاندارے  انوائس ٹٰی بدلی کننگ نا پاننگ ئے۔",
+   "hyp": "اگہ دا غلط رقم ئے تو فروخت کروکا نا بل ئے درست کنے۔"
+  },
+  {
+   "id": "smolsent_399",
+   "chrfpp": 15.86,
+   "src": "Enjoy your Tuesday evening, everyone ... see you here again very soon!",
+   "ref": "تینا سہ شمبہ ئی شام نا چس ئے ارفرہ ، غٹ بندغ آک... زوئس داڑے اسیکہ وا مِلرہ !",
+   "hyp": "نمو کل تینا منگل نا شام ئے خوش تروو ... ہندن پدا باز جلد ننے دا ڈغار آ خنین!"
+  },
+  {
+   "id": "smolsent_834",
+   "chrfpp": 43.25,
+   "src": "Martin realizes that the android’s gun is now able to kill humans, so he flees.",
+   "ref": "مارٹن ئے  احساس مس کہ اینڈرائیڈنا توفک داسا انسان تے کسفنگ نا  قابل ئے،ہنداڑن او نرآ۔",
+   "hyp": "مارٹن سرپد مریک کہ اینڈرائیڈ نا بندوق داسا بندغ آتے کسفنگ نا قابل ئے، اندا خاطر او تتا۔"
+  },
+  {
+   "id": "smolsent_839",
+   "chrfpp": 58.85,
+   "src": "Jack Dorsey explained the corporation did not manage the problem nicely.",
+   "ref": "جیک ڈورسی وضاحت کرے کہ کارپوریشن نا داویل ئے جوانیکہ  منظم کتنو ۔",
+   "hyp": "جیک ڈورسی وضاحت کرے کہ کارپوریشن مسئلہ ئے جوانی اٹ سنبھال کتون۔"
+  },
+  {
+   "id": "smolsent_812",
+   "chrfpp": 30.61,
+   "src": "Performing minor diagnostic tests and procedures as directed by healthcare professionals.",
+   "ref": "صحت  نا رکھ و چیٹ کروک آ پیشہ ور بندغ آتا پنت نا رِداٹ معمولی تشخیص نا ٹیسٹ و طریقہ کار انجام تننگ۔",
+   "hyp": "صحت نا ماہر آتا ہدایت مطابق ہلکا تشخیصی ٹیسٹ و طریقہ کار کننگ۔"
+  },
+  {
+   "id": "smolsent_802",
+   "chrfpp": 57.43,
+   "src": "In his diary, young Washington expressed some reservations.",
+   "ref": "تینا  ڈائری ٹی، ورنا واشنگٹن گڑاس خدشہ تا اظہار کرے۔",
+   "hyp": "تینا ڈائری ٹی، ورنا واشنگٹن چندی خدشہ ات درشان کریر۔"
+  },
+  {
+   "id": "smolsent_449",
+   "chrfpp": 34.14,
+   "src": "When we are obedient, faithful and fervent in spirit, and honest, miracles will happen every time we pray to God.",
+   "ref": "وختس کہ نن فرمانبردار، وفادار ءُ روح نہ تہہ ٹی ہمگرنچ ءُ ایماندار مرینہ گڑا ہرا وخت اَ کہ نن خدا غن دعاس کینہ او معجزہ ئس مریک ۔",
+   "hyp": "ہرتم نن فرمانبردار، وفادار، روح ٹی جوش مند و ایماندار مریبہ تو ہر وار کہ خدا ئے خوانہ تو معجزہ آک مریرہ۔"
+  },
+  {
+   "id": "smolsent_810",
+   "chrfpp": 32.16,
+   "src": "Isaac Newton observed objects falling and eventually proposed gravity.",
+   "ref": "آئزک نیوٹن  سوف ئے تمنگ آ خنا و بالآخر کشش ثقل نا  صلاہ ئے مونا ایس ۔",
+   "hyp": "آئزک نیوٹن چیزآتے کپنگ ءَ خنے و آخر ٹی کشش ثقل نا نظریہ ئے پیش کرے۔"
+  },
+  {
+   "id": "smolsent_380",
+   "chrfpp": 41.55,
+   "src": "Just kidding!",
+   "ref": "بیرہ مخسرہ کننگ اُٹ!",
+   "hyp": "بس مذاک کننگ اٹ!"
+  },
+  {
+   "id": "smolsent_164",
+   "chrfpp": 32.22,
+   "src": "We don’t need to worry that God won’t forgive us if we sincerely repent of our compromise and turn the other way.",
+   "ref": "ننے دا ہیت نا گڑتی نا ضروررت اف کہ خدا ننے بشخپک اگہ نن سُچائی و پاک انگا اُست و قول واقرار تون توبہ کینہ تو ارٹمی پارہ غا کانہ ۔",
+   "hyp": "ننے دا فکر کننگ نا ضرورت افس کہ خدا ننے معاف کپک، کہ نن تینا سمجھوتہ آن سچے دل تون توبہ کنین و ایلو پارہ غا تخین۔"
+  },
+  {
+   "id": "smolsent_223",
+   "chrfpp": 45.81,
+   "src": "To schedule an appointment, please complete and submit the request form.",
+   "ref": "ملاقات نا وخت طے کننگ کن ، براہ کرم درخواست فارم ئے سرجم کبو و  جمع کبو۔",
+   "hyp": "ملاقات نا وخت مقرر کننگ کن مہربانی کرسہ درخواست نا فارم ئے پورو کر و جمع کر۔"
+  },
+  {
+   "id": "smolsent_225",
+   "chrfpp": 38.18,
+   "src": "Stretch out on a comfy lounge chair and wrap yourself up in a soft, teddy bear-like blanket.",
+   "ref": "آرام دہ انگا صوفہ غا تینے آماچ کر و تینے خلکنا ، ٹیڈی بیئر نا ڈول کمبل ٹی کور۔",
+   "hyp": "اسہ آرام دہ لاؤنج کرسی آ دراز مس و تینے نرم، ٹیڈی بیئر ڈول کمبل ٹی گِند۔"
+  },
+  {
+   "id": "smolsent_832",
+   "chrfpp": 50.85,
+   "src": "Fig. 12. Synthesis gas manufacturing process by gasification.",
+   "ref": "تصویر 12. گیسیفیکیشن نا ذریعہ ٹی  ترکیب گیس نا تیاری نا عمل۔",
+   "hyp": "شکل 12. گیسیفیکیشن نا ذریعہ آ سنتھیسز گیس بنّاؤ نا عمل۔"
+  },
+  {
+   "id": "smolsent_604",
+   "chrfpp": 36.57,
+   "src": "Once the vessel is built, a new certificate of registration without this phrase and restriction can be obtained.",
+   "ref": "اسیکہ رزان جوڑ مننگ آن پد، داجملہ و پابندی آن بید  رجسٹریشن نا پوسکنو  سرٹیفکیٹ دوئی کننگ مریک۔",
+   "hyp": "اسہ وار کہ جہاز جوڑ مسر، دا لوز و پابندی آن بغیر رجسٹریشن نا نوا سرٹیفکیٹ ئس ہلنگ کیک۔"
+  },
+  {
+   "id": "smolsent_256",
+   "chrfpp": 40.2,
+   "src": "Whatever authority Muslim jurists may possess stems from their claim to speak on behalf of this religious command.",
+   "ref": "مسلم فقہا تون ہرا کالخوائی ئے او دا مذہبی حکم نا پارہ غان ھیت کننگ کہ اوفتا دعویٰ غان ودی مریک ۔",
+   "hyp": "مسلمان فقہا کن ہرا اختیار ہم مرے، او دا مذہبی حکم نا نمایندگی کننگ نا دعویٰ آن ودی مریک۔"
+  },
+  {
+   "id": "smolsent_557",
+   "chrfpp": 40.95,
+   "src": "He was convinced that it was perfect, but we had to convince the architect.",
+   "ref": "اودے یخین اس کہ دا کامل ئے، ولے ننے  معمارے  قائل کروئی تما۔",
+   "hyp": "اوتے یقین اس کہ دا پورہ ئے، ولے ننے نقشہ نویس ئے قائل کننگ کرے۔"
+  },
+  {
+   "id": "smolsent_446",
+   "chrfpp": 46.46,
+   "src": "Beauty became her mystery, companion, guide, and inspiration.",
+   "ref": "خوبصورتی اونا اسرار، سنگت، راہشون و الہام جوڑ مس۔",
+   "hyp": "حُسن اونا رمز، سنگت، رہنما و الہام جوڑ مس۔"
+  }
+ ],
+ "brh2en": [
+  {
+   "id": "bouquet_P373-S1",
+   "chrfpp": 5.43,
+   "src": "پد آن برجا سلیس",
+   "ref": "The chase went on",
+   "hyp": "Come back later"
+  },
+  {
+   "id": "bouquet_P018-S1",
+   "chrfpp": 9.93,
+   "src": "امتحان نا صفہ آتا زوت پڑو مریک۔",
+   "ref": "The pages for the exam will be announced soon.",
+   "hyp": "Exam papers are quickly distributed."
+  },
+  {
+   "id": "bouquet_P076-S4",
+   "chrfpp": 10.59,
+   "src": "<نیاڑی:> جوان اے۔",
+   "ref": "<female:>  Yeah, right.",
+   "hyp": "<Woman:> Okay."
+  },
+  {
+   "id": "bouquet_P398-S5",
+   "chrfpp": 11.75,
+   "src": "سلائی ہم جوان وڑ اٹ کننگ تانو۔",
+   "ref": "Stitch quality also leaves much to be desired.",
+   "hyp": "Sewing cannot be done well either."
+  },
+  {
+   "id": "bouquet_P458-S1",
+   "chrfpp": 12.61,
+   "src": "بھلا شار اسہ بے ترتیب او بدلی سینا گدرینگنگ اے۔",
+   "ref": "Large cities are undergoing an unprecedented transformation.",
+   "hyp": "A big city is a disorderly and changing passage."
+  },
+  {
+   "id": "bouquet_P248-S1",
+   "chrfpp": 13.39,
+   "src": "سنگتاک، کانبو منالی آ!",
+   "ref": "Guys, let's go to Manali!",
+   "hyp": "Friends, look at the beautiful view!"
+  },
+  {
+   "id": "bouquet_P373-S5",
+   "chrfpp": 14.44,
+   "src": "او نرنگ ئے برجا تخا",
+   "ref": "He kept on running",
+   "hyp": "He continued the story"
+  },
+  {
+   "id": "bouquet_P083-S4",
+   "chrfpp": 14.9,
+   "src": "شوک دُودُو ئے خنا و اودے تینا کاریم اٹ اتنگ کن سوچا۔",
+   "ref": "The fox noticed the little Duoduo at first glance, and came up with a plan to trick Duoduo to help him find the treasure.",
+   "hyp": "The fox saw Dudu and thought of luring him into his work."
+  },
+  {
+   "id": "bouquet_P378-S3",
+   "chrfpp": 15.32,
+   "src": "ای اندا وڑ ہچو حالیت سیٹی خوش مفرہ",
+   "ref": " I am generally not particularly happy either way",
+   "hyp": "I'm not happy in any such situation."
+  },
+  {
+   "id": "bouquet_P325-S3",
+   "chrfpp": 15.56,
+   "src": "آؤ، ای ہم چاہنگ خواہ",
+   "ref": "Yeah I wanna know too",
+   "hyp": "Yes, I also want to have tea."
+  },
+  {
+   "id": "bouquet_P030-S2",
+   "chrfpp": 15.98,
+   "src": "گڑاس کاریم کریوئی اے ولے چناک نمے کننگ کن الیپاسہ؟",
+   "ref": "Have errands to run and the kids won't let you run them?",
+   "hyp": "There is some work to do, but are the children trying to avoid it?"
+  },
+  {
+   "id": "bouquet_P312-S4",
+   "chrfpp": 16.07,
+   "src": "ڈنڈا و اینڈی چرینگار ہراوخت زرس بےچین محسوس کریرہ۔",
+   "ref": "Dinda and Andi walked while feeling a little anxious.",
+   "hyp": "The ones around the stick and the ball always feel quite restless."
+  },
+  {
+   "id": "bouquet_P423-S1",
+   "chrfpp": 16.28,
+   "src": "نن داسہ دڑینگانن۔",
+   "ref": "We just landed.",
+   "hyp": "We have now arrived."
+  },
+  {
+   "id": "bouquet_P083-S2",
+   "chrfpp": 17.23,
+   "src": "دُودُو بھاز گجر کننگاکہ، پدا ہم چنکس ئس، اودے تینا چنک ہاٹی نا اعتماد الو۔",
+   "ref": "Duoduo eats a lot of carrots every day, but he is still very small. He always feels unconfident because he is not tall enough.",
+   "hyp": "Dudu was very proud, yet still a child; he had no confidence in his own children."
+  },
+  {
+   "id": "bouquet_P304-S2",
+   "chrfpp": 17.37,
+   "src": "ہچو خاص او گڑاس اف!",
+   "ref": "Not really!",
+   "hyp": "Nothing special!"
+  },
+  {
+   "id": "bouquet_P013-S5",
+   "chrfpp": 17.89,
+   "src": "ای زرس انداڑے سلیوہ، نم انبو۔",
+   "ref": "I am gonna stay for a bit, you leave.",
+   "hyp": "I'm standing right here, you go."
+  },
+  {
+   "id": "bouquet_P207-S3",
+   "chrfpp": 18.18,
+   "src": "ای وختی آن ماچو پیچو، کرائسٹ دی",
+   "ref": "I've already visited Machu Picchu, Christ the Redeemer, and Iguazú Falls.",
+   "hyp": "I've been tired of it for a long time, Christ."
+  },
+  {
+   "id": "bouquet_P222-S3",
+   "chrfpp": 18.38,
+   "src": "نہ دکھہ ایتبو، نہ آستونک آتے چکابو، و بے عزتی نا ہیت نا تو سوال ہی ودی مفک۔",
+   "ref": "No shoving or sleeve pulling, and even less resorting to any hurtful language.",
+   "hyp": "Don't hurt anyone, don't push anyone, and insulting talk is out of the question."
+  },
+  {
+   "id": "bouquet_P144-S4",
+   "chrfpp": 18.48,
+   "src": "ای تینا مست نا سنگت آتا ہم منت وار اوٹ و اوفتا بروکا وخت نا جوان مننگ کن دُعا کیوہ۔",
+   "ref": "I would also like to take this opportunity to thank my former colleagues for the pleasant collaboration over the past years and wish everyone all the best for their future career path.",
+   "hyp": "I am also grateful to my former friends and pray for their bright future."
+  },
+  {
+   "id": "bouquet_P248-S3",
+   "chrfpp": 18.75,
+   "src": "و کنا لمہ باوہ کنے اجازت تفیسہ۔",
+   "ref": "And my mom and dad will not allow me.",
+   "hyp": "And my parents won't give me permission."
+  },
+  {
+   "id": "bouquet_P383-S2",
+   "chrfpp": 18.85,
+   "src": "تینا حالیت ئے داخس دباؤ ٹی انتئے شاغسہ؟",
+   "ref": "Why pushing oneself into such a condition?",
+   "hyp": "Why are you putting yourself under so much pressure?"
+  },
+  {
+   "id": "bouquet_P082-S5",
+   "chrfpp": 19.01,
+   "src": "بادشاہ زو ئس حکم تس کہ کُل جرنیلاک زو ئس فوج رادہ کبو۔",
+   "ref": "Emperor Ling of Han hastily issued an edict, ordering all generals to send troops immediately to relieve the urgent needs of the court.",
+   "hyp": "The emperor quickly ordered that all the generals should quickly prepare their armies."
+  },
+  {
+   "id": "bouquet_P020-S1",
+   "chrfpp": 19.02,
+   "src": "اونا خن تیٹی خڑینک آک بسور ہرا وخت کہ اودے پارے۔",
+   "ref": "His eyes were filled with tears while he was telling her.",
+   "hyp": "Tears came to his eyes when she told him."
+  },
+  {
+   "id": "bouquet_P001-S3",
+   "chrfpp": 19.21,
+   "src": "شام نا علاقہ ٹی مخلوق سُو ہم شاغک تے.",
+   "ref": "In the levant they stuff it with meat as well.",
+   "hyp": "In the Syria region, there are also creatures called Suu."
+  },
+  {
+   "id": "bouquet_P070-S1",
+   "chrfpp": 19.64,
+   "src": "<یونگ:> انت نی اوڑان ارفینگ کیسہ کہ انت اونا کمرہ ٹی پین ہم بندغ رہینگک؟",
+   "ref": "<yong:> Could you do me a favor to ask her if she has any other roommates?",
+   "hyp": "<Yong:> Do you know whether there are other people staying in his room?"
+  },
+  {
+   "id": "bouquet_P194-S3",
+   "chrfpp": 36.54,
+   "src": "دا بیریفنگ نا ظاہری عجلت و دا خورتی نا نیام اٹ تضاد پاش ئس ہراڑتون ڈیان، ساڑی مننگ آن زرس ہچکچاہٹ آن باوجود، تینا پُچ و زیور آتے بیناسس تانکہ ہموڑے مخلوق نا تنقید ئے بڑزا کننگ کے۔",
+   "ref": "The contrast couldn't be starker between the apparent improvisation of this decoration and the painstaking attention Diane, despite her reluctance to take part in the event, had paid to arrange the clothes and jewelry which would be sure to provoke the sharp criticism of society members thus gathered.",
+   "hyp": "The apparent haste of the dressing and the contrast between them was evident, in which Diane, despite some hesitation about being there, had worn her gown and jewelry so as to raise the criticism of the people there."
+  },
+  {
+   "id": "bouquet_P435-S2",
+   "chrfpp": 56.95,
+   "src": "نن درمیانہ جوانو اسٹیک آرڈر کرین، ولے دا تو بھاز گچین مس۔",
+   "ref": "We ordered a medium rare steak, but it was well done.",
+   "hyp": "We ordered a medium steak, but it turned out to be very good."
+  },
+  {
+   "id": "bouquet_P092-S3",
+   "chrfpp": 40.16,
+   "src": "<کمنٹ 3:> تعریف نا قابل! اندن لگک کہ دا زندہ اے۔",
+   "ref": "<comment 3:>  Impressive!  Almost like it is alive.",
+   "hyp": "<Comment 3:> Praiseworthy! It looks like it's alive."
+  },
+  {
+   "id": "bouquet_P359-S1",
+   "chrfpp": 36.13,
+   "src": "<A:> حیرانی نا ہیت ئس اے کہ نن تون کس مشورہ کتو، نن واقعی بھاز لائخ اون",
+   "ref": "<A:> It's astonishing that no one asks us for advice, we are so smart indeed",
+   "hyp": "<A:> It's surprising that no one has consulted us, we're really worthy."
+  },
+  {
+   "id": "bouquet_P292-S1",
+   "chrfpp": 31.42,
+   "src": "پٹاٹہ نا پکوڑا جوڑ کننگ نا اندنو وڑ ئس ہراکے ہچ ناکام مفک",
+   "ref": "Tips for making fail-proof potato fritters",
+   "hyp": "A potato fritter recipe that never fails"
+  },
+  {
+   "id": "bouquet_P185-S1",
+   "chrfpp": 30.29,
+   "src": "<A:> بَش اوس؟",
+   "ref": "<A:>You up?",
+   "hyp": "<A:> Are you getting up?"
+  },
+  {
+   "id": "bouquet_P082-S3",
+   "chrfpp": 42.08,
+   "src": "ژانگ جیاؤ الس اٹ پھیلائنگوکا ناجوڑی تیان فائدہ ارفے، تینے حکیم ئس نشان تس و بغاوت کن الس ئے مُچ کرے۔",
+   "ref": "Zhang Jiao took advantage of the plague among the plebs, he claimed he could cure diseases and ask his believers to gather and revolt.",
+   "hyp": "Zhang Jiao took advantage of the illness spreading among the people, presented himself as a healer, and gathered the people for rebellion."
+  },
+  {
+   "id": "bouquet_P236-S5",
+   "chrfpp": 40.2,
+   "src": "تینا اورانا چپ و چاگڑد ٹی دیر مُچ مننگ الپابو تانکہ زیات پَشّہ ودی مف۔",
+   "ref": "Don't let water collect around the house, so that there are not too many mosquitoes.",
+   "hyp": "Avoid water collecting around your house so that more mosquitoes don't breed."
+  },
+  {
+   "id": "bouquet_P037-S5",
+   "chrfpp": 33.13,
+   "src": "ای داسہ نیکن رائی کیوہ تا۔",
+   "ref": "I will send it to you right now.",
+   "hyp": "I will show you now."
+  },
+  {
+   "id": "bouquet_P038-S2",
+   "chrfpp": 58.16,
+   "src": "اوکان پد ای ہائیڈ پارک گام خلیسہ بگ بین اسکان سر مسوٹ، کسر ٹی بکنہم پیلس ہم تدینگا۔",
+   "ref": "After that I walked in Hyde Park until I reached Big Ben, I passed Buckingham Palace on my way there.",
+   "hyp": "After that I walked through Hyde Park and reached Big Ben, with Buckingham Palace also seen along the way."
+  },
+  {
+   "id": "bouquet_P062-S4",
+   "chrfpp": 48.88,
+   "src": "موبائل پلے بیک: کنکشن آن گُڈ فون نا میوزک پلیئر ئے ملیسہ شیئر چلیفبو۔",
+   "ref": "Mobile playback: After successfully connecting to Bluetooth, open the music player on your mobile phone to play music.",
+   "hyp": "Mobile playback: After connecting, open the phone's music player and start playing to share."
+  },
+  {
+   "id": "bouquet_P177-S4",
+   "chrfpp": 37.61,
+   "src": "نم دا وردش آتے کننگ کیرے: بیڈی تے بڑزا کننگ، اسکیپنگ، دُو تے چرخ تننگ، جمپ خلنگ، 4-گام تیز نرنگ، چپی نرنگ، یا پالو بدل کرسہ نرنگ نا وردشاک۔",
+   "ref": "You can choose among the following exercises: knee raises, skipping, arm rotations, hopping, 4-step accelerations, running backwards, or even direction changes. ",
+   "hyp": "You can do these exercises: raising your knees high, skipping, circling your arms, jumping, 4-step fast running, side running, or alternating-side running exercises."
+  },
+  {
+   "id": "bouquet_P115-S1",
+   "chrfpp": 45.37,
+   "src": "سد سالہ اواری؛ اُست ہمشہ کن گنڈوک مریک",
+   "ref": "A hundred years of harmony; hearts united forever",
+   "hyp": "A hundred years together; the heart is joyful forever."
+  },
+  {
+   "id": "bouquet_P255-S2",
+   "chrfpp": 56.13,
+   "src": "انداڑتون دروازہ نا گھنٹی لگا، وہرا وخت کہ او پیشن ہورا تو اوڑے کس الو۔",
+   "ref": "Just then, the doorbell rang, and he saw that there was no one outside.",
+   "hyp": "Just then the doorbell rang, but when he went outside there was nobody there."
+  },
+  {
+   "id": "bouquet_P048-S3",
+   "chrfpp": 53.6,
+   "src": "نن ملک ٹی بھاز وخت مخلوق ئے ہمو قانون آتا معلومداری اف ہراکے اوفتا حفاظت کن مریک۔",
+   "ref": "In our country, we sometimes don't know the laws that protect people.",
+   "hyp": "In our country, people often do not know about the laws that exist for their protection."
+  }
+ ]
+}

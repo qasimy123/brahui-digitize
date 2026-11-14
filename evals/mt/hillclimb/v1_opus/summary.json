@@ -1,0 +1,37 @@
+{
+  "description": "v1 prompt on Claude Opus 5.5",
+  "target": "system_prompt",
+  "prompt_file": "evals/mt/prompts/system_v1.md",
+  "model": "opus",
+  "effort": null,
+  "shots_each": 3,
+  "shots_fixed": 12,
+  "scores": {
+    "en2brh/train": {
+      "n": 663,
+      "chrfpp": 34.32,
+      "bleu": 10.16,
+      "mean_sent_chrfpp": 34.28
+    },
+    "en2brh/test": {
+      "n": 200,
+      "chrfpp": 35.3,
+      "bleu": 10.34,
+      "mean_sent_chrfpp": 35.19
+    },
+    "brh2en/train": {
+      "n": 504,
+      "chrfpp": 54.32,
+      "bleu": 34.69,
+      "mean_sent_chrfpp": 56.1
+    },
+    "brh2en/test": {
+      "n": 854,
+      "chrfpp": 56.66,
+      "bleu": 37.31,
+      "mean_sent_chrfpp": 58.0
+    }
+  },
+  "rows": 2221,
+  "error_rows": 0
+}

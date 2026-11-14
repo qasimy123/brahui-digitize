@@ -1,0 +1,15 @@
+[project]
+name = "brahui-onnx-export"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "optimum[onnxruntime]>=1.25,<1.26",
+    "transformers>=4.48,<4.52",
+    "torch>=2.5,<2.6",
+    "sentencepiece",
+    "onnx",
+    "onnxruntime",
+    "onnxslim",
+    "sacrebleu>=2.6.0",
+    "onnxscript>=0.7.2",
+]

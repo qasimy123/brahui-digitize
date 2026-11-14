@@ -1,0 +1,8 @@
+{
+ "model": "qkhawaja/brahui-tts-vits-lr1e4",
+ "n": 40,
+ "cer_mean": 0.2322,
+ "cer_median": 0.212,
+ "dur_ratio_vs_real": 0.901,
+ "seconds": 430.7
+}

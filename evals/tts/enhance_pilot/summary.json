@@ -1,0 +1,31 @@
+{
+ "n": 40,
+ "band": [
+  2.0,
+  2.8
+ ],
+ "raw": {
+  "ovrl_mean": 2.482,
+  "sig_mean": 3.448,
+  "bak_mean": 2.63,
+  "share_ge_3.0": 0.0,
+  "share_ge_2.8": 0.0,
+  "s_per_clip": 0.0
+ },
+ "metricgan": {
+  "ovrl_mean": 2.528,
+  "sig_mean": 2.936,
+  "bak_mean": 3.588,
+  "share_ge_3.0": 0.05,
+  "share_ge_2.8": 0.23,
+  "s_per_clip": 0.45
+ },
+ "sepformer_dns4": {
+  "ovrl_mean": 2.705,
+  "sig_mean": 3.303,
+  "bak_mean": 3.29,
+  "share_ge_3.0": 0.1,
+  "share_ge_2.8": 0.35,
+  "s_per_clip": 6.65
+ }
+}

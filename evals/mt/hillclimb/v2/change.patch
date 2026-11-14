@@ -1,0 +1,10 @@
+--- evals/mt/prompts/system_v1.md	2026-10-06 21:42:31
++++ evals/mt/prompts/system_v2.md	2026-10-06 22:04:43
+@@ -19,7 +19,3 @@
+ - Instructions and requests addressed to the reader take the polite/plural imperative in ‑بو (کبو، خلبو، ایتبو، مبو), not the bare singular stem.
+ - Case suffixes and postpositions are written as separate words after the noun: نا (genitive), ئے / تے (object), آ / ٹی (locative), آن (ablative), تون (with); plurals آک / آتے / آتا.
+ - Western digits (12, 2024); Urdu full stop ۔ and comma ،; retroflex lateral ڷ where the word has it.
+-
+-## Brahui -> English
+-
+-Read the native vocabulary above by its Brahui meaning; do not guess from a look-alike Urdu word (چاہ is "know", not "tea"; نن is "we" or "night"; سُو is "meat"). Keep angle-bracket speaker labels: role labels in lowercase (<female:>, <male:>, <comment 3:>, <customer:>), single-letter labels (<A:>) unchanged. Match the register and length of the source; casual chat stays casual and short.

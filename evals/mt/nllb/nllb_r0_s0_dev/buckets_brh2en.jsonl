@@ -1,0 +1,302 @@
+{"id": "bouquet_P373-S1", "chrf": 9.3, "bucket": "wrong_word", "evidence": "'The chase went on' -> 'Continued afterwards' (پد read as 'afterwards', not pursuit)", "meaning_preserved": false}
+{"id": "bouquet_P083-S4", "chrf": 9.7, "bucket": "entity", "evidence": "'The fox' -> 'Shok' (شوک = fox treated as a name)", "meaning_preserved": false}
+{"id": "smolsent_627", "chrf": 12.0, "bucket": "wrong_word", "evidence": "'a clown on the premises' -> 'a joke on me'", "meaning_preserved": false}
+{"id": "bouquet_P383-S5", "chrf": 14.4, "bucket": "synonym_ok", "evidence": "'It's all good so far' -> 'So far everything is fine'", "meaning_preserved": true}
+{"id": "bouquet_P458-S1", "chrf": 14.8, "bucket": "synonym_ok", "evidence": "'unprecedented transformation' -> 'random change' (literal for بے ترتیب)", "meaning_preserved": true}
+{"id": "smolsent_93", "chrf": 16.1, "bucket": "wrong_word", "evidence": "'socially sensible citizen' -> 'form of nationalism ... comprehensive narrative'", "meaning_preserved": false}
+{"id": "bouquet_P310-S5", "chrf": 16.9, "bucket": "wrong_word", "evidence": "'cucumbers' -> 'a flock'", "meaning_preserved": false}
+{"id": "bouquet_P083-S2", "chrf": 18.9, "bucket": "wrong_word", "evidence": "'eats a lot of carrots' -> 'was very stubborn'", "meaning_preserved": false}
+{"id": "smolsent_660", "chrf": 20.3, "bucket": "wrong_word", "evidence": "'in the ring' -> 'colorful'", "meaning_preserved": false}
+{"id": "bouquet_P316-S2", "chrf": 20.3, "bucket": "wrong_word", "evidence": "'not too salty' -> 'has been added to as well'", "meaning_preserved": false}
+{"id": "bouquet_P137-S4", "chrf": 20.4, "bucket": "synonym_ok", "evidence": "'until he was completely out of breath' -> 'so fast that he was exhausted'", "meaning_preserved": true}
+{"id": "bouquet_P383-S3", "chrf": 20.4, "bucket": "wrong_word", "evidence": "'exercise' -> 'be done quickly'", "meaning_preserved": false}
+{"id": "smolsent_514", "chrf": 20.8, "bucket": "wrong_word", "evidence": "'already split over the infrastructure bill' -> 'divided on the bill for the first time'", "meaning_preserved": false}
+{"id": "smolsent_204", "chrf": 21.2, "bucket": "wrong_word", "evidence": "'blunt ... grumpy or gloomy' -> 'uncertainty ... saddened by the hope of hardships'", "meaning_preserved": false}
+{"id": "bouquet_P398-S5", "chrf": 22.0, "bucket": "polarity_tense", "evidence": "'leaves much to be desired' -> 'should also be done well'", "meaning_preserved": false}
+{"id": "bouquet_P137-S3", "chrf": 22.0, "bucket": "synonym_ok", "evidence": "'pitch black in the alley' -> 'darkness in the street'", "meaning_preserved": true}
+{"id": "bouquet_P090-S5", "chrf": 22.2, "bucket": "wrong_word", "evidence": "'local Hong Kong theme' -> 'Hong Kong's western slopes'", "meaning_preserved": false}
+{"id": "smolsent_686", "chrf": 22.6, "bucket": "wrong_word", "evidence": "'merely delayed the invasion' -> 'carried out somewhat in the attack'", "meaning_preserved": false}
+{"id": "bouquet_P048-S5", "chrf": 22.6, "bucket": "wrong_word", "evidence": "'more complicated' -> 'more settled'", "meaning_preserved": false}
+{"id": "bouquet_P276-S3", "chrf": 22.7, "bucket": "polarity_tense", "evidence": "'must collect' -> 'take'", "meaning_preserved": false}
+{"id": "bouquet_P363-S6", "chrf": 22.8, "bucket": "entity", "evidence": "'Pyotr, Ionovs' -> 'Puter, Onof'", "meaning_preserved": false}
+{"id": "bouquet_P398-S4", "chrf": 24.5, "bucket": "wrong_word", "evidence": "'inexpensive fabrics' -> 'cheap clothes'", "meaning_preserved": true}
+{"id": "bouquet_P373-S2", "chrf": 24.5, "bucket": "wrong_word", "evidence": "'dust cloud' -> 'stream of water'", "meaning_preserved": false}
+{"id": "bouquet_P330-S3", "chrf": 24.6, "bucket": "synonym_ok", "evidence": "'Possesses intermediate engineering knowledge' -> 'We keep middle-level engineering information'", "meaning_preserved": true}
+{"id": "bouquet_P137-S1", "chrf": 24.7, "bucket": "synonym_ok", "evidence": "'a gunshot' -> 'the sound of that bullet'", "meaning_preserved": true}
+{"id": "bouquet_P383-S4", "chrf": 24.9, "bucket": "wrong_word", "evidence": "'exercising for 15 years' -> '15 years old and I am recovering'", "meaning_preserved": false}
+{"id": "bouquet_P196-S4", "chrf": 25.0, "bucket": "synonym_ok", "evidence": "'possibly' -> 'after all'", "meaning_preserved": true}
+{"id": "bouquet_P030-S2", "chrf": 25.0, "bucket": "synonym_ok", "evidence": "'errands to run' -> 'some work to be done'", "meaning_preserved": true}
+{"id": "bouquet_P325-S4", "chrf": 25.2, "bucket": "wrong_word", "evidence": "'wolf spider' -> 'date palm'", "meaning_preserved": false}
+{"id": "bouquet_P196-S1", "chrf": 26.9, "bucket": "wrong_word", "evidence": "'homework' -> 'household chores'", "meaning_preserved": false}
+{"id": "bouquet_P227-S3", "chrf": 27.2, "bucket": "wrong_word", "evidence": "'Zoo staff' -> 'people of Chakat's place'", "meaning_preserved": false}
+{"id": "bouquet_P383-S2", "chrf": 27.2, "bucket": "synonym_ok", "evidence": "'pushing oneself into such a condition' -> 'put your condition under so much pressure'", "meaning_preserved": true}
+{"id": "smolsent_633", "chrf": 27.5, "bucket": "wrong_word", "evidence": "'two identical twin brothers' -> 'siblings in one way or another'", "meaning_preserved": false}
+{"id": "smolsent_472", "chrf": 27.5, "bucket": "entity", "evidence": "'crunchy nut cereal from Millville' -> 'mulberries ... coriander'", "meaning_preserved": false}
+{"id": "bouquet_P442-S2", "chrf": 27.6, "bucket": "wrong_word", "evidence": "'arbitrary' -> 'in one's own money'", "meaning_preserved": false}
+{"id": "bouquet_P196-S3", "chrf": 27.6, "bucket": "wrong_word", "evidence": "'with as much surprise as fear' -> 'carefully'", "meaning_preserved": false}
+{"id": "bouquet_P090-S2", "chrf": 27.8, "bucket": "omission", "evidence": "missing: 'funeral (undertaker)' industry", "meaning_preserved": false}
+{"id": "bouquet_P310-S2", "chrf": 28.1, "bucket": "synonym_ok", "evidence": "'have not yet been blessed with children' -> 'had no children'", "meaning_preserved": true}
+{"id": "smolsent_404", "chrf": 28.3, "bucket": "wrong_word", "evidence": "'extremely wide and extremely fast ... decent light' -> 'bright, intense civilized light'", "meaning_preserved": false}
+{"id": "smolsent_109", "chrf": 28.3, "bucket": "wrong_word", "evidence": "'ego-shell' -> 'suspicion of a dying child'", "meaning_preserved": false}
+{"id": "bouquet_P083-S5", "chrf": 28.5, "bucket": "wrong_word", "evidence": "'insincerely, pretending' -> 'Dodo's mother'", "meaning_preserved": false}
+{"id": "bouquet_P373-S4", "chrf": 28.6, "bucket": "synonym_ok", "evidence": "'chasers couldn't keep up' -> 'person who has fallen behind cannot come back'", "meaning_preserved": true}
+{"id": "bouquet_P409-S4", "chrf": 28.7, "bucket": "synonym_ok", "evidence": "'dedicate 5 minutes a day' -> 'apply these for 5 minutes every day'", "meaning_preserved": true}
+{"id": "bouquet_P310-S4", "chrf": 28.9, "bucket": "wrong_word", "evidence": "'planted the cucumbers' -> 'set off'", "meaning_preserved": false}
+{"id": "bouquet_P229-S4", "chrf": 29.2, "bucket": "wrong_word", "evidence": "'Debris removal' -> 'Leaving the building'", "meaning_preserved": false}
+{"id": "bouquet_P310-S6", "chrf": 29.3, "bucket": "wrong_word", "evidence": "'cut it open -> was bitten'", "meaning_preserved": false}
+{"id": "bouquet_P177-S1", "chrf": 29.3, "bucket": "synonym_ok", "evidence": "'Good warmup before a soccer training session -> Before football training, warm up well'", "meaning_preserved": true}
+{"id": "bouquet_P127-S5", "chrf": 29.4, "bucket": "misread_source", "evidence": "'order -> Urdu' (آرڈو misread)", "meaning_preserved": false}
+{"id": "bouquet_P161-S3", "chrf": 29.6, "bucket": "wrong_word", "evidence": "'loves dog treats -> affects the same quantity'", "meaning_preserved": false}
+{"id": "smolsent_238", "chrf": 30.0, "bucket": "wrong_word", "evidence": "'durable -> softens'", "meaning_preserved": false}
+{"id": "bouquet_P161-S1", "chrf": 30.0, "bucket": "wrong_word", "evidence": "'a home -> him'", "meaning_preserved": false}
+{"id": "smolsent_207", "chrf": 30.1, "bucket": "wrong_word", "evidence": "'beyond our understanding -> Our focus should be more'", "meaning_preserved": false}
+{"id": "smolsent_126", "chrf": 30.3, "bucket": "wrong_word", "evidence": "'touch the horse -> take time off work'", "meaning_preserved": false}
+{"id": "bouquet_P297-S4", "chrf": 30.3, "bucket": "synonym_ok", "evidence": "'set a priority scale for your needs -> make a plan for your expenses'", "meaning_preserved": true}
+{"id": "bouquet_P458-S2", "chrf": 30.3, "bucket": "wrong_word", "evidence": "'tourist apartments ... driving residents -> large residential apartments are ... moving'", "meaning_preserved": false}
+{"id": "smolsent_674", "chrf": 30.5, "bucket": "entity", "evidence": "'Latasha -> he'", "meaning_preserved": false}
+{"id": "bouquet_P037-S4", "chrf": 30.5, "bucket": "synonym_ok", "evidence": "'the rest of the stuff you make -> your other manufactured goods'", "meaning_preserved": true}
+{"id": "smolsent_685", "chrf": 30.6, "bucket": "wrong_word", "evidence": "'fighting men -> angry men'", "meaning_preserved": false}
+{"id": "smolsent_621", "chrf": 30.7, "bucket": "wrong_word", "evidence": "'leaves ... carrot greens -> names ... leg of the peacock'", "meaning_preserved": false}
+{"id": "bouquet_P442-S4", "chrf": 30.7, "bucket": "entity", "evidence": "'finanzasesp -> Finances'", "meaning_preserved": true}
+{"id": "bouquet_P090-S1", "chrf": 31.2, "bucket": "wrong_word", "evidence": "'stars' -> 'stones'", "meaning_preserved": false}
+{"id": "bouquet_P161-S4", "chrf": 31.5, "bucket": "wrong_word", "evidence": "'house-trained ... very easy to care for' -> 'had his upbringing there and is being taken care of'", "meaning_preserved": false}
+{"id": "bouquet_P343-S1", "chrf": 31.6, "bucket": "synonym_ok", "evidence": "'aged 18 and above' -> '18 years of age or older'", "meaning_preserved": true}
+{"id": "bouquet_P090-S3", "chrf": 31.7, "bucket": "synonym_ok", "evidence": "'surprising' -> 'somewhat troubling' (fits the source word for troubled/worried)", "meaning_preserved": true}
+{"id": "smolsent_7", "chrf": 32.2, "bucket": "entity", "evidence": "'ogre' -> 'eggplant'", "meaning_preserved": false}
+{"id": "bouquet_P325-S2", "chrf": 32.6, "bucket": "synonym_ok", "evidence": "'so pretty' -> 'very beautiful'", "meaning_preserved": true}
+{"id": "smolsent_757", "chrf": 32.7, "bucket": "wrong_word", "evidence": "'informed of acceptance status' -> 'informed as accepted'", "meaning_preserved": false}
+{"id": "smolsent_788", "chrf": 33.4, "bucket": "wrong_word", "evidence": "'holds sole voting and investment power' -> 'voting and capital gains are ... only option'", "meaning_preserved": false}
+{"id": "smolsent_665", "chrf": 33.4, "bucket": "wrong_word", "evidence": "'put a hostile witness on the stand' -> 'opposing witness to stand firm on the oath'", "meaning_preserved": false}
+{"id": "bouquet_P373-S3", "chrf": 34.0, "bucket": "wrong_word", "evidence": "'leapt over them' -> 'made a fuss about it'", "meaning_preserved": false}
+{"id": "bouquet_P261-S3", "chrf": 34.2, "bucket": "wrong_word", "evidence": "'healthy food' -> 'gardening'", "meaning_preserved": false}
+{"id": "bouquet_P012-S3", "chrf": 34.2, "bucket": "synonym_ok", "evidence": "'Stop over-reacting' -> 'Don't get angry too much'", "meaning_preserved": true}
+{"id": "smolsent_217", "chrf": 35.0, "bucket": "wrong_word", "evidence": "'seedlings ... vegetable patch' -> 'flowers ... turban ... thorns'", "meaning_preserved": false}
+{"id": "smolsent_222", "chrf": 35.1, "bucket": "wrong_word", "evidence": "'began the tour' -> 'started researching'", "meaning_preserved": false}
+{"id": "bouquet_P090-S4", "chrf": 35.1, "bucket": "synonym_ok", "evidence": "'slightly abrupt' -> 'somewhat pleasant' (source says pleasant; borderline)", "meaning_preserved": true}
+{"id": "smolsent_267", "chrf": 35.2, "bucket": "wrong_word", "evidence": "'emergency surgery' -> 'suspected surgery'; 'jaw was wired shut' -> 'had a stroke'; 'liquid diet' -> 'hunger strike'", "meaning_preserved": false}
+{"id": "bouquet_P115-S4", "chrf": 35.2, "bucket": "entity", "evidence": "'Haiyue Hotel' -> 'High You Hotel'", "meaning_preserved": false}
+{"id": "bouquet_P409-S2", "chrf": 35.3, "bucket": "synonym_ok", "evidence": "'anxiety' -> 'unrest'; 'To do this' -> 'Therefore'", "meaning_preserved": true}
+{"id": "bouquet_P376-S1", "chrf": 35.3, "bucket": "wrong_word", "evidence": "'spa day' -> 'day of ... soldiers'", "meaning_preserved": false}
+{"id": "smolsent_242", "chrf": 35.7, "bucket": "entity", "evidence": "'Foot orthotics' -> 'Leg arthritis'", "meaning_preserved": false}
+{"id": "bouquet_P172-S5", "chrf": 35.7, "bucket": "wrong_word", "evidence": "'Snake found again' -> 'Mullah again'", "meaning_preserved": false}
+{"id": "smolsent_586", "chrf": 35.8, "bucket": "misread_source", "evidence": "'delay effects' -> 'effect of being clean'", "meaning_preserved": false}
+{"id": "bouquet_P359-S1", "chrf": 35.9, "bucket": "synonym_ok", "evidence": "'asks us for advice' -> 'consulted with us'; 'smart' -> 'capable'", "meaning_preserved": true}
+{"id": "bouquet_P435-S5", "chrf": 35.9, "bucket": "wrong_word", "evidence": "'prices' -> 'precious'", "meaning_preserved": false}
+{"id": "smolsent_647", "chrf": 36.2, "bucket": "synonym_ok", "evidence": "'last few steps' -> 'a final step'; 'her' -> 'him' (Brahui pronoun is ungendered)", "meaning_preserved": true}
+{"id": "bouquet_P310-S3", "chrf": 36.2, "bucket": "wrong_word", "evidence": "'plant cucumbers' -> 'had been married'", "meaning_preserved": false}
+{"id": "bouquet_P196-S5", "chrf": 36.3, "bucket": "synonym_ok", "evidence": "'curiosity' -> 'distress' (source فریشانی = distress); 'dread' -> 'unexpected fear'", "meaning_preserved": true}
+{"id": "bouquet_P139-S1", "chrf": 36.4, "bucket": "wrong_word", "evidence": "'beating faster' -> 'aching'; 'cheeks growing warmer and redder' -> 'tongue swelling'", "meaning_preserved": false}
+{"id": "bouquet_P229-S2", "chrf": 36.6, "bucket": "wrong_word", "evidence": "'water may be contaminated' -> 'water can damage'; 'debris may fall off buildings' -> 'buildings can collapse'", "meaning_preserved": false}
+{"id": "bouquet_P215-S6", "chrf": 36.6, "bucket": "wrong_word", "evidence": "'motivation letter' -> 'encouraging letter'", "meaning_preserved": false}
+{"id": "bouquet_P463-S4", "chrf": 36.7, "bucket": "wrong_word", "evidence": "'partially or completely damaged' -> 'which causes total or complete loss'", "meaning_preserved": false}
+{"id": "bouquet_P055-S2", "chrf": 36.7, "bucket": "synonym_ok", "evidence": "'We are at the beginning of a new era' -> 'Today we have ushered in a new era'", "meaning_preserved": true}
+{"id": "bouquet_P103-S3", "chrf": 36.7, "bucket": "entity", "evidence": "'Qu Yuan' -> 'Chuviwan'", "meaning_preserved": false}
+{"id": "bouquet_P055-S4", "chrf": 37.0, "bucket": "synonym_ok", "evidence": "'build a bright future for our sons and daughters' -> 'illuminate the future of our children'", "meaning_preserved": true}
+{"id": "bouquet_P177-S4", "chrf": 37.1, "bucket": "wrong_word", "evidence": "'knee raises' -> 'lifting the bedding'; 'running backwards' -> 'left running'", "meaning_preserved": false}
+{"id": "bouquet_P330-S2", "chrf": 37.2, "bucket": "synonym_ok", "evidence": "'Ability to guarantee proper work completion on time' -> 'We have the ability to complete the work on time'", "meaning_preserved": true}
+{"id": "smolsent_642", "chrf": 37.4, "bucket": "entity", "evidence": "'Sting wrote the song' -> 'Sting Bagal wrote it'", "meaning_preserved": false}
+{"id": "smolsent_610", "chrf": 37.4, "bucket": "misread_source", "evidence": "'police artist' -> 'a painter'; 'suspect who left in a hurry' -> 'suspicious person, which went so fast'", "meaning_preserved": false}
+{"id": "smolsent_777", "chrf": 37.6, "bucket": "wrong_word", "evidence": "'auto-aggressive T-cells' -> 'aggressively ... in the skin'", "meaning_preserved": false}
+{"id": "smolsent_153", "chrf": 37.6, "bucket": "wrong_word", "evidence": "'inverse square law' -> 'law of the quiet square'; 'perfect detection' -> 'complete precautions'", "meaning_preserved": false}
+{"id": "smolsent_652", "chrf": 37.8, "bucket": "wrong_word", "evidence": "'subsisted primarily on meat' -> 'basically settled'", "meaning_preserved": false}
+{"id": "smolsent_45", "chrf": 38.0, "bucket": "misread_source", "evidence": "'sweep' -> 'roast it in the ghee'; 'cork flooring' -> 'work floor'", "meaning_preserved": false}
+{"id": "bouquet_P083-S3", "chrf": 38.0, "bucket": "synonym_ok", "evidence": "'sneaky cunning fox' -> 'clever jackal'", "meaning_preserved": true}
+{"id": "bouquet_P055-S1", "chrf": 38.1, "bucket": "synonym_ok", "evidence": "'everyone who got out to cast their vote' -> 'all the people who cast their votes'", "meaning_preserved": true}
+{"id": "bouquet_P435-S2", "chrf": 38.2, "bucket": "wrong_word", "evidence": "'medium rare steak' -> 'moderately good stock'; 'well done' -> 'turned out very well'", "meaning_preserved": false}
+{"id": "bouquet_P037-S2", "chrf": 38.2, "bucket": "entity", "evidence": "'Bon appétit' -> 'Bone appetite'", "meaning_preserved": false}
+{"id": "smolsent_841", "chrf": 38.3, "bucket": "synonym_ok", "evidence": "'From the smallest to the greatest decisions' -> 'small and big decisions'", "meaning_preserved": true}
+{"id": "smolsent_71", "chrf": 38.3, "bucket": "wrong_word", "evidence": "'avid concert-goer' -> 'keen jurist'", "meaning_preserved": false}
+{"id": "bouquet_P083-S1", "chrf": 39.0, "bucket": "wrong_word", "evidence": "'little rabbit named Duoduo' -> 'beautiful snake'", "meaning_preserved": false}
+{"id": "smolsent_618", "chrf": 39.2, "bucket": "wrong_word", "evidence": "'contribution' -> 'fellowship'; 'acquittal' -> 'salvation'", "meaning_preserved": false}
+{"id": "bouquet_P172-S3", "chrf": 39.4, "bucket": "wrong_word", "evidence": "'much bigger than snakes on earth' -> 'very big on the ground's tail'", "meaning_preserved": false}
+{"id": "smolsent_110", "chrf": 39.5, "bucket": "wrong_word", "evidence": "'terrible disease' -> 'bad omen'", "meaning_preserved": false}
+{"id": "bouquet_P325-S3", "chrf": 39.5, "bucket": "wrong_word", "evidence": "'Yeah' -> 'Come'", "meaning_preserved": false}
+{"id": "bouquet_P376-S3", "chrf": 39.7, "bucket": "misread_source", "evidence": "'vet' -> 'waiter'", "meaning_preserved": false}
+{"id": "smolsent_699", "chrf": 39.8, "bucket": "synonym_ok", "evidence": "'tutorial on handling' -> 'lesson in confronting'", "meaning_preserved": true}
+{"id": "smolsent_609", "chrf": 39.9, "bucket": "entity", "evidence": "'anti-biophilic' -> 'antibiotic-like, environmentally friendly'", "meaning_preserved": false}
+{"id": "smolsent_677", "chrf": 40.2, "bucket": "wrong_word", "evidence": "'classmate involved in a car crash' -> 'In the car accident, she helped'", "meaning_preserved": false}
+{"id": "bouquet_P422-S4", "chrf": 40.2, "bucket": "synonym_ok", "evidence": "'<customer:> Let's see, yes, I have it here' -> '<user:> Yes, I have this'", "meaning_preserved": true}
+{"id": "smolsent_664", "chrf": 40.3, "bucket": "synonym_ok", "evidence": "'In the wake of bird flu alerts' -> 'out of fear of bird flu'", "meaning_preserved": true}
+{"id": "smolsent_742", "chrf": 40.4, "bucket": "wrong_word", "evidence": "'translucent to white' -> 'pale brown'", "meaning_preserved": false}
+{"id": "smolsent_134", "chrf": 40.4, "bucket": "wrong_word", "evidence": "'bloom, stem, and leaf' -> 'names and moustaches'; 'carefully' -> 'every era'", "meaning_preserved": false}
+{"id": "smolsent_49", "chrf": 40.5, "bucket": "synonym_ok", "evidence": "'track down' -> 'research'; 'passionate' -> 'excited'", "meaning_preserved": true}
+{"id": "bouquet_P330-S1", "chrf": 40.5, "bucket": "entity", "evidence": "'in accordance with Standard Operating Procedures (SOP)' -> '(SOP) is as it should be'", "meaning_preserved": false}
+{"id": "bouquet_P215-S3", "chrf": 40.5, "bucket": "synonym_ok", "evidence": "'realize your potential' -> 'bring your abilities forward'", "meaning_preserved": true}
+{"id": "smolsent_471", "chrf": 40.9, "bucket": "entity", "evidence": "'lynching' -> 'luncheon'", "meaning_preserved": false}
+{"id": "smolsent_720", "chrf": 41.1, "bucket": "synonym_ok", "evidence": "'leadership' -> 'guidance'", "meaning_preserved": true}
+{"id": "smolsent_835", "chrf": 41.4, "bucket": "entity", "evidence": "'Python' -> 'the inverse'", "meaning_preserved": false}
+{"id": "bouquet_P376-S4", "chrf": 41.4, "bucket": "wrong_word", "evidence": "'nails' -> 'hair'", "meaning_preserved": false}
+{"id": "smolsent_858", "chrf": 41.6, "bucket": "wrong_word", "evidence": "'differences' -> 'confusion'", "meaning_preserved": false}
+{"id": "bouquet_P098-S2", "chrf": 41.7, "bucket": "misread_source", "evidence": "'3D printing' -> 'D ... printing'; 'was founded by a team' -> 'formed a team'", "meaning_preserved": false}
+{"id": "bouquet_P196-S2", "chrf": 41.8, "bucket": "synonym_ok", "evidence": "'It's ... she' -> 'It was ... he'", "meaning_preserved": true}
+{"id": "bouquet_P227-S2", "chrf": 41.9, "bucket": "polarity_tense", "evidence": "'don't feed me' -> 'give me food'", "meaning_preserved": false}
+{"id": "bouquet_P215-S1", "chrf": 41.9, "bucket": "synonym_ok", "evidence": "'rewarding position' -> 'meaningful job'", "meaning_preserved": true}
+{"id": "bouquet_P139-S3", "chrf": 41.9, "bucket": "synonym_ok", "evidence": "'feelings' -> 'emotions'", "meaning_preserved": true}
+{"id": "smolsent_815", "chrf": 42.3, "bucket": "synonym_ok", "evidence": "'many route configuration options' -> 'more routing capabilities'", "meaning_preserved": true}
+{"id": "smolsent_453", "chrf": 42.8, "bucket": "wrong_word", "evidence": "'coincidences' -> 'attributes'; 'general literature' -> 'General vocabulary'", "meaning_preserved": false}
+{"id": "bouquet_P359-S4", "chrf": 42.9, "bucket": "addition", "evidence": "'No one!' -> 'Nobody knows!'", "meaning_preserved": false}
+{"id": "bouquet_P276-S1", "chrf": 43.1, "bucket": "synonym_ok", "evidence": "'mandatory to wear full uniform everyday' -> 'Wearing uniforms ... mandatory every day'", "meaning_preserved": true}
+{"id": "smolsent_542", "chrf": 43.4, "bucket": "wrong_word", "evidence": "'get me into a great deal of hot water' -> 'refers to very hot water'", "meaning_preserved": false}
+{"id": "smolsent_338", "chrf": 43.4, "bucket": "wrong_word", "evidence": "'sword fight' -> 'quarrel'", "meaning_preserved": false}
+{"id": "bouquet_P115-S2", "chrf": 43.5, "bucket": "synonym_ok", "evidence": "'sincerely' -> 'in our hearts'; 'union' -> 'closeness'", "meaning_preserved": true}
+{"id": "smolsent_254", "chrf": 43.7, "bucket": "synonym_ok", "evidence": "'facilitate' -> 'make ... easy'", "meaning_preserved": true}
+{"id": "bouquet_P172-S1", "chrf": 43.7, "bucket": "wrong_word", "evidence": "'expedition into the interior of the mountain' -> 'sub-mountainous campaign'; 'living creatures' -> 'animal'", "meaning_preserved": false}
+{"id": "bouquet_P435-S4", "chrf": 43.9, "bucket": "entity", "evidence": "'croquettes' -> 'crocodiles'", "meaning_preserved": false}
+{"id": "bouquet_P463-S3", "chrf": 44.0, "bucket": "synonym_ok", "evidence": "'Deferral of payment of Corporate Tax' -> 'Companies are being deferred from paying their taxes'", "meaning_preserved": true}
+{"id": "bouquet_P037-S3", "chrf": 44.0, "bucket": "polarity_tense", "evidence": "'try other things ... you will like everything' -> 'we'll enjoy ... everyone will like it'", "meaning_preserved": false}
+{"id": "smolsent_451", "chrf": 44.2, "bucket": "wrong_word", "evidence": "'food' -> 'their doing'; 'have trouble' -> 'fall into a dispute'", "meaning_preserved": false}
+{"id": "smolsent_136", "chrf": 44.3, "bucket": "wrong_word", "evidence": "'Transfer ... with a slotted spoon' -> 'Cut'; 'discard' -> 'bring'", "meaning_preserved": false}
+{"id": "bouquet_P215-S4", "chrf": 44.8, "bucket": "synonym_ok", "evidence": "'hours' -> 'time'", "meaning_preserved": true}
+{"id": "bouquet_P442-S1", "chrf": 44.9, "bucket": "entity", "evidence": "'albertogarcia' -> 'Albert Ogarcia' (also 'deduct' -> 'pay')", "meaning_preserved": false}
+{"id": "bouquet_P463-S1", "chrf": 45.1, "bucket": "wrong_word", "evidence": "'threatening -> spreading across'", "meaning_preserved": false}
+{"id": "smolsent_413", "chrf": 45.4, "bucket": "entity", "evidence": "'Haitians -> Hittites'", "meaning_preserved": false}
+{"id": "bouquet_P145-S1", "chrf": 45.4, "bucket": "synonym_ok", "evidence": "'robbed -> stolen' (Trier not in source)", "meaning_preserved": true}
+{"id": "bouquet_P103-S4", "chrf": 45.5, "bucket": "entity", "evidence": "'making zongzi -> making dragon boots for the race and the jungle'", "meaning_preserved": false}
+{"id": "bouquet_P325-S5", "chrf": 45.6, "bucket": "synonym_ok", "evidence": "'it has all kinds of colors -> There are many kinds of colors in this too'", "meaning_preserved": true}
+{"id": "smolsent_752", "chrf": 45.7, "bucket": "polarity_tense", "evidence": "'They are -> It was'", "meaning_preserved": false}
+{"id": "bouquet_P343-S2", "chrf": 45.8, "bucket": "synonym_ok", "evidence": "'government-issued ID -> identity card issued by the government'", "meaning_preserved": true}
+{"id": "bouquet_P398-S1", "chrf": 45.9, "bucket": "synonym_ok", "evidence": "'how damaging is it -> How much harm do they do'", "meaning_preserved": true}
+{"id": "bouquet_P145-S5", "chrf": 45.9, "bucket": "synonym_ok", "evidence": "'any other police station -> the nearest police station' (source: خڑک = near)", "meaning_preserved": true}
+{"id": "smolsent_230", "chrf": 46.0, "bucket": "omission", "evidence": "missing: 'collect fuel'", "meaning_preserved": false}
+{"id": "smolsent_374", "chrf": 46.2, "bucket": "wrong_word", "evidence": "'being polite -> becoming aware'", "meaning_preserved": false}
+{"id": "smolsent_414", "chrf": 46.4, "bucket": "wrong_word", "evidence": "'genius -> broad one'; 'whistle -> seat'", "meaning_preserved": false}
+{"id": "bouquet_P177-S3", "chrf": 46.4, "bucket": "wrong_word", "evidence": "'exercises -> verses'", "meaning_preserved": false}
+{"id": "smolsent_848", "chrf": 46.5, "bucket": "synonym_ok", "evidence": "'greatest insecurities were well-founded -> most of my reservations were correct'", "meaning_preserved": true}
+{"id": "bouquet_P115-S1", "chrf": 46.5, "bucket": "wrong_word", "evidence": "'forever -> for the neighbor'", "meaning_preserved": false}
+{"id": "smolsent_425", "chrf": 46.7, "bucket": "wrong_word", "evidence": "'deep concern' -> 'great loss'", "meaning_preserved": false}
+{"id": "bouquet_P037-S1", "chrf": 46.7, "bucket": "omission", "evidence": "missing: 'Bless your hands' (replaced by repeated 'the food was delicious')", "meaning_preserved": false}
+{"id": "smolsent_82", "chrf": 46.8, "bucket": "wrong_word", "evidence": "'Allow' -> 'No, no, no'", "meaning_preserved": false}
+{"id": "bouquet_P435-S3", "chrf": 46.8, "bucket": "synonym_ok", "evidence": "'too greasy' -> 'had a lot of ghee'", "meaning_preserved": true}
+{"id": "bouquet_P103-S2", "chrf": 46.8, "bucket": "entity", "evidence": "'Qu Yuan, a poet of the State of Chu' -> 'the state's poet Chuviwan'", "meaning_preserved": false}
+{"id": "bouquet_P048-S2", "chrf": 46.9, "bucket": "synonym_ok", "evidence": "'conflicts with' -> 'oppose'", "meaning_preserved": true}
+{"id": "bouquet_P261-S2", "chrf": 47.1, "bucket": "wrong_word", "evidence": "'exercises ... do' -> 'vegetables ... eat'", "meaning_preserved": false}
+{"id": "smolsent_350", "chrf": 47.2, "bucket": "wrong_word", "evidence": "'readers' -> 'students'", "meaning_preserved": false}
+{"id": "bouquet_P398-S3", "chrf": 47.4, "bucket": "synonym_ok", "evidence": "'shop at the same stores' -> 'bought from one shop'", "meaning_preserved": true}
+{"id": "bouquet_P215-S2", "chrf": 47.6, "bucket": "synonym_ok", "evidence": "'childcare specialists' -> 'experts in childcare'", "meaning_preserved": true}
+{"id": "bouquet_P127-S4", "chrf": 47.6, "bucket": "synonym_ok", "evidence": "'just a moment' -> 'wait a bit'", "meaning_preserved": true}
+{"id": "bouquet_P376-S2", "chrf": 47.9, "bucket": "wrong_word", "evidence": "'fur' -> 'pots'; 'Musya' -> 'mosquitoes'", "meaning_preserved": false}
+{"id": "bouquet_P229-S3", "chrf": 48.0, "bucket": "synonym_ok", "evidence": "'will be available very soon' -> 'is available'", "meaning_preserved": true}
+{"id": "smolsent_24", "chrf": 48.4, "bucket": "synonym_ok", "evidence": "'rural income' -> 'agricultural income'", "meaning_preserved": true}
+{"id": "smolsent_656", "chrf": 48.5, "bucket": "wrong_word", "evidence": "'obsolete' -> 'will not happen'", "meaning_preserved": false}
+{"id": "smolsent_84", "chrf": 48.5, "bucket": "wrong_word", "evidence": "'Put on -> Keep ... in place'; 'visually examine -> have ... inspected'", "meaning_preserved": false}
+{"id": "smolsent_614", "chrf": 48.6, "bucket": "wrong_word", "evidence": "'chick -> theft'; 'cute as hell -> like a love of the world'", "meaning_preserved": false}
+{"id": "smolsent_763", "chrf": 48.8, "bucket": "wrong_word", "evidence": "'about policies, candidates, and election dates -> In policies alone ... candidates' election day'", "meaning_preserved": false}
+{"id": "smolsent_696", "chrf": 49.3, "bucket": "synonym_ok", "evidence": "'stability -> steadfastness'; 'betrayal -> deceit'", "meaning_preserved": true}
+{"id": "bouquet_P227-S1", "chrf": 49.3, "bucket": "synonym_ok", "evidence": "'in good health -> healthy'", "meaning_preserved": true}
+{"id": "smolsent_39", "chrf": 49.4, "bucket": "wrong_word", "evidence": "'generous -> charming'; 'He's ... wonderful company -> It's a ... stunning company'", "meaning_preserved": false}
+{"id": "bouquet_P145-S2", "chrf": 49.4, "bucket": "wrong_word", "evidence": "'black -> mountainous'", "meaning_preserved": false}
+{"id": "smolsent_100", "chrf": 49.5, "bucket": "wrong_word", "evidence": "'ranks -> pursuit'", "meaning_preserved": false}
+{"id": "smolsent_412", "chrf": 49.8, "bucket": "wrong_word", "evidence": "'first lion killed -> lion being killed'; 'nose to tip of tail -> first trunk to its head'", "meaning_preserved": false}
+{"id": "bouquet_P363-S1", "chrf": 49.9, "bucket": "entity", "evidence": "'Anna Pavlovna -> Anna Paula'", "meaning_preserved": false}
+{"id": "bouquet_P359-S2", "chrf": 50.0, "bucket": "synonym_ok", "evidence": "'not clear why -> but I don't know why'", "meaning_preserved": true}
+{"id": "bouquet_P103-S1", "chrf": 50.1, "bucket": "entity", "evidence": "'Dragon Boat -> dragon boot'", "meaning_preserved": false}
+{"id": "smolsent_801", "chrf": 50.2, "bucket": "omission", "evidence": "missing: 'candidate' ('candidate to be trained -> obtaining training')", "meaning_preserved": false}
+{"id": "bouquet_P172-S4", "chrf": 50.2, "bucket": "entity", "evidence": "'Day 13 -> Day 1'", "meaning_preserved": false}
+{"id": "smolsent_622", "chrf": 50.7, "bucket": "wrong_word", "evidence": "'swallowed a watermelon -> eaten a pot' (also 'Rita -> Retta')", "meaning_preserved": false}
+{"id": "bouquet_P261-S5", "chrf": 50.8, "bucket": "wrong_word", "evidence": "'fitness journey' -> 'journey of recovery'", "meaning_preserved": false}
+{"id": "smolsent_585", "chrf": 51.1, "bucket": "wrong_word", "evidence": "'no more noisy air conditioner' -> 'no noise-induced air conditioning here'", "meaning_preserved": false}
+{"id": "bouquet_P463-S2", "chrf": 51.2, "bucket": "wrong_word", "evidence": "'previous tax year' -> 'current fiscal year'", "meaning_preserved": false}
+{"id": "smolsent_765", "chrf": 51.3, "bucket": "wrong_word", "evidence": "'runs nearly thirty minutes longer' -> 'is about thirty minutes long'", "meaning_preserved": false}
+{"id": "bouquet_P343-S3", "chrf": 51.3, "bucket": "synonym_ok", "evidence": "'active' -> 'available'", "meaning_preserved": true}
+{"id": "smolsent_793", "chrf": 51.5, "bucket": "wrong_word", "evidence": "'or survived independently' -> 'and remained free and living'", "meaning_preserved": false}
+{"id": "bouquet_P048-S3", "chrf": 51.5, "bucket": "synonym_ok", "evidence": "'sometimes' -> 'often' (source بھاز وخت = often)", "meaning_preserved": true}
+{"id": "smolsent_589", "chrf": 51.8, "bucket": "wrong_word", "evidence": "'curb ... spike in homelessness' -> 'increase homelessness'", "meaning_preserved": false}
+{"id": "bouquet_P422-S3", "chrf": 51.9, "bucket": "synonym_ok", "evidence": "'confirmation number' -> 'order verification number'", "meaning_preserved": true}
+{"id": "smolsent_447", "chrf": 52.1, "bucket": "wrong_word", "evidence": "'increase weight' -> 'lose weight'", "meaning_preserved": false}
+{"id": "bouquet_P409-S3", "chrf": 52.2, "bucket": "synonym_ok", "evidence": "'mindfulness' -> 'mind-building'", "meaning_preserved": true}
+{"id": "smolsent_268", "chrf": 52.4, "bucket": "wrong_word", "evidence": "'sacred moon dancing' -> 'rainbow dance'", "meaning_preserved": false}
+{"id": "bouquet_P098-S3", "chrf": 52.6, "bucket": "entity", "evidence": "'3D printing' -> 'printing'", "meaning_preserved": false}
+{"id": "smolsent_535", "chrf": 52.7, "bucket": "wrong_word", "evidence": "'rabbit, egg, bee' -> 'mustard, yogurt, butter'", "meaning_preserved": false}
+{"id": "bouquet_P037-S5", "chrf": 52.8, "bucket": "synonym_ok", "evidence": "'it' -> 'them'", "meaning_preserved": true}
+{"id": "bouquet_P115-S3", "chrf": 53.4, "bucket": "synonym_ok", "evidence": "'January 14, 2009' -> '14 January 2009'", "meaning_preserved": true}
+{"id": "bouquet_P363-S5", "chrf": 53.5, "bucket": "synonym_ok", "evidence": "'red blazer' -> 'red coat'", "meaning_preserved": true}
+{"id": "bouquet_P161-S2", "chrf": 54.1, "bucket": "entity", "evidence": "'Bello' -> 'Belo'", "meaning_preserved": true}
+{"id": "smolsent_703", "chrf": 54.3, "bucket": "addition", "evidence": "'a singer second' -> 'the second a poet and singer'", "meaning_preserved": false}
+{"id": "bouquet_P172-S2", "chrf": 54.5, "bucket": "entity", "evidence": "'Day 11' -> '11 days'", "meaning_preserved": false}
+{"id": "smolsent_522", "chrf": 54.6, "bucket": "wrong_word", "evidence": "'thick temple curtain' -> 'shrines of the temple'", "meaning_preserved": false}
+{"id": "bouquet_P359-S3", "chrf": 54.6, "bucket": "synonym_ok", "evidence": "'smart' -> 'capable'", "meaning_preserved": true}
+{"id": "bouquet_P177-S2", "chrf": 54.6, "bucket": "wrong_word", "evidence": "'stretching cold muscles' -> 'wiping cold clothes'", "meaning_preserved": false}
+{"id": "smolsent_650", "chrf": 54.9, "bucket": "omission", "evidence": "'feast and famine annual cycle' -> 'annual cycle of drought' (missing: feast)", "meaning_preserved": false}
+{"id": "bouquet_P398-S2", "chrf": 55.0, "bucket": "misread_source", "evidence": "'our column' -> 'your column'", "meaning_preserved": false}
+{"id": "smolsent_825", "chrf": 55.1, "bucket": "synonym_ok", "evidence": "'Walk hundreds of miles through' -> 'Going hundreds of miles on foot from'", "meaning_preserved": true}
+{"id": "smolsent_549", "chrf": 55.4, "bucket": "synonym_ok", "evidence": "'advanced' -> 'new'", "meaning_preserved": true}
+{"id": "smolsent_790", "chrf": 55.8, "bucket": "omission", "evidence": "missing: 'monthly'", "meaning_preserved": false}
+{"id": "smolsent_651", "chrf": 55.9, "bucket": "entity", "evidence": "'15.5m' -> '15-metre'", "meaning_preserved": false}
+{"id": "smolsent_710", "chrf": 56.0, "bucket": "polarity_tense", "evidence": "'Chinese banks and tech giants control' -> 'it controls the distribution channels of Chinese banks'", "meaning_preserved": false}
+{"id": "bouquet_P048-S4", "chrf": 56.0, "bucket": "synonym_ok", "evidence": "'I advise ... appoint someone' -> 'I suggest ... bring forward a person'", "meaning_preserved": true}
+{"id": "bouquet_P446-S3", "chrf": 56.1, "bucket": "synonym_ok", "evidence": "'stores' -> 'shops'", "meaning_preserved": true}
+{"id": "smolsent_843", "chrf": 56.2, "bucket": "synonym_ok", "evidence": "'faculty listing' -> 'list of the ... Faculty'", "meaning_preserved": true}
+{"id": "bouquet_P048-S1", "chrf": 56.5, "bucket": "wrong_word", "evidence": "'means' -> 'The purpose of'", "meaning_preserved": false}
+{"id": "bouquet_P310-S1", "chrf": 56.8, "bucket": "wrong_word", "evidence": "'a husband and wife' -> 'a woman ... as a breadwinner'", "meaning_preserved": false}
+{"id": "bouquet_P409-S1", "chrf": 56.9, "bucket": "synonym_ok", "evidence": "'To learn how to manage' -> 'Learn to control'", "meaning_preserved": true}
+{"id": "bouquet_P127-S1", "chrf": 56.9, "bucket": "synonym_ok", "evidence": "'package still hasn't' -> 'parcel has not ... yet'", "meaning_preserved": true}
+{"id": "smolsent_580", "chrf": 57.1, "bucket": "wrong_word", "evidence": "'born-in-a-stable' -> 'patient'", "meaning_preserved": false}
+{"id": "smolsent_479", "chrf": 57.4, "bucket": "synonym_ok", "evidence": "'exciting topic ... great guest' -> 'interesting topic ... famous guest'", "meaning_preserved": true}
+{"id": "smolsent_862", "chrf": 57.5, "bucket": "wrong_word", "evidence": "'orders supplies, and ships packages' -> 'fulfills orders, and packages for customers'", "meaning_preserved": false}
+{"id": "smolsent_711", "chrf": 58.7, "bucket": "wrong_word", "evidence": "'couple' -> 'patient'", "meaning_preserved": false}
+{"id": "bouquet_P316-S1", "chrf": 58.7, "bucket": "wrong_word", "evidence": "'stir fried' -> 'new'", "meaning_preserved": false}
+{"id": "smolsent_183", "chrf": 58.8, "bucket": "wrong_word", "evidence": "'mug' -> 'face'; 'pencil' -> 'pen'", "meaning_preserved": false}
+{"id": "smolsent_369", "chrf": 58.8, "bucket": "wrong_word", "evidence": "'the rug' -> 'petroleum products'", "meaning_preserved": false}
+{"id": "bouquet_P316-S3", "chrf": 58.8, "bucket": "synonym_ok", "evidence": "'affordable' -> 'very good'", "meaning_preserved": true}
+{"id": "bouquet_P458-S3", "chrf": 58.9, "bucket": "wrong_word", "evidence": "'chains' -> 'things'; 'homogenizing the urban space' -> 'which the city people are making the places alike'", "meaning_preserved": false}
+{"id": "bouquet_P297-S1", "chrf": 59.5, "bucket": "synonym_ok", "evidence": "'tips on saving money on your salary' -> 'advice on saving your salary'", "meaning_preserved": true}
+{"id": "bouquet_P359-S5", "chrf": 59.7, "bucket": "synonym_ok", "evidence": "'I am glad' -> 'It's good'", "meaning_preserved": true}
+{"id": "bouquet_P435-S1", "chrf": 59.9, "bucket": "synonym_ok", "evidence": "'not great' -> 'not very good'", "meaning_preserved": true}
+{"id": "smolsent_538", "chrf": 60.1, "bucket": "omission", "evidence": "missing: 'best available'; 'shoot in' -> 'focus on'", "meaning_preserved": false}
+{"id": "bouquet_P373-S5", "chrf": 60.3, "bucket": "synonym_ok", "evidence": "'kept on running' -> 'kept running'", "meaning_preserved": true}
+{"id": "bouquet_P139-S2", "chrf": 60.7, "bucket": "synonym_ok", "evidence": "'gently placed his hand on mine' -> 'slowly placed his hand on my hand'", "meaning_preserved": true}
+{"id": "bouquet_P261-S4", "chrf": 61.2, "bucket": "wrong_word", "evidence": "'give you tips' -> 'ask you a question'", "meaning_preserved": false}
+{"id": "bouquet_P012-S2", "chrf": 61.5, "bucket": "synonym_ok", "evidence": "'it in movies' -> 'this in the movies'", "meaning_preserved": true}
+{"id": "smolsent_772", "chrf": 62.8, "bucket": "wrong_word", "evidence": "'dental and consumer products' -> 'dental clients and manufacturing-like industries'", "meaning_preserved": false}
+{"id": "smolsent_680", "chrf": 63.0, "bucket": "wrong_word", "evidence": "'grind' -> 'brushing'; 'dentist' -> 'doctor'", "meaning_preserved": false}
+{"id": "smolsent_318", "chrf": 63.7, "bucket": "wrong_word", "evidence": "'are often confused' -> 'lead to increased distress'", "meaning_preserved": false}
+{"id": "smolsent_771", "chrf": 64.4, "bucket": "synonym_ok", "evidence": "'Border colors for unfocused' -> 'The color of the border ... for non-focused'", "meaning_preserved": true}
+{"id": "bouquet_P012-S1", "chrf": 64.8, "bucket": "synonym_ok", "evidence": "'think' -> 'feel'", "meaning_preserved": true}
+{"id": "bouquet_P383-S1", "chrf": 66.4, "bucket": "wrong_word", "evidence": "'Well' -> 'It's good'; 'humane' -> 'human'", "meaning_preserved": false}
+{"id": "bouquet_P229-S1", "chrf": 66.5, "bucket": "synonym_ok", "evidence": "'notice' -> 'notification'", "meaning_preserved": true}
+{"id": "bouquet_P325-S1", "chrf": 66.9, "bucket": "wrong_word", "evidence": "'spider' -> 'skill'", "meaning_preserved": false}
+{"id": "bouquet_P422-S1", "chrf": 67.5, "bucket": "wrong_word", "evidence": "'Good morning' -> 'Hello'; 'Marta' -> 'Martha'", "meaning_preserved": false}
+{"id": "bouquet_P258-S3", "chrf": 67.5, "bucket": "wrong_word", "evidence": "'show off' -> 'point out'", "meaning_preserved": false}
+{"id": "bouquet_P215-S5", "chrf": 67.6, "bucket": "synonym_ok", "evidence": "'asap' -> 'as soon as possible'", "meaning_preserved": true}
+{"id": "smolsent_367", "chrf": 67.7, "bucket": "synonym_ok", "evidence": "'at the intersection of' -> 'on the basis of'", "meaning_preserved": true}
+{"id": "smolsent_802", "chrf": 68.0, "bucket": "synonym_ok", "evidence": "'reservations' -> 'concerns'", "meaning_preserved": true}
+{"id": "smolsent_340", "chrf": 68.2, "bucket": "synonym_ok", "evidence": "'impact of the charity' -> 'effects of charity'", "meaning_preserved": true}
+{"id": "smolsent_726", "chrf": 68.3, "bucket": "synonym_ok", "evidence": "'enterprise' -> 'business'", "meaning_preserved": true}
+{"id": "bouquet_P030-S1", "chrf": 68.8, "bucket": "synonym_ok", "evidence": "'kids' -> 'children'", "meaning_preserved": true}
+{"id": "bouquet_P127-S2", "chrf": 69.1, "bucket": "synonym_ok", "evidence": "'what is the order number please' -> 'Please tell me the order number'", "meaning_preserved": true}
+{"id": "smolsent_189", "chrf": 69.2, "bucket": "synonym_ok", "evidence": "'managed to seize the lands occupied by' -> 'occupied lands that came under the control of'", "meaning_preserved": true}
+{"id": "smolsent_277", "chrf": 69.5, "bucket": "wrong_word", "evidence": "'sudden fever' -> 'sudden headache'", "meaning_preserved": false}
+{"id": "smolsent_728", "chrf": 69.6, "bucket": "synonym_ok", "evidence": "'officials' -> 'employees'; 'organizations' -> 'groups'", "meaning_preserved": true}
+{"id": "smolsent_847", "chrf": 70.1, "bucket": "omission", "evidence": "missing: 'some' (ناگڑاس)", "meaning_preserved": false}
+{"id": "bouquet_P446-S2", "chrf": 70.3, "bucket": "entity", "evidence": "'El Corte Inglés' -> 'the English court'", "meaning_preserved": false}
+{"id": "bouquet_P422-S2", "chrf": 70.8, "bucket": "wrong_word", "evidence": "'customer' -> 'Guests'", "meaning_preserved": false}
+{"id": "smolsent_811", "chrf": 70.9, "bucket": "synonym_ok", "evidence": "'Christ' -> 'Messiah'", "meaning_preserved": true}
+{"id": "bouquet_P137-S2", "chrf": 71.7, "bucket": "synonym_ok", "evidence": "'dreaming' -> 'seeing a dream'", "meaning_preserved": true}
+{"id": "smolsent_695", "chrf": 72.6, "bucket": "wrong_word", "evidence": "'replaced' -> 'turned on'", "meaning_preserved": false}
+{"id": "smolsent_767", "chrf": 73.0, "bucket": "wrong_word", "evidence": "'Even' -> 'Until now'", "meaning_preserved": false}
+{"id": "bouquet_P297-S3", "chrf": 74.5, "bucket": "addition", "evidence": "added: 'together'", "meaning_preserved": false}
+{"id": "smolsent_778", "chrf": 74.8, "bucket": "synonym_ok", "evidence": "'supports' -> 'will help'", "meaning_preserved": true}
+{"id": "smolsent_755", "chrf": 75.0, "bucket": "wrong_word", "evidence": "'There is ... at work' -> 'Action is'", "meaning_preserved": false}
+{"id": "smolsent_557", "chrf": 76.2, "bucket": "synonym_ok", "evidence": "'convinced' -> 'sure'", "meaning_preserved": true}
+{"id": "bouquet_P258-S1", "chrf": 76.3, "bucket": "synonym_ok", "evidence": "'Can ... change' -> 'Is ... changing'", "meaning_preserved": true}
+{"id": "bouquet_P297-S2", "chrf": 76.7, "bucket": "synonym_ok", "evidence": "'our expenses' -> 'the expenses'", "meaning_preserved": true}
+{"id": "bouquet_P055-S3", "chrf": 80.3, "bucket": "synonym_ok", "evidence": "'the mother of the world' -> 'a mother to the world'", "meaning_preserved": true}
+{"id": "bouquet_P030-S3", "chrf": 80.3, "bucket": "synonym_ok", "evidence": "'serve them' -> 'give them'", "meaning_preserved": true}
+{"id": "bouquet_P145-S3", "chrf": 81.6, "bucket": "synonym_ok", "evidence": "'transport driver' -> 'driver'", "meaning_preserved": true}
+{"id": "bouquet_P145-S4", "chrf": 82.1, "bucket": "synonym_ok", "evidence": "'suspects' -> 'accused'", "meaning_preserved": true}
+{"id": "bouquet_P276-S2", "chrf": 83.4, "bucket": "synonym_ok", "evidence": "'lunch' -> 'eating' (ارغ = meal/food)", "meaning_preserved": true}
+{"id": "bouquet_P258-S2", "chrf": 84.5, "bucket": "synonym_ok", "evidence": "'Many times' -> 'Often'; 'everyone' -> 'every person'", "meaning_preserved": true}
+{"id": "smolsent_823", "chrf": 88.1, "bucket": "synonym_ok", "evidence": "'come fully equipped' -> 'are fully equipped'", "meaning_preserved": true}
+{"id": "smolsent_718", "chrf": 89.1, "bucket": "synonym_ok", "evidence": "'featuring' -> 'which include'", "meaning_preserved": true}
+{"id": "bouquet_P363-S3", "chrf": 91.2, "bucket": "synonym_ok", "evidence": "'on the right' -> 'on the right side'", "meaning_preserved": true}
+{"id": "smolsent_833", "chrf": 91.3, "bucket": "synonym_ok", "evidence": "'What about' -> 'What do you think about' (انت خیال ئے)", "meaning_preserved": true}
+{"id": "smolsent_485", "chrf": 92.6, "bucket": "entity", "evidence": "'chomuchim' -> 'chomu chim'", "meaning_preserved": true}
+{"id": "bouquet_P442-S3", "chrf": 97.9, "bucket": "synonym_ok", "evidence": "'Good question' -> 'Good question.' (punctuation only)", "meaning_preserved": true}
+{"id": "smolsent_827", "chrf": 100.0, "bucket": "synonym_ok", "evidence": "identical to reference", "meaning_preserved": true}
+{"id": "bouquet_P297-S5", "chrf": 100.0, "bucket": "synonym_ok", "evidence": "identical to reference", "meaning_preserved": true}
+{"id": "bouquet_P098-S1", "chrf": 100.0, "bucket": "synonym_ok", "evidence": "identical to reference", "meaning_preserved": true}
+{"id": "bouquet_P261-S1", "chrf": 100.0, "bucket": "synonym_ok", "evidence": "identical to reference", "meaning_preserved": true}
+{"id": "bouquet_P363-S2", "chrf": 100.0, "bucket": "synonym_ok", "evidence": "identical to reference", "meaning_preserved": true}
+{"id": "bouquet_P363-S4", "chrf": 100.0, "bucket": "synonym_ok", "evidence": "identical to reference", "meaning_preserved": true}
+{"id": "bouquet_P446-S1", "chrf": 100.0, "bucket": "synonym_ok", "evidence": "identical: 'Are you ready for the winter sales?' -> 'Are you ready for the winter sales?'", "meaning_preserved": true}
+{"id": "bouquet_P127-S3", "chrf": 100.0, "bucket": "synonym_ok", "evidence": "identical: 'My order number is 12345678.' -> 'My order number is 12345678.'", "meaning_preserved": true}

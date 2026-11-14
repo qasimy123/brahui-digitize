@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Brahui voice (in-browser)</title>
+<script src="coi-serviceworker.min.js"></script><script src="config.js"></script>
+<style>
+  :root { --bg:#f6f4ef; --card:#fffdf8; --ink:#1f2a2e; --muted:#5d6b70; --line:#ddd6c8; --accent:#0f6b5c; --accent-ink:#fff; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#15191b; --card:#1d2326; --ink:#e9ecea; --muted:#9aa8ab; --line:#313a3e; --accent:#4fc3a8; --accent-ink:#0c1a17; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif; } main { max-width:720px; margin:0 auto; padding:24px 16px; }
+  h1 { font-size:1.4rem; margin:0 0 4px; } .sub, .small { color:var(--muted); } .small { font-size:.85rem; }
+  textarea { width:100%; min-height:90px; font:inherit; font-size:1.3rem; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px; }
+  button { font:inherit; border-radius:8px; padding:9px 14px; border:1px solid var(--accent); background:var(--accent); color:var(--accent-ink); cursor:pointer; margin:8px 8px 8px 0; } button:disabled { opacity:.4; }
+  .rom { font-style:italic; margin:8px 0; min-height:1.5em; } .row { display:flex; flex-wrap:wrap; gap:6px; } .row button { background:transparent; color:var(--accent); margin:0; padding:5px 10px; font-size:.9rem; }
+</style></head><body><main>
+<h1>Brahui voice, in your browser</h1>
+<p class="sub">Type or paste Brahui (Arabic script, or vowelled Latin letters) and hear it. The voice model runs on this device; nothing is uploaded.</p>
+<textarea id="text" dir="auto">نی انتئے دن مدان مدان ہننگ اٹی ئس؟ زو کر، کنا ساہ۔</textarea>
+<div class="row" id="ex"></div>
+<button id="go" disabled>loading voice…</button><button id="again" disabled>🔊 Again</button>
+<div class="rom" id="rom"></div><div class="small" id="status"></div>
+<script type="module">
+import { env, AutoModel, Tensor } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.5.2';
+import { romanize } from './romanize.js';
+const CFG = window.BRAHUI_MODELS || {}; const q = new URLSearchParams(location.search); const $ = id => document.getElementById(id);
+env.allowRemoteModels = !!CFG.remote; env.allowLocalModels = !CFG.remote; env.localModelPath = new URL('./models/', location.href).href;
+env.useBrowserCache = !location.hostname.match(/^(localhost|127\.0\.0\.1)$/);
+const name = q.get('tts') || CFG.tts || 'tts_student'; const base = CFG.remote ? `https://huggingface.co/${name}/resolve/main/` : `${env.localModelPath}${name}/`;
+const EX = ['دا کنا لمہ نا توار ئے۔', 'نی امر اس؟', 'اینو شام آ پر کننگ اٹی ئس۔', 'سائنس و میتھ نا کلاس آن لائن ئے۔'];
+$('ex').innerHTML = EX.map((t, i) => `<button data-i="${i}" dir="rtl">${t}</button>`).join(''); $('ex').onclick = e => { const i = e.target.dataset.i; if (i != null) { $('text').value = EX[i]; $('go').click(); } };
+const PUNCT = { '۔': '.', '،': ',', '؟': '?', '؛': ',', '!': '!', '.': '.', ',': ',', '?': '?' };
+let vocab, lex, model, last = null, ctx = null;
+function vowelize(text) {   // same as talk.html: table lookup per word, consonant skeleton for unknown words; Latin input passes through
+  return text.normalize('NFC').replace(/[ً-ْٰـ]/g, '').split(/\s+/).filter(Boolean).map(tok => {
+    const m = tok.match(/^([^\p{L}]*)(.*?)([^\p{L}]*)$/u); const w = m[2]; if (!w) return [...tok].map(c => PUNCT[c] || '').join('');
+    const tail = [...m[3]].map(c => PUNCT[c] || '').join(''); return (/^[\p{Script=Latin}']+$/u.test(w) ? w : (lex[w] ?? romanize(w))) + tail; }).join(' ').replace(/\s+([.,?!])/g, '$1');
+}
+function play(w) { if (!w) return; ctx = ctx || new AudioContext(); const b = ctx.createBuffer(1, w.length, 16000); b.copyToChannel(w, 0); const s = ctx.createBufferSource(); s.buffer = b; s.connect(ctx.destination); s.start(); }
+async function speak(latin) {
+  const ids = [0]; for (const c of latin.toLowerCase()) if (c in vocab) ids.push(vocab[c], 0);
+  if (ids.length < 3) return null; const n = ids.length;
+  const out = await model({ input_ids: new Tensor('int64', BigInt64Array.from(ids.map(BigInt)), [1, n]), attention_mask: new Tensor('int64', new BigInt64Array(n).fill(1n), [1, n]) });
+  return Float32Array.from(out.waveform.data);
+}
+$('go').onclick = async () => {
+  const lat = vowelize($('text').value); $('rom').textContent = lat; $('go').disabled = true; const t0 = performance.now();
+  try { last = await speak(lat); const dt = (performance.now() - t0) / 1000; play(last); $('again').disabled = !last;
+    $('status').textContent = last ? `${(last.length / 16000).toFixed(1)} s of speech made in ${dt.toFixed(2)} s (${(last.length / 16000 / dt).toFixed(1)}× real time)` : 'nothing to say';
+    window.__tts = { latin: lat, seconds: last ? last.length / 16000 : 0, took: dt, peak: last ? Math.max(...last.subarray(0, 50000).map(Math.abs)) : 0 };
+  } catch (e) { $('status').textContent = 'error: ' + (e?.message || e); console.error(e); window.__tts = { error: String(e?.message || e) }; }
+  $('go').disabled = false;
+};
+$('again').onclick = () => play(last);
+(async () => { const t0 = performance.now();
+  try { [vocab, lex, model] = await Promise.all([fetch(base + 'vocab.json').then(r => r.json()), fetch(`${env.localModelPath}vowel_lex.json`).then(r => r.json()), AutoModel.from_pretrained(name, { device: q.get('dev') || 'wasm', dtype: q.get('dtype') || 'fp32' })]);
+    $('go').disabled = false; $('go').textContent = '🔊 Speak'; $('status').textContent = `voice ready in ${((performance.now() - t0) / 1000).toFixed(1)} s · ${Object.keys(lex).length.toLocaleString()} words in the vowel table`; window.__ready = true;
+  } catch (e) { $('status').textContent = 'load failed: ' + (e?.message || e); console.error(e); window.__ready = 'failed: ' + (e?.message || e); }
+})();
+</script></main></body></html>

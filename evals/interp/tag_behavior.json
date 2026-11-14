@@ -1,0 +1,119 @@
+{
+ "n": 120,
+ "chrfpp": {
+  "base": {
+   "urd→en": 58.4,
+   "brh→en": 21.3,
+   "en→urd_Arab vs Urdu ref": 56.9,
+   "en→urd_Arab vs Brahui ref": 18.0
+  },
+  "ft": {
+   "urd→en": 63.6,
+   "brh→en": 52.1,
+   "en→urd_Arab vs Urdu ref": 17.6,
+   "en→urd_Arab vs Brahui ref": 40.9
+  }
+ },
+ "samples": {
+  "base": [
+   {
+    "en": "Mahshi \"dolma\" recipe varies a lot from one country to another.",
+    "en→urd_Arab": "مہشی \"ڈولما\" کی ترکیب ایک ملک سے دوسرے ملک میں بہت مختلف ہوتی ہے۔",
+    "urd→en": "The composition of multicolored dolmas varies greatly from country to country.",
+    "brh→en": "\"Mashi Dolma Na Jood King Na Vidhudol is the country on Elo country T Baaz Jata Marik\"."
+   },
+   {
+    "en": "In Egypt usually it's stuffed with rice and veggies.",
+    "en→urd_Arab": "مصر میں عام طور پر یہ چاول اور سبزیوں کے ساتھ بھرا ہوا ہے.",
+    "urd→en": "In Egypt it is usually filled with rice and vegetables.",
+    "brh→en": "Egypt tea tea vegetables and rice or vinegar."
+   },
+   {
+    "en": "In the levant they stuff it with meat as well.",
+    "en→urd_Arab": "لیونٹ میں وہ اسے گوشت کے ساتھ ساتھ بھرتے ہیں.",
+    "urd→en": "In Syria and Lebanon, it's also usually stuffed with meat.",
+    "brh→en": "The Syrian people are the same people."
+   },
+   {
+    "en": "Ways to get rid of negative energy.",
+    "en→urd_Arab": "منفی توانائی سے چھٹکارا حاصل کرنے کے طریقے.",
+    "urd→en": "How to get rid of negative energy",
+    "brh→en": "Negative energy is on the rise."
+   },
+   {
+    "en": "Walking in the open air, even if it's for 10 minutes a day.",
+    "en→urd_Arab": "کھلی ہوا میں چلنا، یہاں تک کہ اگر یہ ایک دن میں 10 منٹ کے لئے ہے.",
+    "urd→en": "Take just 10 minutes a day to walk in the fresh air.",
+    "brh→en": "We'll be dead in the next 18 minutes."
+   },
+   {
+    "en": "Good relationships with positive people",
+    "en→urd_Arab": "مثبت لوگوں کے ساتھ اچھے تعلقات",
+    "urd→en": "The Bible says: \"The spirit of the world is against you, and the desire of the flesh is against you\".",
+    "brh→en": "I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man, and I'm a young man."
+   },
+   {
+    "en": "I didn't think this day would come to us.",
+    "en→urd_Arab": "میں نے یہ نہیں سوچا تھا کہ یہ دن ہمارے پاس آئے گا۔",
+    "urd→en": "I never thought we'd see this day.",
+    "brh→en": "It seemed to break down."
+   },
+   {
+    "en": "I only saw it in movies.",
+    "en→urd_Arab": "میں نے اسے صرف فلموں میں دیکھا ہے.",
+    "urd→en": "I've only seen it happen in the movies.",
+    "brh→en": "It's just the grandfather movie."
+   }
+  ],
+  "ft": [
+   {
+    "en": "Mahshi \"dolma\" recipe varies a lot from one country to another.",
+    "en→urd_Arab": "مہشی \"ڈولما\" نا ترکیب اسہ ملک آن ایلو ملک اٹی بھاز جتا مریک۔",
+    "urd→en": "The recipe for mushy \"dolma\" varies greatly from one country to another.",
+    "brh→en": "The recipe for Mash Dolma varies greatly from one country to another."
+   },
+   {
+    "en": "In Egypt usually it's stuffed with rice and veggies.",
+    "en→urd_Arab": "مصر ٹی دادے گیشتری برنج و سوزی آن پر کننگک۔",
+    "urd→en": "In Egypt, one is usually stuffed with rice and vegetables.",
+    "brh→en": "In Egypt, it's stuffed with vegetables and rice."
+   },
+   {
+    "en": "In the levant they stuff it with meat as well.",
+    "en→urd_Arab": "دے ٹک اٹی سو ہم شاغرہ تے۔",
+    "urd→en": "In Syria and Lebanon, it's usually stuffed with meat, too.",
+    "brh→en": "In the Syrian area, people also throw meat."
+   },
+   {
+    "en": "Ways to get rid of negative energy.",
+    "en→urd_Arab": "منفی توانائی آن جان چھٹفنگ نا وڑوڈول۔",
+    "urd→en": "How to get rid of negative energy.",
+    "brh→en": "How to get rid of negative energy"
+   },
+   {
+    "en": "Walking in the open air, even if it's for 10 minutes a day.",
+    "en→urd_Arab": "تہو ٹی پند خلنگ، اگہ دے ٹی 10 منٹ ہم مرے۔",
+    "urd→en": "Just 10 minutes a day, right, take a walk in the open air.",
+    "brh→en": "Walking a little in the sun, even for ten minutes a day"
+   },
+   {
+    "en": "Good relationships with positive people",
+    "en→urd_Arab": "مثبت آ بندغ آتتون جوانو تعلقداری",
+    "urd→en": "Good relationships with people who have a positive outlook.",
+    "brh→en": "Keeping good relationships with good people"
+   },
+   {
+    "en": "I didn't think this day would come to us.",
+    "en→urd_Arab": "کنے گمان الو کہ ننے دا دے رسینگک۔",
+    "urd→en": "I never thought we'd have to see this again.",
+    "brh→en": "I didn't think this day would come to us."
+   },
+   {
+    "en": "I only saw it in movies.",
+    "en→urd_Arab": "ای بیرہ فلم آتیٹی خناٹہ۔",
+    "urd→en": "I'd only seen you do that in the movies.",
+    "brh→en": "I've only seen it in the movies."
+   }
+  ]
+ }
+}

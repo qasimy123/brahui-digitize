@@ -1,0 +1,11 @@
+{
+  "chrfpp": 51.2,
+  "bleu": 28.1,
+  "n": 302,
+  "sec": 217.2,
+  "sec_per_sent": 0.72,
+  "export": "export/nllb_r5_trim",
+  "variant": "quantized",
+  "beams": 4,
+  "threads": 0
+}

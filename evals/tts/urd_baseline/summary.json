@@ -1,0 +1,8 @@
+{
+ "model": "facebook/mms-tts-urd-script_arabic",
+ "n": 40,
+ "cer_mean": 0.2068,
+ "cer_median": 0.186,
+ "dur_ratio_vs_real": 0.987,
+ "seconds": 60.4
+}

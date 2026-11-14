@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Brahui demo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--bg:#0f1115;--fg:#e8e8e8;--mut:#8a8f98;--acc:#4f8cff;--rec:#ff4d4f;--card:#181b22}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.5 -apple-system,system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:600;margin:0 0 4px}.sub{color:var(--mut);font-size:14px;margin-bottom:20px}
+#btn{display:block;width:100%;padding:28px;font-size:26px;border:0;border-radius:16px;background:var(--acc);color:#fff;cursor:pointer}
+#btn.rec{background:var(--rec);animation:pulse 1s infinite}@keyframes pulse{50%{opacity:.75}}
+#btn:disabled{background:#333;color:var(--mut);cursor:wait}
+#meter{height:8px;background:#222;border-radius:4px;margin:12px 0;overflow:hidden}#meter i{display:block;height:100%;width:0;background:#4caf50}
+.take{background:var(--card);border-radius:14px;padding:18px 20px;margin:14px 0}
+.brh{font-size:34px;line-height:1.7;direction:rtl;text-align:right;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Geeza Pro",serif}
+.lat{font-size:20px;color:#b8c0cc;font-style:italic;margin-top:2px}
+.en{font-size:24px;margin-top:8px}.speak{background:#2a2f3a;border:0;color:#fff;border-radius:8px;font-size:18px;padding:4px 10px;margin:0 8px;cursor:pointer;vertical-align:middle}.meta{color:var(--mut);font-size:13px;margin-top:8px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.stars button{background:none;border:0;color:#555;font-size:22px;cursor:pointer;padding:0 2px}.stars button.on{color:#f5c518}
+audio{height:28px;vertical-align:middle}.err{color:var(--rec)}
+.meant{width:100%;box-sizing:border-box;margin-top:10px;padding:8px 10px;border-radius:8px;border:1px solid #333;background:#0f1115;color:var(--fg);font-size:15px}
+.hint{color:var(--mut);font-size:14px;margin-top:10px;text-align:center}
+</style></head><body><main>
+<h1>Brahui → English, spoken</h1><div class="sub" id="sub">loading…</div>
+<button id="btn">🎤 Press to speak</button>
+<div id="meter"><i></i></div>
+<div class="hint">Space to start / stop. Speak a sentence or two (under 20 s works best). Rate the English with the stars: 5 = meaning fully right.</div>
+<div id="takes"></div>
+</main>
+<script>
+const $=s=>document.querySelector(s); const btn=$('#btn'), meter=$('#meter i'), takesEl=$('#takes');
+let stream, ctx, analyser, rec, chunks=[], busy=false, state;
+async function init(){
+  state=await (await fetch('/api/state')).json();
+  $('#sub').textContent=`ASR ${state.asr} → ${state.mt} → ${state.tts==='say'?'macOS voice':'browser voice'} · all on this Mac · session ${state.session}`;
+  state.takes.slice().reverse().forEach(render);
+  stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
+  ctx=new AudioContext(); analyser=ctx.createAnalyser(); analyser.fftSize=1024; ctx.createMediaStreamSource(stream).connect(analyser);
+  const buf=new Uint8Array(analyser.fftSize);
+  (function tick(){analyser.getByteTimeDomainData(buf);let p=0;for(const v of buf)p=Math.max(p,Math.abs(v-128));meter.style.width=Math.min(100,p/128*100*1.5)+'%';meter.style.background=p>120?'#ff4d4f':'#4caf50';requestAnimationFrame(tick)})();
+}
+function start(){
+  if(busy||rec)return; chunks=[];
+  const mime=MediaRecorder.isTypeSupported('audio/webm;codecs=opus')?'audio/webm;codecs=opus':'';
+  rec=new MediaRecorder(stream,mime?{mimeType:mime,audioBitsPerSecond:128000}:{});
+  rec.ondataavailable=e=>chunks.push(e.data); rec.onstop=send; rec.start(); btn.textContent='■ Stop'; btn.classList.add('rec');
+}
+function stop(){ if(rec){rec.stop(); rec=null;} }
+async function send(){
+  busy=true; btn.disabled=true; btn.classList.remove('rec'); btn.textContent='… recognising';
+  const blob=new Blob(chunks,{type:'audio/webm'});
+  try{
+    const r=await (await fetch('/api/transcribe',{method:'POST',body:blob})).json();
+    if(r.error&&!r.brh) throw new Error(r.error);
+    render(r,true); say(r);
+  }catch(e){ const d=document.createElement('div'); d.className='take err'; d.textContent='error: '+e.message; takesEl.prepend(d); }
+  busy=false; btn.disabled=false; btn.textContent='🎤 Press to speak';
+}
+function say(t){
+  if(!t.en) return;
+  if(t.en_audio){ const a=document.querySelector('#t'+t.id+' audio.en'); if(a){a.play().catch(()=>{});} return; }
+  if('speechSynthesis' in window){ const u=new SpeechSynthesisUtterance(t.en); u.lang='en-US'; speechSynthesis.cancel(); speechSynthesis.speak(u); }
+}
+function render(t,top){
+  const d=document.createElement('div'); d.className='take'; d.id='t'+t.id;
+  const stars=[1,2,3,4,5].map(n=>`<button data-n="${n}" class="${t.score>=n?'on':''}">★</button>`).join('');
+  d.innerHTML=`<div class="brh">${t.brh||'<span class="err">(nothing recognised)</span>'}</div>
+    <div class="lat">${t.lat||''}</div>
+    <div class="en">${t.en||''}${t.error?`<span class="err"> ${t.error}</span>`:''}
+      ${t.en?`<button class="speak" title="Play English">🔊</button>`:''}${t.en_audio?`<audio class="en" controls src="/audio/${t.en_audio}"></audio>`:''}</div>
+    <div class="meta"><span>#${t.id}</span><span>${t.duration}s audio</span><span>ASR ${t.t_asr}s</span>${t.t_mt?`<span>MT ${t.t_mt}s</span>`:''}${t.t_tts?`<span>TTS ${t.t_tts}s</span>`:''}
+    <audio controls src="/audio/${String(t.id).padStart(4,'0')}.wav"></audio><span class="stars" title="Is the English right?">${stars}</span></div>
+    <input class="meant" placeholder="What she actually meant (English) — and was the Brahui text right?" value="${t.meant||''}">`;
+  const sp=d.querySelector('.speak'); if(sp) sp.onclick=()=>say(t);
+  const inp=d.querySelector('.meant'); inp.onchange=()=>fetch('/api/rate',{method:'POST',body:JSON.stringify({id:t.id,meant:inp.value})});
+  inp.onkeydown=e=>{e.stopPropagation(); if(e.key==='Enter')inp.blur();};
+  d.querySelectorAll('.stars button').forEach(b=>b.onclick=async()=>{const n=+b.dataset.n;await fetch('/api/rate',{method:'POST',body:JSON.stringify({id:t.id,score:n})});d.querySelectorAll('.stars button').forEach(x=>x.classList.toggle('on',+x.dataset.n<=n));});
+  top?takesEl.prepend(d):takesEl.append(d);
+}
+btn.onclick=()=>rec?stop():start();
+document.addEventListener('keydown',e=>{if(e.code==='Space'&&e.target===document.body){e.preventDefault();rec?stop():start();}});
+init();
+</script></body></html>

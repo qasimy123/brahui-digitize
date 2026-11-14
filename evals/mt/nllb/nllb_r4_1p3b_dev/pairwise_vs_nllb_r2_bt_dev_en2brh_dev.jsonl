@@ -1,0 +1,302 @@
+{"id": "bouquet_P012-S1", "winner": "A", "evidence": "دا دے ننے آ بریک"}
+{"id": "bouquet_P012-S2", "winner": "tie", "evidence": "identical"}
+{"id": "bouquet_P012-S3", "winner": "B", "evidence": "باز vs زیادہ"}
+{"id": "bouquet_P030-S1", "winner": "tie", "evidence": "identical"}
+{"id": "bouquet_P030-S2", "winner": "B", "evidence": "کاریم vs ارادے"}
+{"id": "bouquet_P030-S3", "winner": "A", "evidence": "نی ارا غا بفیس vs نم ... بفسہ"}
+{"id": "bouquet_P037-S1", "winner": "A", "evidence": "دو تے مبارک مرے"}
+{"id": "bouquet_P037-S2", "winner": "B", "evidence": "بون ایپیٹ، مہر"}
+{"id": "bouquet_P037-S3", "winner": "A", "evidence": "دوست بریک"}
+{"id": "bouquet_P037-S4", "winner": "A", "evidence": "نی جوڑ کیسہ"}
+{"id": "bouquet_P037-S5", "winner": "A", "evidence": "T2 'ای دادے داسہ' keeps 'I' and 'it'; T1 drops the object 'it'."}
+{"id": "bouquet_P048-S1", "winner": "B", "evidence": "T1 'اسہ بندغ نا فائدہ غاک' keeps 'a person's'; T2 drops 'اسہ'."}
+{"id": "bouquet_P048-S2", "winner": "A", "evidence": "T2 'وڑوڈول ایسر اسکان سرمننگ' means 'reach a solution'; T1 'آسراتی رسینگے' shifts the sense to comfort."}
+{"id": "bouquet_P048-S3", "winner": "B", "evidence": "T2 'مخلوق ء رکھوک' means 'that protect people'; T1 'مخلوق نا رکھوک' reads as 'people's protectors'."}
+{"id": "bouquet_P048-S4", "winner": "B", "evidence": "T1 'تقرر کیر' correctly means 'appoint' and uses the Brahui 'کڑدہ'; T2 'پن کیر' adds a stray 'او'."}
+{"id": "bouquet_P048-S5", "winner": "B", "evidence": "T1 'مقدمہ نا بناء مننگ آن زیات وخت گدرینگ' is clear; T2 'مقدمہ ہرا وخت کہ ٹرائل' is garbled and redundant."}
+{"id": "bouquet_P055-S1", "winner": "tie", "evidence": "'کل انا ... پیشن مسر' and 'ہر ہمو بندغ ... پیش تمانو' carry the same meaning."}
+{"id": "bouquet_P055-S2", "winner": "tie", "evidence": "The two are identical apart from spacing in 'تینکن' vs 'تین کن'."}
+{"id": "bouquet_P055-S3", "winner": "B", "evidence": "T2 'و مدام مرو' keeps 'will always be'; T1 'و مرو ء' drops 'always'."}
+{"id": "bouquet_P055-S4", "winner": "B", "evidence": "T1 'روشنا آخبت اس' avoids T2's redundant 'اسہ ... اس'."}
+{"id": "bouquet_P083-S1", "winner": "A", "evidence": "T1 keeps 'lovely' (زیبدار); T2 drops it and uses the Urdu loan خرگوش"}
+{"id": "bouquet_P083-S2", "winner": "B", "evidence": "T1 uses the correct word for carrots, گجر; T2's گراوٹ is wrong"}
+{"id": "bouquet_P083-S3", "winner": "A", "evidence": "T1 'ڈھکوک و چالاک... پٹنگ اٹی بس' reads naturally; T2's ending 'پٹ و پول کننگ ئس' is awkward"}
+{"id": "bouquet_P083-S4", "winner": "A", "evidence": "T2 keeps the 'help find' purpose: 'پٹنگ ئٹ کمک کن'; T1 drops 'help'"}
+{"id": "bouquet_P083-S5", "winner": "tie", "evidence": "Both convey that he pretended to care and the line about the magic apple"}
+{"id": "bouquet_P090-S1", "winner": "tie", "evidence": "Identical: 3۔5 استار"}
+{"id": "bouquet_P090-S2", "winner": "B", "evidence": "T1 keeps 'مرکزی کردار' (protagonist); T2 drops مرکزی"}
+{"id": "bouquet_P090-S3", "winner": "B", "evidence": "T2 keeps 'deeply' with 'کڑمبی ٹی عکاسی'"}
+{"id": "bouquet_P090-S4", "winner": "tie", "evidence": "Both: 'زرس ناگمان... ناپورو احساس ئس ایتک'"}
+{"id": "bouquet_P090-S5", "winner": "B", "evidence": "T2 'طاق خاصیت و مارکیٹ نا نیامٹ' scopes the phrase correctly"}
+{"id": "bouquet_P098-S1", "winner": "B", "evidence": "T2 writes the word in its normal joined form \"بارواٹ\"; T1 splits it as \"بارو اٹ\"."}
+{"id": "bouquet_P098-S2", "winner": "B", "evidence": "T1 \"شونقی تا\" correctly means enthusiasts; T2 \"شونق آتا\" means hobbies or enthusiasm, which is wrong."}
+{"id": "bouquet_P098-S3", "winner": "A", "evidence": "T1 uses the Brahui word \"مسخت\" for goal and \"اسیجا\" for together; T2 uses the Urdu loan \"ہدف\" and repeats \"اواری\"."}
+{"id": "bouquet_P103-S1", "winner": "B", "evidence": "T1 keeps \"قمری تو\" (lunar month); T2 leaves out \"lunar\"."}
+{"id": "bouquet_P103-S2", "winner": "B", "evidence": "T1 \"تینے ... غرق کرے\" correctly says he drowned himself; T2 \"ڈبینگاسس\" is a passive form and reads awkwardly."}
+{"id": "bouquet_P103-S3", "winner": "tie", "evidence": "Both say the same thing (\"مست آن\" vs \"مست\"); only the spelling of the name differs."}
+{"id": "bouquet_P103-S4", "winner": "B", "evidence": "T2 \"زونگزی جوڑ کننگ\" correctly means making zongzi; T1 \"ژونگزی کننگ\" is vaguer."}
+{"id": "bouquet_P115-S1", "winner": "tie", "evidence": "\"مدامی کن است آک اوار\" and \"است آک مدام اسہ\" are equally good ways to say hearts united forever."}
+{"id": "bouquet_P115-S2", "winner": "B", "evidence": "T2 ends at \"برکت\" with no verb, so the sentence is incomplete; T1 finishes it with \"برکت ہلنگ کن اوار مریرے\"."}
+{"id": "bouquet_P115-S3", "winner": "B", "evidence": "T2 matches the reference exactly; T1 adds an Urdu-style \"ء\" after the year."}
+{"id": "bouquet_P115-S4", "winner": "B", "evidence": "T1 keeps the plural 'فور سیزنز' (Four Seasons); T2 has 'فور سیزن'. Both garble Haiyue as ہائیوے."}
+{"id": "bouquet_P127-S1", "winner": "tie", "evidence": "Only a spelling difference: 'پیکیج' vs 'پیکج'."}
+{"id": "bouquet_P127-S2", "winner": "A", "evidence": "T1 keeps 'please' ('مہربانی'); T2 drops it and uses the informal 'نا خواست'."}
+{"id": "bouquet_P127-S3", "winner": "tie", "evidence": "The two translations are identical."}
+{"id": "bouquet_P127-S4", "winner": "A", "evidence": "T2 'اسہ ساعت ئس مہربانی' is concise and keeps 'please'; T1 is wordy and garbled ('اسکان سرمننگ کتوٹ')."}
+{"id": "bouquet_P127-S5", "winner": "A", "evidence": "T1 keeps the polite 'نما' throughout and has the full 'anything else I can help you with'; T2 switches to the informal 'نا'."}
+{"id": "bouquet_P137-S1", "winner": "A", "evidence": "Same wording, but T1 keeps the question mark ('سم ئس؟')."}
+{"id": "bouquet_P137-S2", "winner": "tie", "evidence": "The two translations are identical."}
+{"id": "bouquet_P137-S3", "winner": "B", "evidence": "T2's 'تہار تہار' is idiomatic Brahui for pitch dark; T1's 'کچ سیاہ' is a calque."}
+{"id": "bouquet_P137-S4", "winner": "tie", "evidence": "Only a spelling difference: 'رمب' vs 'رم'. Both have the same meaning."}
+{"id": "bouquet_P139-S1", "winner": "A", "evidence": "گمان تون ترندی ئٹ ترندی ئٹ دھڑکنگ"}
+{"id": "bouquet_P139-S2", "winner": "A", "evidence": "T1: تینا دو ء کنا خن تیا تخا (hand on eyes)"}
+{"id": "bouquet_P139-S3", "winner": "A", "evidence": "ہمو ساہت اٹ کنے سما تما"}
+{"id": "bouquet_P145-S1", "winner": "B", "evidence": "دیگر آ ٹریئر نا شار نا مرکز ٹی"}
+{"id": "bouquet_P145-S2", "winner": "B", "evidence": "T2: بلیک مرسڈیز / مین ٹرین اسٹیشن"}
+{"id": "bouquet_P145-S3", "winner": "tie", "evidence": "سم ئنا گواچی vs سم کاری"}
+{"id": "bouquet_P145-S4", "winner": "A", "evidence": "دائسکان ... پٹنگ اٹی ء"}
+{"id": "bouquet_P145-S5", "winner": "A", "evidence": "براہ کرم (T2 omits please)"}
+{"id": "bouquet_P161-S1", "winner": "A", "evidence": "ارا نا پٹوکا سہدارک"}
+{"id": "bouquet_P161-S2", "winner": "B", "evidence": "T1: مہروان و خاہوت"}
+{"id": "bouquet_P161-S3", "winner": "B", "evidence": "T2 سبک رنگ (light-colored) vs T1 روشن (bright); T1 علاج = medical treatment"}
+{"id": "bouquet_P161-S4", "winner": "B", "evidence": "T1 ارا نا تربیت یافتہ vs T2 English loan ہاؤس ٹرینڈ"}
+{"id": "bouquet_P172-S1", "winner": "B", "evidence": "T2 مہم (expedition) + داسکان ہم (still) vs T1 سفر"}
+{"id": "bouquet_P172-S2", "winner": "B", "evidence": "T1 بند کروئی = switch off (wrong); T2 ملنگ"}
+{"id": "bouquet_P172-S3", "winner": "B", "evidence": "T2 اندن لگک کہ دا اسہ وڑ ئنا مار ئسے more natural"}
+{"id": "bouquet_P172-S4", "winner": "A", "evidence": "T2 پیشن مروٹ vs awkward T1 پیش تموہ"}
+{"id": "bouquet_P172-S5", "winner": "B", "evidence": "T1 adds اسل جوان وڑاٹ and past اسوٹ; T2 انتظار ٹی اٹ"}
+{"id": "bouquet_P177-S1", "winner": "tie", "evidence": "جوان وارم اپ vs جوان انگا وارم اپ"}
+{"id": "bouquet_P177-S2", "winner": "A", "evidence": "T1 omits 'against' (کشکنگ نا سلاہ); T2 کشنگ آن بچنگ"}
+{"id": "bouquet_P177-S3", "winner": "A", "evidence": "T1 ہن و بر keeps back and forth; T2 only ہنبو"}
+{"id": "bouquet_P177-S4", "winner": "B", "evidence": "T2 repeats چھاپنگ for two different exercises; T1 lists all seven distinctly."}
+{"id": "bouquet_P196-S1", "winner": "A", "evidence": "T1's چکار کیک conveys 'distracts'; T2's مشغول کیک means 'occupies'."}
+{"id": "bouquet_P196-S2", "winner": "B", "evidence": "T2 keeps 'بیدس دا چائسہ کہ انت' ('without knowing what'); T1's 'انت آن بیدس' garbles it."}
+{"id": "bouquet_P196-S3", "winner": "A", "evidence": "T1's کاغد ئس چلیفنگ ('paper being slid') is right; T2's 'کاغد نا چادر … چرینگسہ' reads as 'a paper blanket rotating'."}
+{"id": "bouquet_P196-S4", "winner": "A", "evidence": "T1's دا انت مننگ کیک؟ is natural; T2's word order is awkward."}
+{"id": "bouquet_P196-S5", "winner": "tie", "evidence": "Both keep curiosity, dread and staying put: T1 'ٹکر ٹکر مرسہ … سلوک سلیک', T2 'بیم … سلوک مریک'."}
+{"id": "bouquet_P215-S1", "winner": "B", "evidence": "T1 uses the polite plural نم … دوست تخیرے, matching the job-ad register; T2 switches to the informal نی."}
+{"id": "bouquet_P215-S2", "winner": "A", "evidence": "T2 adds the English loan اسپیشلسٹ; T1's ماہر پٹنگ ان is more natural."}
+{"id": "bouquet_P215-S3", "winner": "A", "evidence": "T2 keeps the consistent نم and gives 'سرجم … چاگڑد'; T1 switches to نی and uses the odd 'پوروی کروک'."}
+{"id": "bouquet_P215-S4", "winner": "B", "evidence": "T1's لچکدار گھنٹہ is concise; T2's 'لچکدار آ گھنٹہ غاک' is awkward."}
+{"id": "bouquet_P215-S5", "winner": "tie", "evidence": "Neither translates 'asap'. One writes it out as آساپ and the other keeps the Latin ASAP."}
+{"id": "bouquet_P215-S6", "winner": "A", "evidence": "T2 uses the natural Brahui word for address, ڈس و نشان, instead of T1's loanword ایڈریس."}
+{"id": "bouquet_P227-S1", "winner": "B", "evidence": "T1 says تخنگ ('keep') in good health. T2's کننگ means 'make', not 'keep'."}
+{"id": "bouquet_P227-S2", "winner": "tie", "evidence": "The two translations are identical."}
+{"id": "bouquet_P227-S3", "winner": "tie", "evidence": "They differ only in spelling (مالو vs مہالو). The meaning is the same."}
+{"id": "bouquet_P229-S1", "winner": "A", "evidence": "T2's آبادی ء دمدستی نوٹس is closer to 'notice to the population' (reference: آبادی کن ہنگامی اطلاع)."}
+{"id": "bouquet_P229-S2", "winner": "B", "evidence": "T1's تموک مننگ کیک keeps 'may have fallen', and گندہ fits 'contaminated'. T2's زہیری means 'poisonous', which is stronger than the source."}
+{"id": "bouquet_P229-S3", "winner": "A", "evidence": "T1 keeps the 'Water distribution:' header. T2 merges the header into the sentence (بشخ و پانٹ المی ء کہ), which distorts the structure."}
+{"id": "bouquet_P229-S4", "winner": "B", "evidence": "T1's کاریم کننگو gives 'will be working'. T2's کاریم کننگ ئے is an incomplete verb form."}
+{"id": "bouquet_P258-S1", "winner": "B", "evidence": "T1 uses the native Brahui word گواچنی for 'really' instead of the Urdu loan واقعی."}
+{"id": "bouquet_P258-S2", "winner": "A", "evidence": "T1 renders 'moments' as 'ساہت آک'; T2's 'وخت آتے' means 'times', which is looser."}
+{"id": "bouquet_P258-S3", "winner": "A", "evidence": "T1 keeps the reference's construction 'سوشل میڈیا نا ... اثر تمنگ'. T2's 'شاغنگ' and 'شون ہلینہ' fit less well."}
+{"id": "bouquet_P261-S1", "winner": "A", "evidence": "T1 uses the polite 'نم ... کیرے' like the reference; T2 switches to the singular 'نی ... کیسہ'."}
+{"id": "bouquet_P261-S2", "winner": "A", "evidence": "T1's 'ورزش آک دو بریرہ' has a plural verb; T2's 'ورزش آک ملک' pairs a plural subject with a singular verb."}
+{"id": "bouquet_P261-S3", "winner": "A", "evidence": "T2 keeps 'other content ... like': 'ایلو مواد آتے ہم ... دنکہ یوگا'."}
+{"id": "bouquet_P261-S4", "winner": "A", "evidence": "T2 uses the Brahui words 'پنت' and 'جان جوڑی'; T1 uses the Urdu loan 'مشورہ'."}
+{"id": "bouquet_P261-S5", "winner": "A", "evidence": "T2 uses the Brahui 'کنا چینل تون اوار مریسہ'; T1 uses the English loan 'جوائن کبو'."}
+{"id": "bouquet_P276-S1", "winner": "tie", "evidence": "Both translations are identical: 'اسکول آ ہڑدے پورو وردی بیننگ المی ء۔'"}
+{"id": "bouquet_P276-S2", "winner": "B", "evidence": "T2 keeps 'lunch' as 'نیمروچ نا ارغ'; T1 says only 'ارغ'."}
+{"id": "bouquet_P276-S3", "winner": "B", "evidence": "T1 keeps 'toddlers' ('چنکا چناتے') and uses 'ارفوئی' for pick up. T2 drops 'toddlers' and its 'مچ کروئی' means 'gather'."}
+{"id": "bouquet_P297-S1", "winner": "B", "evidence": "پنت درکار ئے vs سلاہ نا ضرورت"}
+{"id": "bouquet_P297-S2", "winner": "B", "evidence": "ننا تنخواہ vs تینا تنخواہ"}
+{"id": "bouquet_P297-S3", "winner": "B", "evidence": "وڑ و ڈول ئے vs truncated وڑ۔"}
+{"id": "bouquet_P297-S4", "winner": "A", "evidence": "اولیت نا ترازو keeps 'scale'"}
+{"id": "bouquet_P297-S5", "winner": "A", "evidence": "کاریم ئٹ ہتنگ vs استعمال کننگ"}
+{"id": "bouquet_P310-S1", "winner": "tie", "evidence": "ارغ زائیفہ vs ارغ و زئیفہ"}
+{"id": "bouquet_P310-S2", "winner": "B", "evidence": "داخس وخت آن برام مننگ آن awkward"}
+{"id": "bouquet_P310-S3", "winner": "B", "evidence": "چنا اس ودی کننگ خوارہ"}
+{"id": "bouquet_P310-S4", "winner": "A", "evidence": "الار خلکر vs ککو تے"}
+{"id": "bouquet_P310-S5", "winner": "A", "evidence": "کدو = pumpkin, wrong"}
+{"id": "bouquet_P310-S6", "winner": "A", "evidence": "T1 'پرغار' = cut open; T2 'کشار' (pulled out) and 'کدو' (gourd) wrong"}
+{"id": "bouquet_P316-S1", "winner": "A", "evidence": "T2 renders squid as 'مچھی' (fish)"}
+{"id": "bouquet_P316-S2", "winner": "A", "evidence": "both say salty; T2 uses Urdu 'شورہ'"}
+{"id": "bouquet_P316-S3", "winner": "B", "evidence": "'نرخ ہم اڑزان' = price affordable"}
+{"id": "bouquet_P325-S1", "winner": "B", "evidence": "'مکڑدہ' vs Urdu 'مکڑی'"}
+{"id": "bouquet_P325-S2", "winner": "B", "evidence": "'داخس زیبدار' keeps 'so pretty'"}
+{"id": "bouquet_P325-S3", "winner": "B", "evidence": "'ہم چاہنگ خواوہ' close to reference"}
+{"id": "bouquet_P325-S4", "winner": "B", "evidence": "T1 'ککڑ نا مکڑی' = chicken spider; T2 'خرماؤ مکڑدہ' wolf"}
+{"id": "bouquet_P325-S5", "winner": "tie", "evidence": "identical translations"}
+{"id": "bouquet_P330-S1", "winner": "B", "evidence": "'مینجمنٹ چاہندار ... پک کیر' renders savvy"}
+{"id": "bouquet_P330-S2", "winner": "B", "evidence": "T1 keeps 'proper' (باقاعدہ); T2 leaves it out"}
+{"id": "bouquet_P330-S3", "winner": "A", "evidence": "T2 uses the Brahui word چاہنداری instead of the loan علم, and سازوسامان fits 'equipment'"}
+{"id": "bouquet_P343-S1", "winner": "B", "evidence": "T1 '18 سال یا اوڑان زیات' includes age 18; T2 'آن زیات' means over 18 only"}
+{"id": "bouquet_P343-S2", "winner": "A", "evidence": "T2 has the loan فیملی and the wrong phrase 'شناختی کاپی نا فوٹو کاپی'; T1 'خاہوت نا رجسٹری' is correct"}
+{"id": "bouquet_P343-S3", "winner": "A", "evidence": "T2 'ہلنگ کیک' correctly gives 'can receive'"}
+{"id": "bouquet_P359-S1", "winner": "A", "evidence": "T2 'کس ... خواہپک' means 'no one asks'; T1 'کسس' means 'someone'. T2 also keeps 'indeed' with تو"}
+{"id": "bouquet_P359-S2", "winner": "A", "evidence": "T2 'کنے سما ء، دا واضح اف' matches the source; T1 adds ولے and has 'not certain'"}
+{"id": "bouquet_P359-S3", "winner": "tie", "evidence": "The two translations are identical"}
+{"id": "bouquet_P359-S4", "winner": "B", "evidence": "T1 'کس ئس اف!' means 'no one'; T2 'کسس!' means 'someone!'"}
+{"id": "bouquet_P359-S5", "winner": "A", "evidence": "T2 uses the Brahui word امنا instead of the loan اتفاق"}
+{"id": "bouquet_P363-S1", "winner": "B", "evidence": "T1 keeps 'کنے' (tell me); T2 omits it and misspells name 'ہاوولوفنا'"}
+{"id": "bouquet_P363-S2", "winner": "B", "evidence": "T1 'ہرا؟' concise, matches reference; T2 adds odd 'اسٹ'"}
+{"id": "bouquet_P363-S3", "winner": "tie", "evidence": "identical 'راستیکو پارہ غا'"}
+{"id": "bouquet_P363-S4", "winner": "B", "evidence": "T1 'ہرا؟' vs T2 'ہرا اسٹ؟'"}
+{"id": "bouquet_P363-S5", "winner": "tie", "evidence": "identical 'خیسن آ بلیزر والا'"}
+{"id": "bouquet_P363-S6", "winner": "B", "evidence": "T2 'پیٹر... آئیونوف' vs T1 wrong names 'پٹرو، ایرونوس'"}
+{"id": "bouquet_P373-S1", "winner": "tie", "evidence": "'رند ء ہنا' vs 'رند اٹ ہنار' both acceptable"}
+{"id": "bouquet_P373-S2", "winner": "B", "evidence": "T1 'دڑنگسہ... پدی ہلک' natural; T2 loan 'جمپ کرے' and garbled 'جمب اس توریسہ'"}
+{"id": "bouquet_P373-S3", "winner": "B", "evidence": "T1 keeps 'داپار ایپار' (around); T2 omits it"}
+{"id": "bouquet_P373-S4", "winner": "B", "evidence": "T1 'ہمگرنچ مننگ کتوس' = couldn't keep up; T2 'مون آ ہننگ کتوس' shifts meaning"}
+{"id": "bouquet_P373-S5", "winner": "A", "evidence": "او رم کرسا کرے"}
+{"id": "bouquet_P376-S1", "winner": "A", "evidence": "اسہ گواچنی ء سپا دے اس"}
+{"id": "bouquet_P376-S2", "winner": "A", "evidence": "پژہ غاتے ... دم درینگ انگ"}
+{"id": "bouquet_P376-S3", "winner": "B", "evidence": "فہرست ئے تخپرہ"}
+{"id": "bouquet_P376-S4", "winner": "B", "evidence": "شیف کریٹ و برش کریٹ"}
+{"id": "bouquet_P383-S1", "winner": "A", "evidence": "دا اسہ کچ اسکان"}
+{"id": "bouquet_P383-S2", "winner": "tie", "evidence": "دن ء حالیت اسے ٹی دھکہ تننگ"}
+{"id": "bouquet_P383-S3", "winner": "A", "evidence": "بیدس بھاز زور خلنگ آن"}
+{"id": "bouquet_P383-S4", "winner": "B", "evidence": "ای 15 سال آن ورزش کننگ اٹ"}
+{"id": "bouquet_P383-S5", "winner": "B", "evidence": "کل جوان ء"}
+{"id": "bouquet_P398-S1", "winner": "B", "evidence": "T2 uses the Brahui word \"اسل\" for \"really\" where T1 uses the Urdu loan \"واقعی\"; the meaning is the same."}
+{"id": "bouquet_P398-S2", "winner": "A", "evidence": "T2's \"سرپند مننگ\" is the more natural Brahui for \"figure out\", compared with T1's \"معلوم کننگ\"."}
+{"id": "bouquet_P398-S3", "winner": "B", "evidence": "T2's \"دکانداری کینہ\" means \"run a shop\", not \"shop at\"; T1's \"دکان تیان سوداگری\" is closer to the meaning."}
+{"id": "bouquet_P398-S4", "winner": "A", "evidence": "T1's \"لس وڑاٹ\" matches \"usually\"; T2's \"گیشتری\" means \"mostly\"."}
+{"id": "bouquet_P398-S5", "winner": "tie", "evidence": "Both translate the idiom word for word and neither is clearly better: T1 has \"بھاز استخوائی تخک\", T2 has \"خواہش نا گنجائش ئے الیک\"."}
+{"id": "bouquet_P409-S1", "winner": "B", "evidence": "T1 keeps \"know how to recognize them first\" (\"مالو دافتے درست کننگ ئے چارے\"); T2 drops \"know\" and its wording is broken."}
+{"id": "bouquet_P409-S2", "winner": "B", "evidence": "T1's \"پیدوار کروئی\" means \"produce\", which is wrong for \"identify\"; T2's \"نشاندہی ئے کروئی\" is correct."}
+{"id": "bouquet_P409-S3", "winner": "B", "evidence": "T1 uses the Brahui \"کڑمب ساہ\" for \"deep breathing\"; T2 uses the Urdu-style \"گہرائی ٹی\"."}
+{"id": "bouquet_P409-S4", "winner": "B", "evidence": "T2 keeps \"all you need\" (\"بیرہ ... ضرورت\"); T1 leaves it out."}
+{"id": "bouquet_P422-S1", "winner": "B", "evidence": "T1 gets the greeting wrong (\"سہب شاباش\") and the name wrong (\"مرسٹا\"); T2 has \"سہب بخیر\" and \"مارٹا\"."}
+{"id": "bouquet_P422-S2", "winner": "A", "evidence": "T1 uses the native Brahui 'توار کریٹہ' for 'I was calling'. T2 uses the clumsier 'فون کننگ اسوٹ'."}
+{"id": "bouquet_P422-S3", "winner": "B", "evidence": "T2's 'بشخنداری خواوہ، ھرینہ کہ آیا' keeps 'let's see if' correctly. T1's 'خواہسہ ہرن' is run-on and garbled."}
+{"id": "bouquet_P422-S4", "winner": "B", "evidence": "T1's 'ھربو' renders 'let's see'. T2's 'ببو' means 'come'."}
+{"id": "bouquet_P435-S1", "winner": "A", "evidence": "T2's 'بھاز جوان اف' conveys 'not great'. T1's 'گچین اف' says 'not the best'."}
+{"id": "bouquet_P435-S2", "winner": "B", "evidence": "Both mistranslate 'rare', but T1 keeps 'well done' as 'جوان وڑٹ کننگاسس' (well cooked). T2's 'جوان مس' just means 'it became good'."}
+{"id": "bouquet_P435-S3", "winner": "tie", "evidence": "The two are nearly identical: 'فرائی تے' vs 'فرائز ئے', both with 'بھاز چرپی'."}
+{"id": "bouquet_P435-S4", "winner": "B", "evidence": "T2's 'کرکوٹ' approximates 'croquettes'. T1's 'ککڑی' means cucumber, which is wrong."}
+{"id": "bouquet_P435-S5", "winner": "B", "evidence": "T2's 'بس جواننگا گڑا نرخ آک اسر' is natural. T1's 'اسٹ انگا جوان انگا ہیت' is awkward."}
+{"id": "bouquet_P442-S1", "winner": "B", "evidence": "T1 renders 'corresponds to you' as 'نم تون ہمگرنچ مریک'. T2 is garbled and also misspells the name ('البرٹوکاریسیا')."}
+{"id": "bouquet_P442-S2", "winner": "tie", "evidence": "Both have the same meaning: 'تینا منشا' vs 'تینا مرضی' plus 'کمتی نا خواست کننگ مفک'."}
+{"id": "bouquet_P442-S3", "winner": "A", "evidence": "T1 matches the reference exactly. T2 transliterates the username and adds 'ئس'."}
+{"id": "bouquet_P442-S4", "winner": "B", "evidence": "T2 'جی او، مننگ کیک،' keeps the source's phrasing and punctuation, and 'فنانس ایسپ' is closer to the name."}
+{"id": "bouquet_P446-S1", "winner": "A", "evidence": "T1 uses 'کن' (for). T2 has 'کہ', which is wrong here."}
+{"id": "bouquet_P446-S2", "winner": "B", "evidence": "T1 garbles the store name as 'ایل اسکوپیٹ'. T2 'ال کورٹے انگلز' is close."}
+{"id": "bouquet_P446-S3", "winner": "A", "evidence": "Close call: both keep the meaning, but T1 'دو بریک' is a more natural way to say 'available'."}
+{"id": "bouquet_P458-S1", "winner": "A", "evidence": "T1 uses Brahui 'بے مٹ'. T2 uses the Urdu loan 'بے مثال'."}
+{"id": "bouquet_P458-S2", "winner": "A", "evidence": "T2 'ودکی' renders 'proliferation' well. T1 'مدان مدان آ' is awkward."}
+{"id": "bouquet_P458-S3", "winner": "A", "evidence": "T1 keeps 'multiplying' ('زیات مریسہ'). T2 leaves it out."}
+{"id": "bouquet_P463-S1", "winner": "B", "evidence": "T1 'ہرافک اندلوسیا ء خلیس تننگ ء' keeps the fires as what threatens Andalusia. T2 changes the structure."}
+{"id": "bouquet_P463-S2", "winner": "B", "evidence": "Close call: T1 'خراج سال' renders 'tax year' more literally and uses Brahui-style 'گوشوارہ' instead of 'ریٹرن'."}
+{"id": "bouquet_P463-S3", "winner": "B", "evidence": "T1 keeps 'ٹیکس' and 'موخر کننگ' (deferral); T2 uses the odd 'خراج' for tax and 'پدبٹنگ' for deferral."}
+{"id": "bouquet_P463-S4", "winner": "A", "evidence": "T2 'نسخان رسینگانے' means 'damaged'; T1 'زہمی مسنو' means 'injured', which is odd for facilities."}
+{"id": "smolsent_100", "winner": "B", "evidence": "T1 'صف آتے برجا تخار' renders 'ranks intact'; T2 'درجہ' means grade, not ranks."}
+{"id": "smolsent_109", "winner": "A", "evidence": "T1 'کوپہ ناگمان آن لتاڑنگک' keeps 'suddenly crushed'; T2 'ٹکر مریک' means 'collides', which is wrong."}
+{"id": "smolsent_110", "winner": "B", "evidence": "T2 'موکل ایتے' means 'allow' and matches the reference; T1 'الیپک' is unclear here and may read as negative."}
+{"id": "smolsent_126", "winner": "B", "evidence": "T1 uses the explicit plural 'اوفک' for 'they'; otherwise the two are nearly the same."}
+{"id": "smolsent_134", "winner": "B", "evidence": "T2 'مونی کاہک' renders 'goes far beyond' (as in the reference) and 'وڑوڈول' renders 'arrangement'."}
+{"id": "smolsent_136", "winner": "B", "evidence": "T2 'سوتے اسہ بھلو پیالہ سے ٹی... چٹفبو' is clearer; T1 repeats 'شاغسہ' and the instruction gets muddled."}
+{"id": "smolsent_153", "winner": "B", "evidence": "T2 translates the term as 'معکوس مربع قانود'; T1 keeps the English loan 'انورس اسکوائر لاء'."}
+{"id": "smolsent_183", "winner": "B", "evidence": "T1 'خاکہ ئے شاغہ' means 'draw the outline'; T2 'شون ایت' means 'show', which is wrong."}
+{"id": "smolsent_189", "winner": "tie", "evidence": "Identical except اٹ vs ئٹ"}
+{"id": "smolsent_204", "winner": "A", "evidence": "اومیت ئس کہ وختس ہم بھاز گڑگڑ یا مونجا مف"}
+{"id": "smolsent_207", "winner": "A", "evidence": "ننا سمجھ آن بھاز ایڑتر اسہ خاص ء کاروباری عمل اس مروئی ء"}
+{"id": "smolsent_217", "winner": "B", "evidence": "نہال آک ... سوزی نا تلہ ٹی"}
+{"id": "smolsent_222", "winner": "A", "evidence": "ہرا رنگ خننگک و ہرا رنگ تالان ء"}
+{"id": "smolsent_230", "winner": "B", "evidence": "ایندھن مچ کننگ vs تیل"}
+{"id": "smolsent_238", "winner": "A", "evidence": "پمبہ سوگو مریک ... کچ ئسے ٹی باسنی"}
+{"id": "smolsent_24", "winner": "B", "evidence": "ہر بزغر زیات وام تے ٹی اختہ مس vs زمیندار"}
+{"id": "smolsent_242", "winner": "B", "evidence": "نت تا سہی صف بندی"}
+{"id": "smolsent_254", "winner": "B", "evidence": "اسہ وڑ vs متزلزل (wrong)"}
+{"id": "smolsent_267", "winner": "A", "evidence": "پژہ نا تار بند مس"}
+{"id": "smolsent_268", "winner": "A", "evidence": "چاند ناچ نا رسم"}
+{"id": "smolsent_277", "winner": "B", "evidence": "ناگمان تپ ... کاٹم نا خڷ"}
+{"id": "smolsent_318", "winner": "A", "evidence": "جانجوڑی نا ہڑتوم"}
+{"id": "smolsent_338", "winner": "B", "evidence": "زغم نا جنگ نا خواست"}
+{"id": "smolsent_340", "winner": "B", "evidence": "YouTube نا براہ راست"}
+{"id": "smolsent_350", "winner": "A", "evidence": "ہو، ... دھوکہ ایترہ"}
+{"id": "smolsent_367", "winner": "B", "evidence": "امتیازی سلوک و تعصب"}
+{"id": "smolsent_369", "winner": "B", "evidence": "درآمد یا کسٹم ڈیوٹی تا ذمہ وار"}
+{"id": "smolsent_374", "winner": "B", "evidence": "اسہ وخت آ شرفدار مریسہ"}
+{"id": "smolsent_39", "winner": "B", "evidence": "T1 repeats 'مضحکہ خیز' twice, losing 'fun'; T2 'مزہ، مسخرہ' distinguishes both"}
+{"id": "smolsent_404", "winner": "B", "evidence": "T1 'جوان روشنائی… بے کچ' is native Brahui; T2 uses Urdu 'مناسب روشنی… بے حد'"}
+{"id": "smolsent_412", "winner": "B", "evidence": "T2 'نت فٹ' mistranslates nine; T1 'نہہ فٹ… نک آن دمہ نا سر اسکان' correct"}
+{"id": "smolsent_413", "winner": "A", "evidence": "T1 Brahui 'راجی' vs T2 Urdu loan 'قومی'"}
+{"id": "smolsent_414", "winner": "B", "evidence": "T1 'توفک تون' (gun) loses whistle; T2 'سیٹی تفوک' keeps it"}
+{"id": "smolsent_425", "winner": "A", "evidence": "T2 'اوفتے کن اونا است ہسونی' keeps 'his concern for them'; T1 drops 'his/for'"}
+{"id": "smolsent_447", "winner": "B", "evidence": "T1 keeps 'بیرہ' (only); T2 omits it"}
+{"id": "smolsent_45", "winner": "A", "evidence": "T2 'وخت وخت ئس… نم مپ ئٹ' natural; T1 'نمبو والا مٹ' and 'وقتا فوقتا' awkward"}
+{"id": "smolsent_451", "winner": "B", "evidence": "T2 'خوراک نا بارواٹ اوفتا اصل ویل آک' clearer for issues around food"}
+{"id": "smolsent_453", "winner": "B", "evidence": "T2 'بلکن لس ادب اٹی ہم' renders 'even'; T1 just 'و'"}
+{"id": "smolsent_471", "winner": "B", "evidence": "ذہنی معذور vs فکری معذور"}
+{"id": "smolsent_472", "winner": "B", "evidence": "T1 بورہ غان ہم زیات = more than sugar"}
+{"id": "smolsent_479", "winner": "B", "evidence": "گچینو vs Urdu عظیم"}
+{"id": "smolsent_485", "winner": "B", "evidence": "T1 garbled او کن خور"}
+{"id": "smolsent_49", "winner": "B", "evidence": "T2 literal ٹریک ئے کننگ"}
+{"id": "smolsent_514", "winner": "A", "evidence": "T2 omits 'not to mention' (دن مف کہ)"}
+{"id": "smolsent_522", "winner": "B", "evidence": "T2 خیسن (red) for thick"}
+{"id": "smolsent_535", "winner": "B", "evidence": "T2 attaches tube only to مکھی"}
+{"id": "smolsent_538", "winner": "A", "evidence": "T2 drops دستیاب, imperative کر"}
+{"id": "smolsent_542", "winner": "B", "evidence": "باسونو دیر keeps 'hot water'"}
+{"id": "smolsent_549", "winner": "B", "evidence": "T2 'پارہ غان درشان مروکا' matches 'displayed by' better than T1 'کنڈآن پیش کروک', and 'متاثر کیک' reads more naturally"}
+{"id": "smolsent_557", "winner": "A", "evidence": "T1 'کامل' matches 'perfect'; T2 'گچین' means 'best/choice' and uses the loanword 'آرکیٹیکٹ'"}
+{"id": "smolsent_580", "winner": "B", "evidence": "T2 leaves out 'born-in-a-stable'; T1 keeps it as 'اسٹیبل ٹی ودی مروکا'"}
+{"id": "smolsent_585", "winner": "B", "evidence": "T2 has the correct 'ہیئرنگ ایڈز' and 'پس منظر نا شور'; T1 has the garbled 'ہیڈنگ ایڈ' and the English loan 'بیک گراؤنڈ'"}
+{"id": "smolsent_586", "winner": "A", "evidence": "T2 leaves out 'really'; T1 keeps it as 'واقعی صاف ستھرا'"}
+{"id": "smolsent_589", "winner": "A", "evidence": "T2 renders 'critical' as 'نازرک تنکی'; T1 leaves it out"}
+{"id": "smolsent_609", "winner": "B", "evidence": "T1 keeps 'دمدستی' (instantly) and 'اینٹی بائیوفلک'; T2 leaves out 'instantly' and drops the 'anti-' from 'anti-biophilic'"}
+{"id": "smolsent_610", "winner": "B", "evidence": "T1 'کمک ئے کننگ ئٹی سرسہب مس' keeps 'was able to'; T2 'کمک تننگ کرے' loses it"}
+{"id": "smolsent_614", "winner": "B", "evidence": "T1 'زیبدار ئے' keeps 'cute'; T2 'دوزخ آن ہنین' ('sweeter than hell') distorts the meaning"}
+{"id": "smolsent_618", "winner": "A", "evidence": "T1 keeps 'شراکت (ہے)'; T2 drops the '(is)' and renders 'contribution' as 'بشخ'"}
+{"id": "smolsent_621", "winner": "A", "evidence": "T1 'گجر نا رنگ ئٹی بریرہ' (carrot colour) wrong; T2 'گجر نا خرن آنبار' keeps resemblance"}
+{"id": "smolsent_622", "winner": "B", "evidence": "T1 'شلغم' keeps large-object sense; T2 'بادام' (almond) contradicts it"}
+{"id": "smolsent_627", "winner": "A", "evidence": "T1 'اراٹی' turns into 'where'; T2 'انت جاگہ غا ... ارے؟' keeps yes/no"}
+{"id": "smolsent_633", "winner": "B", "evidence": "T1 'بیچلر سوات', 'ٹوئن', missing 'features'"}
+{"id": "smolsent_642", "winner": "B", "evidence": "T1 'باگل' vs T2 Urdu 'سنگر' / 'گانا'"}
+{"id": "smolsent_647", "winner": "A", "evidence": "T2 'خیال بس کہ ... راہی کرے' conveys 'was enough to send'"}
+{"id": "smolsent_650", "winner": "A", "evidence": "T2 loan 'ہاؤسنگ' vs T1 'ہند آک'"}
+{"id": "smolsent_651", "winner": "B", "evidence": "T1 leaves 'ٹینشن clamps' in English; T2 'تناؤ نا کلیمپ'"}
+{"id": "smolsent_652", "winner": "tie", "evidence": "both 'بنیاتی وڑاٹ سو... گزران/گزارہ کریرہ'"}
+{"id": "smolsent_656", "winner": "B", "evidence": "T1 garbled 'بیم ئنا گواچی ء'; T2 clear 'پابند مننگ آن خلیرہ'"}
+{"id": "smolsent_660", "winner": "B", "evidence": "T1 has the wrong name 'یاکو'; T2 correctly has 'ہاکو'."}
+{"id": "smolsent_664", "winner": "A", "evidence": "T2's 'ہچ ئس ہنکینی' garbles 'none of the residents'; T1's 'ہندی تا اسہ بندغ اس ہم' is clear."}
+{"id": "smolsent_665", "winner": "B", "evidence": "T2's 'دشمنی کروک گواہ' means hostile witness; T1's 'دشمنی نا شاہدی' means testimony of enmity."}
+{"id": "smolsent_674", "winner": "A", "evidence": "T1 drops 'Oh no' and uses 'گڑتی' for concerned; T2 keeps 'اوہ نہ' and 'فریشان ء لہجہ'."}
+{"id": "smolsent_677", "winner": "B", "evidence": "T1's 'کلاس فیلو ئسے' is clearer than T2's 'تپہ نا سنگت'."}
+{"id": "smolsent_680", "winner": "A", "evidence": "T2's 'دنتان تے چٹفنگ نا رجحان' conveys grinding teeth; T1's 'دنتان خڑینکی' is unclear."}
+{"id": "smolsent_685", "winner": "tie", "evidence": "Identical except 'ئے' vs 'ء'."}
+{"id": "smolsent_686", "winner": "tie", "evidence": "Identical except 'ء' vs 'ئے'."}
+{"id": "smolsent_695", "winner": "B", "evidence": "T2's 'نیم لکھ' (50,000) is wrong; half a million is 'نیم ملین'."}
+{"id": "smolsent_696", "winner": "tie", "evidence": "'بے وفائی' vs 'غداری': both render betrayal acceptably."}
+{"id": "smolsent_699", "winner": "A", "evidence": "T2 has stray 'نا بابت ٹی ٹیوٹوریل' and Urdu 'سنبھالنگ'; T1 'توننگ' matches the reference"}
+{"id": "smolsent_7", "winner": "A", "evidence": "T1 'اوگڑ اسے نا کنڈ آ چکاکہ' keeps the ogre and the luring; T2 has 'ڈنڈ' in place of the ogre"}
+{"id": "smolsent_703", "winner": "A", "evidence": "T1 repeats 'گلوکارہ؛' over and over (degenerate output)"}
+{"id": "smolsent_71", "winner": "B", "evidence": "T2 'پرجوش کنسرٹ ہروک' keeps 'avid'; T1 transliterates English ('فارن لینگویج نرڈ و بک ورم')"}
+{"id": "smolsent_710", "winner": "A", "evidence": "T2 'ٹیک دیوتاک' means 'tech gods'; T1 'ٹیک دیو آک' means giants"}
+{"id": "smolsent_711", "winner": "B", "evidence": "T2 'وائرس نا ٹیسٹ مثبت بس' keeps 'tested'"}
+{"id": "smolsent_718", "winner": "tie", "evidence": "'ساڑی مریرہ' vs 'تالان مریرہ': both carry the meaning"}
+{"id": "smolsent_720", "winner": "A", "evidence": "T1 'گواچنی وڑاٹ زند ئے بدل کیر' keeps 'truly transform'; T2 garbles it into 'گواچنی زند'"}
+{"id": "smolsent_726", "winner": "B", "evidence": "Both translate the brand name; T1 'شونکی' is a Brahui form, while T2 'شوقین' is Urdu"}
+{"id": "smolsent_728", "winner": "B", "evidence": "T1 keeps 'و سول سوسائٹی'; T2 drops the conjunction"}
+{"id": "smolsent_742", "winner": "B", "evidence": "شفاف آن پیہن اسکان"}
+{"id": "smolsent_752", "winner": "A", "evidence": "T2 آتیانبار = 'more than', wrong comparison"}
+{"id": "smolsent_755", "winner": "B", "evidence": "اسکان سیکنڈری عنصر ئس ارے vs awkward ساڑی ء"}
+{"id": "smolsent_757", "winner": "B", "evidence": "درخواست تروک vs خواجہ غاتے"}
+{"id": "smolsent_763", "winner": "tie", "evidence": "تاریخ آتیا vs تاریخ آ"}
+{"id": "smolsent_765", "winner": "B", "evidence": "T2 نسبتا ٹرم کننگانے distorts"}
+{"id": "smolsent_767", "winner": "A", "evidence": "گوازی تا vs اسپورٹس"}
+{"id": "smolsent_771", "winner": "A", "evidence": "T2 محور = axis, wrong"}
+{"id": "smolsent_772", "winner": "A", "evidence": "حقی پیداواری حل"}
+{"id": "smolsent_777", "winner": "A", "evidence": "خود جارحانہ vs اشتعال انگیز"}
+{"id": "smolsent_778", "winner": "B", "evidence": "T1 'براہ راست سپورٹ کیک' clearly means 'directly supports'; T2's 'مخ تفی ء کیک' is unclear."}
+{"id": "smolsent_788", "winner": "A", "evidence": "T1 uses the Brahui word 'واکداری' for 'power'; T2 uses the Urdu loan 'اختیار'."}
+{"id": "smolsent_790", "winner": "A", "evidence": "T2's 'بیان کروک' (user-defined) matches the reference; the two are otherwise identical."}
+{"id": "smolsent_793", "winner": "A", "evidence": "T1 'آزات بچار' means 'survived independently'; T2 'تینٹ زندہ مسر' reads more like 'came alive by themselves'."}
+{"id": "smolsent_801", "winner": "B", "evidence": "T2 'تربیت تننگ کن اومیتدار آ غور کننگ نا وخت' keeps the full condition: when considering a candidate for training."}
+{"id": "smolsent_802", "winner": "B", "evidence": "T2's plural 'گڑتی تا' matches 'some reservations'; T1 uses the singular 'نا'."}
+{"id": "smolsent_811", "winner": "A", "evidence": "T1 has 'مسہ جتا جتا وخت' (three separate times); T2's 'مسہ جتا وخت' is less natural."}
+{"id": "smolsent_815", "winner": "B", "evidence": "T1 'مائیکروسافٹ ئے ... بونس' keeps the bonus going to Microsoft; T2 is muddled ('مائیکروسافٹ نا پوائنٹس')."}
+{"id": "smolsent_82", "winner": "B", "evidence": "T2 keeps 'opposite' ('مون پہ مون') and uses 'اجازت'; T1 drops 'opposite' and mistranslates the button as 'محلت'."}
+{"id": "smolsent_823", "winner": "A", "evidence": "T1 'پورو وڑاٹ لیس' is a more natural way to say 'fully equipped' than T2's bare 'پورو لیس'."}
+{"id": "smolsent_825", "winner": "A", "evidence": "ممکنہ وڑاٹ ... پند خلنگ"}
+{"id": "smolsent_827", "winner": "B", "evidence": "خاہوتی کاروبار ٹی"}
+{"id": "smolsent_833", "winner": "B", "evidence": "ایپلی کیشن نا بارواٹ انت پاننگک"}
+{"id": "smolsent_835", "winner": "tie", "evidence": "تینٹ / خود بخود"}
+{"id": "smolsent_84", "winner": "A", "evidence": "بصری وڑاٹ چیک کبو"}
+{"id": "smolsent_841", "winner": "A", "evidence": "کل آن چنکا فیصلہ غاتیان ہلیس بھلا فیصلہ غاتسکان"}
+{"id": "smolsent_843", "winner": "B", "evidence": "لسٹنگ کن شیف کلک کبو"}
+{"id": "smolsent_847", "winner": "tie", "evidence": "کوریج آ / کوریج آتیا"}
+{"id": "smolsent_848", "winner": "B", "evidence": "دا پک کرے ... جوان وڑاٹ مبنی ئسر"}
+{"id": "smolsent_858", "winner": "A", "evidence": "جغرافیائی فرق"}
+{"id": "smolsent_862", "winner": "B", "evidence": "T1 'پیشن بروک … برجا تخک' vs T2 'پیشن مروک … پروسیس کیک … سنبھالک' (inaccurate 'outgoing', English/Urdu loans)"}
+{"id": "smolsent_93", "winner": "A", "evidence": "T1 'پامدار ء شاری' vs T2 'باشعور شاری' (Urdu loan) with repeated 'وڑاٹ… وڑ اٹ'"}
